@@ -28,14 +28,14 @@ Make sure you have the following installed:
 ## Project Structure
 
 ## Backend
-
-- backend/
-- ├── controllers/
-- ├── models/
-- ├── routes/
-- ├── middlewares/
-- ├── config/
-- └── index.js
+      ```sh   
+      backend/
+      ├── controllers/
+      ├── models/
+      ├── routes/
+      ├── middlewares/
+      ├── config/
+      └── index.js
 
 
 - **`backend/`**: Contains the backend server setup and configuration.
@@ -46,7 +46,8 @@ Make sure you have the following installed:
   - **`config/`**: Configuration files, such as database connection settings.
   - **`index.js`**: Main entry point for the backend server.
 
-### Dashboard
+## Dashboard
+
    ```sh
    dashboard/
    ├── components/
