@@ -48,11 +48,11 @@ Make sure you have the following installed:
 
 ### Dashboard
 
-- dashboard/
-- ├── components/
-- ├── services/
-- ├── utils/
-- └──  pages/
+ dashboard/
+ ├── components/
+ ├── services/
+ ├── utils/
+ └──  pages/
 
 - **`dashboard/`**: Contains the frontend dashboard setup.
   - **`components/`**: React components used in the dashboard.
