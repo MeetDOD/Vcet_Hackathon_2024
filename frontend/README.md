@@ -25,14 +25,7 @@ Make sure you have the following installed:
 
 
 
-### Install dependencies and start the backend server
-
-   ```sh
-      cd backend
-      npm install express mongoose nodemailer cors dotenv prettier
-      node server.js
-
-### Install dependencies and start the Frotend
+2. ### Install dependencies and start the Frotend
 
    ```sh
       cd ../dashboard
@@ -41,6 +34,14 @@ Make sure you have the following installed:
       npx tailwindcss init
       npm install react-icons
       npm start
+
+3. ### Install dependencies and start the backend server
+
+   ```sh
+      cd backend
+      npm install express mongoose nodemailer cors dotenv prettier
+      node server.js
+
 
 ### Project Structure
 
