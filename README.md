@@ -46,14 +46,14 @@ Make sure you have the following installed:
   - **`config/`**: Configuration files, such as database connection settings.
   - **`index.js`**: Main entry point for the backend server.
 
-## Dashboard
+##  Dashboard
+      
+      dashboard/
+      ├── components/
+      ├── services/
+      ├── utils/
+      └──  pages/
 
-   ```sh
-   dashboard/
-   ├── components/
-   ├── services/
-   ├── utils/
-   └──  pages/
 
 - **`dashboard/`**: Contains the frontend dashboard setup.
   - **`components/`**: React components used in the dashboard.
