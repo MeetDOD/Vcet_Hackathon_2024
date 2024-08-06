@@ -52,7 +52,7 @@ Make sure you have the following installed:
       ├── components/
       ├── services/
       ├── utils/
-      └──  pages/
+      └── pages/
 
 
 - **`dashboard/`**: Contains the frontend dashboard setup.
