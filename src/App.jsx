@@ -1,9 +1,14 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import Home from "./Pages/Home"
+
 function App() {
 
   return (
-    <div className='bg-sky-900 font-bold text-5xl text-gray-100 h-screen flex justify-center items-center'>
-      HACKATHON IS BACK 😭
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" Component={Home} />
+      </Routes>
+    </Router>
   )
 }
 
