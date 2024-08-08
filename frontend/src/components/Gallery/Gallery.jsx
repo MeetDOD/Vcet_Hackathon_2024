@@ -22,6 +22,15 @@ useEffect(() => {
     });
 }, []);
 
+const projects = [
+    { id: 'project2', imgSrc: img5, alt: 'Project 2' },
+    { id: 'project3', imgSrc: img3, alt: 'Project 3' },
+    { id: 'project4', imgSrc: img4, alt: 'Project 4' },
+    { id: 'project5', imgSrc: img7, alt: 'Project 5' },
+    { id: 'project6', imgSrc: img6, alt: 'Project 6' }
+];
+
+
 return (
     <>
     <StarsCanvas />
@@ -66,176 +75,42 @@ return (
                 </div>
                 </div>
                 {/* Repeat the similar structure for other projects */}
-                <div className="project project2">
-                <img className="smallImage" src={img5} alt="Project 2" />
-                <div className="overlay">
-                    <div className="overlay-inner">
-                    <button className="close">
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="25"
-                        height="30"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="square"
-                        strokeLinejoin="arcs"
-                        >
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
-                    </button>
+                {projects.map(project => (
+                <div className={`project ${project.id}`} key={project.id}>
+                    <img className="smallImage" src={project.imgSrc} alt={project.alt} />
+                    <div className="overlay">
+                        <div className="overlay-inner">
+                            <button className="close">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="25"
+                                    height="30"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="square"
+                                    strokeLinejoin="arcs"
+                                >
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                            </button>
 
-                    <div className="hdImgs">
-                        <img
-                        className="squareImg"
-                        src={img5}
-                        alt="Project 2 HD"
-                        />
+                            <div className="hdImgs">
+                                <img
+                                    className="squareImg"
+                                    src={project.imgSrc}
+                                    alt={`${project.alt} HD`}
+                                />
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                </div>
-                <div className="btn-box">
-                    <button className="btn">View</button>
-                </div>
-                </div>
-                <div className="project project3">
-                <img className="smallImage" src={img3} alt="Project 3" />
-                <div className="overlay">
-                    <div className="overlay-inner">
-                    <button className="close">
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="25"
-                        height="30"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="square"
-                        strokeLinejoin="arcs"
-                        >
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
-                    </button>
-
-                    <div className="hdImgs">
-                        <img
-                        className="squareImg"
-                        src={img3}
-                        alt="Project 3 HD"
-                        />
-                    </div>
+                    <div className="btn-box">
+                        <button className="btn">View</button>
                     </div>
                 </div>
-                <div className="btn-box">
-                    <button className="btn">View</button>
-                </div>
-                </div>
-                <div className="project project4">
-                <img className="smallImage" src={img4} alt="Project 4" />
-                <div className="overlay">
-                    <div className="overlay-inner">
-                    <button className="close">
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="25"
-                        height="30"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="square"
-                        strokeLinejoin="arcs"
-                        >
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
-                    </button>
-
-                    <div className="hdImgs">
-                        <img
-                        className="squareImg"
-                        src={img4}
-                        alt="Project 4 HD"
-                        />
-                    </div>
-                    </div>
-                </div>
-                <div className="btn-box">
-                    <button className="btn">View</button>
-                </div>
-                </div>
-                <div className="project project5">
-                <img className="smallImage" src={img7} alt="Project 5" />
-                <div className="overlay">
-                    <div className="overlay-inner">
-                    <button className="close">
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="25"
-                        height="30"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="square"
-                        strokeLinejoin="arcs"
-                        >
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
-                    </button>
-
-                    <div className="hdImgs">
-                        <img
-                        className="squareImg"
-                        src={img7}
-                        alt="Project 5 HD"
-                        />
-                    </div>
-                    </div>
-                </div>
-                <div className="btn-box">
-                    <button className="btn">View</button>
-                </div>
-                </div>
-                <div className="project project6">
-                <img className="smallImage" src={img6} alt="Project 6" />
-                <div className="overlay">
-                    <div className="overlay-inner">
-                    <button className="close">
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="25"
-                        height="30"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="square"
-                        strokeLinejoin="arcs"
-                        >
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
-                    </button>
-
-                    <div className="hdImgs">
-                        <img
-                        className="squareImg"
-                        src={img6}
-                        alt="Project 6 HD"
-                        />
-                    </div>
-                    </div>
-                </div>
-                <div className="btn-box">
-                    <button className="btn">View</button>
-                </div>
-                </div>
+            ))}
             </div>
             </div>
         </div>
