@@ -149,8 +149,8 @@
   
   .gallery_1 .close {
     position: absolute;
-    top: 9px;
-    right: 15px;
+    top: 5px;
+    right: 5px;
     background-image: none;
     background-position-x: initial;
     background-position-y: initial;
@@ -167,7 +167,7 @@
     color: #ffff;
     border-top-width: 0px;
     border-right-width: 0px;
-    border-bottom-width: 0px;
+    border-bottom-width: 2px;
     border-left-width: 0px;
     border-top-style: initial;
     border-right-style: initial;
@@ -190,6 +190,7 @@
     height: auto;
     width: 100%;
     transform: none;
+    border-radius: 10px;
   }
   
   .gallery_1 .close:hover {
@@ -376,6 +377,7 @@
   
     .gallery_1 .overlay-inner {
       width: 90%;
+      overflow: hidden;
     }
   
     .gallery_1 .text-blk.subHeading {
