@@ -74,7 +74,7 @@ const Navbar = () => {
                         <div className="hidden lg:flex items-center space-x-4">
                             <Link
                                 to="/app/home"
-                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange/90 transition-colors duration-300"
+                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange transition-colors duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -82,7 +82,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/about"
-                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange/90 transition-colors duration-300"
+                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange transition-colors duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -90,7 +90,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/problems"
-                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange/90 transition-colors duration-300"
+                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange transition-colors duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -98,7 +98,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/prizes"
-                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange/90 transition-colors duration-300"
+                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange transition-colors duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -106,7 +106,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/sponsors"
-                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange/90 transition-colors duration-300"
+                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange transition-colors duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -114,7 +114,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/timeline"
-                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange/90 transition-colors duration-300"
+                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange transition-colors duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -124,7 +124,7 @@ const Navbar = () => {
                         <div className="relative flex items-center" ref={dropdownRef}>
                             <button
                                 type="button"
-                                className="hidden lg:inline-flex items-center px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange/90 transition-colors duration-300"
+                                className="hidden lg:inline-flex items-center px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange transition-colors duration-300"
                                 onClick={toggleProfileDropdown}
                                 animate="true"
                             >
@@ -148,46 +148,38 @@ const Navbar = () => {
                                 <div className="absolute right-0 mt-64 w-48 bg-gray-800 border-2 border-gray-900 text-white rounded-md shadow-lg z-10">
                                     <Link
                                         to="/app/guidelines"
-                                        className="block px-4 py-2 rounded-md m-2 hover:bg-customOrange/90 transition-colors duration-300"
+                                        className="block px-4 py-2 rounded-md m-2 hover:bg-customOrange transition-colors duration-300"
                                         onClick={closeMenu}
                                     >
                                         Guidelines
                                     </Link>
                                     <Link
                                         to="/app/gallery"
-                                        className="block px-4 py-2 rounded-md m-2 hover:bg-customOrange/90 transition-colors duration-300"
+                                        className="block px-4 py-2 rounded-md m-2 hover:bg-customOrange transition-colors duration-300"
                                         onClick={closeMenu}
                                     >
                                         Gallery
                                     </Link>
                                     <Link
                                         to="/app/faq"
-                                        className="block px-4 py-2 rounded-md m-2 hover:bg-customOrange/90 transition-colors duration-300"
+                                        className="block px-4 py-2 rounded-md m-2 hover:bg-customOrange transition-colors duration-300"
                                         onClick={closeMenu}
                                     >
                                         FAQ
                                     </Link>
                                     <Link
                                         to="/app/contact"
-                                        className="block px-4 py-2 rounded-md m-2 hover:bg-customOrange/90 transition-colors duration-300"
+                                        className="block px-4 py-2 rounded-md m-2 hover:bg-customOrange transition-colors duration-300"
                                         onClick={closeMenu}
                                     >
                                         Contact
                                     </Link>
                                 </div>
                             )}
-                            <Link
-                                to="/app/register"
-                                className="ml-4 px-4 py-2 rounded-md bg-customOrange text-white text-base font-medium hover:bg-customOrange/90 transition-colors duration-300"
-                                onClick={closeMenu}
-                                animate="true"
-                            >
-                                Register
-                            </Link>
                             <button
                                 onClick={toggleMenu}
                                 type="button"
-                                className="lg:hidden ml-4 p-2 rounded-md hover:bg-customOrange/90 transition-colors duration-300"
+                                className="lg:hidden ml-4 p-2 rounded-md hover:bg-customOrange transition-colors duration-300"
                                 aria-controls="mobile-menu"
                                 aria-expanded={isMenuOpen ? "true" : "false"}
                             >
@@ -214,7 +206,7 @@ const Navbar = () => {
                         <div className="space-y-1 px-2 pt-2 pb-3">
                             <Link
                                 to="/app/home"
-                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange/90 transition-colors duration-300"
+                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange transition-colors duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -222,7 +214,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/about"
-                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange/90 transition-colors duration-300"
+                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange transition-colors duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -230,7 +222,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/problems"
-                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange/90 transition-colors duration-300"
+                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange transition-colors duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -238,7 +230,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/prizes"
-                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange/90 transition-colors duration-300"
+                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange transition-colors duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -246,7 +238,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/sponsors"
-                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange/90 transition-colors duration-300"
+                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange transition-colors duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -254,7 +246,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/timeline"
-                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange/90 transition-colors duration-300"
+                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange transition-colors duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -262,7 +254,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/guidelines"
-                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange/90 transition-colors duration-300"
+                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange transition-colors duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -270,7 +262,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/gallery"
-                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange/90 transition-colors duration-300"
+                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange transition-colors duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -278,7 +270,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/faq"
-                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange/90 transition-colors duration-300"
+                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange transition-colors duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -286,11 +278,19 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/contact"
-                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange/90 transition-colors duration-300"
+                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-customOrange transition-colors duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
                                 Contact
+                            </Link>
+                            <Link
+                                to="/app/contact"
+                                className="block px-3 py-2 rounded-md text-base font-medium bg-customOrange hover:bg-customOrange/90 transition-colors duration-300"
+                                onClick={closeMenu}
+                                animate="true"
+                            >
+                                Register Now
                             </Link>
                         </div>
                     </div>
