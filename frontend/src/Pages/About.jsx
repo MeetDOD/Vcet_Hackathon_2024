@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image1 from '../assets/moon-inverse1.png';
 import ImageRotate from '../assets/moon-sign-3-450x450.png';
 import ImageScale from '../assets/moon-sign-1-1.png';
