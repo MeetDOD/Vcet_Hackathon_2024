@@ -1,0 +1,154 @@
+:root {
+  --clr: #9cf5fd;
+  --bg: #08b2aa;
+  --text: #180828;
+  --background: #180828;
+  --light: #fff;
+  --yellow: #fee800;
+  --red: #ff2972;
+  --green: #04fc43;
+  --blue: rgb(233, 135, 8);
+}
+
+.bgBlue {
+  color: #7a2baa;
+}
+
+.container {
+  height: auto;
+  width: 100%;
+  /* background-color: var(--bg); */
+  display: flex;
+}
+
+.container .timer {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--clr);
+  /* color: var(--background); */
+  /* color: rgba(163, 108, 224, 0.25); */
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.container .timer div {
+  position: absolute;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.3em;
+}
+
+.container .timer div span {
+  position: absolute;
+  font-size: 0.45em;
+  letter-spacing: 0.1em;
+  transform: translateX(-50%) translateY(2px);
+  text-transform: uppercase;
+  color: var(--clr);
+}
+
+/* .container .timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.container .timer .time p {
+    font-size: 2rem;
+}
+
+.container .timer .time small {
+    color: silver;
+    text-shadow: none;
+} */
+
+.container .timer .content {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: var(--bg); */
+  gap: 2rem;
+}
+
+.container .timer .content svg {
+  position: relative;
+  /* width: 150px;
+
+    height: 150px; */
+  height: 100%;
+  width: 100%;
+  transform: rotate(270deg);
+  /* radius: 50%; */
+}
+
+.container .timer .content svg circle {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  /* fill: var(--bg); */
+  stroke: var(--clr);
+  stroke-width: 4;
+  transform: translate(5px, 5px);
+}
+
+.container .timer .content svg circle:nth-child(2) {
+  stroke: var(--text);
+  stroke-dasharray: 440;
+}
+
+.container .timer .content .time p {
+  color: var(--light);
+}
+
+.container .timer .content .time span {
+  color: var(--light);
+}
+
+.container .timer .content .dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  z-index: 1;
+}
+
+.container .timer .content .dots::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -3px;
+  width: 15px;
+  height: 15px;
+  background: var(--clr);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
+}
+
+/* .container .timer .content .day_dot::before {
+    box-shadow: 0 0 20px var(--blue), 0 0 60px var(--blue);
+    background: var(--blue);
+} */
+
+/* .container .timer .content .hr_dot::before {
+    box-shadow: 0 0 20px var(--red), 0 0 60px var(--red);
+    background: var(--red);
+}
+
+.container .timer .content .min_dot::before {
+    box-shadow: 0 0 20px var(--yellow), 0 0 60px var(--yellow);
+    background: var(--yellow);
+}
+
+.container .timer .content .sec_dot::before {
+    box-shadow: 0 0 20px var(--green), 0 0 60px var(--green);
+    background: var(--green);
+} */

@@ -1,0 +1,53 @@
+
+/* Inline #8 | http://127.0.0.1:5173/ */
+
+._container_1ruib_51 ._box_1ruib_73 {
+    /* padding: 1rem; */
+    margin-bottom: 1rem;
+}
+
+._container_1ruib_51 ._box_1ruib_73 ._content_1ruib_87 img {
+    /* max-width: 12.5rem; */
+    max-width: 17.5rem;
+}
+
+
+/* bootstrap.min.css | https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css */
+
+ol,
+ul {
+    /* padding-left: 2rem; */
+}
+
+img,
+svg {
+    /* vertical-align: middle; */
+}
+
+
+/* Inline #7 | http://127.0.0.1:5173/ */
+
+._container2_1a0p6_77 ._box2_1a0p6_101 {
+    /* padding: 1rem; */
+    padding: 0.5rem;
+}
+
+._container2_1a0p6_77 ._map_1a0p6_201 ._content2_1a0p6_135 {
+    /* max-width: 100%; */
+    max-width: 96%;
+}
+
+@media (max-width: 1100px) {
+    ._container2_1a0p6_77 {
+        /* padding: 1rem; */
+        /* margin: 1rem 1.5rem; */
+        margin: 1rem;
+    }
+}
+
+
+/* Element | http://127.0.0.1:5173/ */
+
+._contacts_1a0p6_55 {
+    padding: 0;
+}

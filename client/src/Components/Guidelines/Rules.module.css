@@ -1,0 +1,51 @@
+.textPurple {
+  color: #08b2aa;
+}
+
+.textBlue {
+  color: #08b2aa;
+}
+
+.bgBlue {
+  background-color: #08b2aa;
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.Link {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.Link:hover {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.hLight {
+  color: #08b2aa;
+  font-weight: 350%;
+}
+
+.ruleList {
+  list-style-type: "🖥️ ";
+  text-align: justify;
+}
+
+.ruleList li {
+  margin: 10px;
+}
+
+@media only screen and (max-width: 420px) {
+  .ruleList li {
+    margin: 5px;
+  }
+}
+
+.qrcode {
+  width: 40%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
