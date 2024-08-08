@@ -14,6 +14,9 @@ export default {
         customPurpleDark: '#582692',
         customOrange: '#F5AF64',
       },
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
     },
   },
   plugins: [],
