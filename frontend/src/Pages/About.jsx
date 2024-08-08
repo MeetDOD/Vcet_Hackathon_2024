@@ -1,10 +1,12 @@
 import Image1 from '../assets/moon-inverse1.png';
 import ImageRotate from '../assets/moon-sign-3-450x450.png';
 import ImageScale from '../assets/moon-sign-1-1.png';
+// import BgMoon from '../assets/moon1.png'
 
 const About = () => {
   return (
     <div className="bg-black min-h-screen text-white">
+      {/* <img src={BgMoon} /> */}
       <div className='flex justify-center'>
         <p className="text-[60px] font-orbitron font-bold mt-5 text-[#d88a4c]">About Us</p>
       </div>
