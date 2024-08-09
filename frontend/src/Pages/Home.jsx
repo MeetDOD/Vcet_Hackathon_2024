@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import AboutUs from '../components/AboutUs';
 import Gallery from '../components/Gallery';
 import FAQ from '../components/FAQ';
+import Problems from '../components/Problems';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
                 <Navbar />
                 <Hero />
                 <AboutUs />
+                <Problems />
                 <Gallery />
                 <FAQ />
             </div>

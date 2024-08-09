@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import SplitType from "split-type";
 import logo from "../assets/logo.png";
-import { Button } from "./Button";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
