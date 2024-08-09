@@ -7,6 +7,8 @@ import Gallery from '../components/Gallery';
 import FAQ from '../components/FAQ';
 import Problems from '../components/Problems';
 import Footer from '../components/Footer';
+import Sponsors from '../components/Sponsors';
+import PreviousSponsors from '../components/PreviousSponsors';
 
 const Home = () => {
     return (
@@ -17,6 +19,8 @@ const Home = () => {
                 <Hero />
                 <AboutUs />
                 <Problems />
+                <Sponsors />
+                <PreviousSponsors />
                 <Gallery />
                 <FAQ />
                 <Footer />
