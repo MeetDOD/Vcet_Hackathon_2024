@@ -44,7 +44,7 @@ const Problems = () => {
                     <Card key={id} id={id} title={title} description={description} />
                 ))}
             </div>
-            <div className="mt-5 grid grid-cols-1 md:grid-cols-2  gap-5 justify-center sm:px-7">
+            <div className="mt-5 grid grid-cols-1 md:grid-cols-2  gap-5 justify-center p-5 sm:px-7">
                 {data.slice(3).map(({ id, title, description }) => (
                     <Card key={id} id={id} title={title} description={description} />
                 ))}
@@ -77,7 +77,7 @@ const Card = ({ id, title, description }) => {
 
     return (
         <motion.div
-            className="border border-white/30 px-30 px-5 py-10 text-center rounded-2xl relative"
+            className="bg-gray-700/50 border border-white/50 px-30 px-5 py-10 text-center rounded-2xl relative"
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
             ref={borderTrack}
