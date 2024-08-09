@@ -6,6 +6,7 @@ import AboutUs from '../components/AboutUs';
 import Gallery from '../components/Gallery';
 import FAQ from '../components/FAQ';
 import Problems from '../components/Problems';
+import Footer from '../components/Footer';
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
                 <Problems />
                 <Gallery />
                 <FAQ />
+                <Footer />
             </div>
         </div>
     );
