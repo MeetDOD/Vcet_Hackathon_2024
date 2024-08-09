@@ -15,10 +15,10 @@ Make sure you have the following installed:
 
    ```sh
    git clone https://github.com/MeetDOD/Hackathon_2024.git
-   cd codeTheCosmos
+   cd frontend
    npm i
    npm run dev
 
 ### Screenshot:
 
-![image](https://github.com/user-attachments/assets/08417713-60e8-4a99-830f-24586dfa2a0d)
+![image](https://github.com/user-attachments/assets/1d6ca331-6894-44bb-93ea-2eaafa187132)
