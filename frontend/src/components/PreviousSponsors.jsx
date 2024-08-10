@@ -27,7 +27,7 @@ const PreviousSponsors = () => {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 4000,
+        speed: 2000,
         slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
