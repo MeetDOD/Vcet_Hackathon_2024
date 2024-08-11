@@ -31,7 +31,7 @@ const AboutUs = () => {
     return (
         <div className="min-h-screen text-white">
             <div className="flex justify-center">
-                <p className="text-4xl md:text-5xl lg:text-6xl font-montserrat font-medium mt-5 text-white">
+                <p className="text-4xl md:text-5xl lg:text-6xl font-montserrat font-medium  mt-5 text-white">
                     About Us
                 </p>
             </div>
