@@ -7,6 +7,7 @@ import card5 from "../assets/problemStatements/card-5.png"
 import { SiNeptune, SiPlanetscale } from "react-icons/si";
 import { FaEarthAmericas } from "react-icons/fa6";
 import { GiJupiter, GiRingedPlanet } from "react-icons/gi";
+import "../global.css"
 
 const problemData = [
     {
@@ -15,7 +16,7 @@ const problemData = [
         description: "Create a digital platform that bridges the gap between remote and underserved communities and healthcare professionals using telemedicine technology.",
         backgroundImage: card1,
         iconUrl: <SiPlanetscale size={24} />,
-        imageUrl: "https://static.vecteezy.com/system/resources/thumbnails/021/968/643/small_2x/space-nebula-night-gallaxy-illustration-cosmos-universe-astronomy-generative-ai-photo.jpg",
+        imageUrl: "https://d.newsweek.com/en/full/2308742/exoplanet.jpg?w=1200&f=d554ef6d8e154a66da9984230561f9f7",
     },
     {
         id: "2",
@@ -23,7 +24,7 @@ const problemData = [
         description: "Create a digital platform that bridges the gap between remote and underserved communities and healthcare professionals using telemedicine technology.",
         backgroundImage: card2,
         iconUrl: <SiNeptune size={24} />,
-        imageUrl: "https://static.vecteezy.com/system/resources/thumbnails/021/968/643/small_2x/space-nebula-night-gallaxy-illustration-cosmos-universe-astronomy-generative-ai-photo.jpg",
+        imageUrl: "https://bigthink.com/wp-content/uploads/2021/11/https___blogs-images.forbes.com_startswithabang_files_2019_03_NASA-Dana-Berry-e1711556875766.jpg",
     },
     {
         id: "3",
@@ -31,7 +32,7 @@ const problemData = [
         description: "Create a digital platform that bridges the gap between remote and underserved communities and healthcare professionals using telemedicine technology.",
         backgroundImage: card3,
         iconUrl: <FaEarthAmericas size={24} />,
-        imageUrl: "https://static.vecteezy.com/system/resources/thumbnails/021/968/643/small_2x/space-nebula-night-gallaxy-illustration-cosmos-universe-astronomy-generative-ai-photo.jpg",
+        imageUrl: "https://www.eurokidsindia.com/blog/wp-content/uploads/2023/09/solar-system.jpg",
     },
     {
         id: "4",
@@ -39,7 +40,7 @@ const problemData = [
         description: "Create a digital platform that bridges the gap between remote and underserved communities and healthcare professionals using telemedicine technology.",
         backgroundImage: card4,
         iconUrl: <GiJupiter size={24} />,
-        imageUrl: "https://static.vecteezy.com/system/resources/thumbnails/021/968/643/small_2x/space-nebula-night-gallaxy-illustration-cosmos-universe-astronomy-generative-ai-photo.jpg",
+        imageUrl: "https://media.istockphoto.com/id/865884812/photo/science-fiction-space-wallpaper-incredibly-beautiful-planets-galaxies-dark-and-cold-beauty-of.jpg?s=612x612&w=0&k=20&c=JI6MmXNSCDKpnbLJNjbHX-QE1okdAJG2kY_W8UWmDIE=",
     },
     {
         id: "5",
@@ -47,7 +48,7 @@ const problemData = [
         description: "Create a digital platform that bridges the gap between remote and underserved communities and healthcare professionals using telemedicine technology.",
         backgroundImage: card5,
         iconUrl: <GiRingedPlanet size={24} />,
-        imageUrl: "https://static.vecteezy.com/system/resources/thumbnails/021/968/643/small_2x/space-nebula-night-gallaxy-illustration-cosmos-universe-astronomy-generative-ai-photo.jpg",
+        imageUrl: "https://images.theconversation.com/files/511620/original/file-20230222-16-c8nmnb.jpg?ixlib=rb-4.1.0&q=45&auto=format&w=926&fit=clip",
     }
 ];
 
@@ -63,7 +64,8 @@ const ClipPath = () => {
 
 const ProblemStatements = () => {
     return (
-        <div className='text-white font-montserrat overflow-hidden'>
+        <div className='overflow-hidden text-white font-montserrat'>
+            <div className="gradient-02"></div>
             <div className="flex flex-col justify-center items-center py-[72px]">
                 <div className="container">
                     <h2 className="text-5xl md:text-6xl font-medium text-center tracking-tighter">Problem Statements</h2>

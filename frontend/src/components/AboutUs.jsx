@@ -1,76 +1,79 @@
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import Image1 from '../assets/moon-inverse1.png';
-import ImageRotate from '../assets/moon-sign-3-450x450.png';
-import ImageScale from '../assets/moon-sign-1-1.png';
+import React from 'react'
+import { Tilt } from 'react-tilt'
+import { motion } from 'framer-motion';
+import { SiNeptune, SiPlanetscale } from "react-icons/si";
+import { GiJupiter, GiRingedPlanet } from "react-icons/gi";
 import "../global.css"
 
+const about = [
+    {
+        title: "Develop Problem Solving",
+        icon: <SiPlanetscale size={30} />
+    },
+    {
+        title: "Critical Thinking",
+        icon: <GiJupiter size={30} />
+    },
+    {
+        title: "Software Development Skills",
+        icon: <SiNeptune size={30} />
+    },
+    {
+        title: "Time Management Skills",
+        icon: <GiRingedPlanet size={30} />
+    }
+]
+
+const ServiceCard = ({ index, title, icon }) => (
+    <Tilt className='xs:w-[200px] w-full'>
+        <motion.div
+            className='w-full p-[1px] rounded-[15px] shadow-xl bg-gradient-to-r from-customOrange via-customPurple to-customPurpleDark'
+        >
+            <div
+                options={{
+                    max: 45,
+                    scale: 1,
+                    speed: 450,
+                }}
+                className='bg-gray-800 rounded-[15px] py-6 px-4 min-h-[240px] flex justify-evenly items-center flex-col'
+            >
+                <div className='text-white bg-customPurpleDark p-2 rounded-lg shadow-[0px_0.5px_5px_#8c45ff]'>
+                    {icon}
+                </div>
+
+                <h3 className='text-white text-base font-bold text-center mt-4'>
+                    {title}
+                </h3>
+            </div>
+        </motion.div>
+    </Tilt>
+);
+
 const AboutUs = () => {
-    const rotateRef = useRef(null);
-    const scaleRef = useRef(null);
-
-    useEffect(() => {
-        const rotateElement = rotateRef.current;
-        const scaleElement = scaleRef.current;
-
-        gsap.to(rotateElement, {
-            duration: 10,
-            rotate: 360,
-            repeat: -1,
-            ease: 'linear'
-        });
-
-        gsap.to(scaleElement, {
-            duration: 10,
-            scale: 1.2,
-            yoyo: true,
-            repeat: -1,
-            ease: 'linear'
-        });
-    }, []);
-
     return (
-        <div className="overflow-hidden relative min-h-screen text-white">
+        <div className='overflow-hidden relative py-20 text-white font-montserrat'>
             <div className="gradient-01"></div>
-            <div className="relative z-10">
-                <div className="flex justify-center">
-                    <p className="text-4xl md:text-5xl lg:text-6xl font-montserrat font-medium mt-5 text-white">
-                        About Us
+            <div className="relative flex flex-col justify-center items-center py-[72px] z-10">
+                <div className="container">
+                    <h2 className="text-5xl md:text-6xl font-medium text-center tracking-tighter">About Us</h2>
+                    <p className="text-white/70 text-lg md:text-xl tracking-tight text-center mt-5">
+                        Code the Cosmos, Code for Cosmos and Code by Cosmos
                     </p>
                 </div>
-                <div className="flex flex-col lg:flex-row items-center mt-10">
-                    <div className="relative lg:ml-[230px] mb-10 lg:mb-0">
-                        <img
-                            ref={scaleRef}
-                            src={ImageScale}
-                            alt="Moon Sign"
-                            className="h-[250px] w-[250px] sm:h-[350px] sm:w-[350px] md:h-[400px] md:w-[400px] lg:h-[450px] lg:w-[450px] absolute top-0 left-0"
-                        />
-                        <img
-                            ref={rotateRef}
-                            src={ImageRotate}
-                            alt="Moon Sign"
-                            className="h-[200px] w-[200px] sm:h-[300px] sm:w-[300px] md:h-[350px] md:w-[350px] lg:h-[400px] lg:w-[400px] absolute top-0 left-0 mt-5 ml-5"
-                        />
-                        <img
-                            src={Image1}
-                            alt="Moon Inverse"
-                            className="h-[250px] w-[250px] sm:h-[350px] sm:w-[350px] md:h-[400px] md:w-[400px] lg:h-[450px] lg:w-[450px]"
-                        />
-                    </div>
-                    <div className="px-2 sm:px-3 w-full lg:w-[700px] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mx-6 lg:mx-24 font-exo text-justify text-[#999898]">
-                        <p>
-                            VCET Hackathon is a 30-hour hackathon organized by the Department of Information Technology of
-                            <span className="text-customOrange">
-                                "Vidyavardhini&apos;s College of Engineering and Technology".
-                            </span>
-                            By organizing this hackathon, we aim to promote a strong programming and product-building culture among students that will help them develop problem-solving, critical thinking, and software development skills. It is an opportunity to tackle challenging problems that affect us all and find solutions. Will you get time to eat? Can you ditch your sleep? Do you have a passion for building? Find out in this 30-hour long thrilling experience!
-                        </p>
-                    </div>
+            </div>
+            <div className='relative z-10 px-10 sm:px-32'>
+                <p className='font-semibold text-white text-lg sm:max-w-7xl mx-auto leading-relaxed text-center tracking-tight'>
+                    <span className='text-3xl font-bold'>V</span>CET Hackathon is a 30-hour event organized by the Department of Information Technology at "Vidyavardhini's College of Engineering and Technology". We aim to foster a strong programming culture and build critical problem-solving skills among students. Can you take on the challenge?
+                    It is an opportunity to take on challenging problems that revolve around us all the time and crack them down. Will you get time to eat ? Can you ditch your sleep ? Do you have passion to build? Find out in this 30 hours long thrilling experience.
+                </p>
+                <div className='mt-16 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10'>
+                    {about.map((about, index) => (
+                        <ServiceCard key={about.title} index={index} {...about} />
+                    ))}
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default AboutUs;
+export default AboutUs
