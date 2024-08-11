@@ -1,10 +1,9 @@
 import React from 'react'
-import card1 from "../assets/problemStatements/card-1.svg"
-import card2 from "../assets/problemStatements/card-2.svg"
-import card3 from "../assets/problemStatements/card-3.svg"
-import card4 from "../assets/problemStatements/card-4.svg"
-import card5 from "../assets/problemStatements/card-5.svg"
-import card6 from "../assets/problemStatements/card-6.svg"
+import card1 from "../assets/problemStatements/card-1.png"
+import card2 from "../assets/problemStatements/card-2.png"
+import card3 from "../assets/problemStatements/card-3.png"
+import card4 from "../assets/problemStatements/card-6.png"
+import card5 from "../assets/problemStatements/card-5.png"
 import { SiNeptune, SiPlanetscale } from "react-icons/si";
 import { FaEarthAmericas } from "react-icons/fa6";
 import { GiJupiter, GiRingedPlanet } from "react-icons/gi";
