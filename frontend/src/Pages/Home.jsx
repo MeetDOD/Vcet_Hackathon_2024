@@ -10,6 +10,8 @@ import Footer from '../components/Footer';
 import Sponsors from '../components/Sponsors';
 import PreviousSponsors from '../components/PreviousSponsors';
 import Timeline from '../components/Timeline';
+import Prize from '../components/Prize';
+import Guidelines from '../components/Guidelines';
 
 const Home = () => {
     return (
@@ -20,9 +22,11 @@ const Home = () => {
                 <Hero />
                 <AboutUs />
                 <Problems />
+                <Prize />
                 <Sponsors />
                 <PreviousSponsors />
                 <Timeline />
+                <Guidelines />
                 <Gallery />
                 <FAQ />
                 <Footer />
