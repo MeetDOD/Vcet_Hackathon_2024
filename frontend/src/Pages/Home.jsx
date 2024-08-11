@@ -5,13 +5,13 @@ import Hero from "../components/Hero";
 import AboutUs from '../components/AboutUs';
 import Gallery from '../components/Gallery';
 import FAQ from '../components/FAQ';
-import Problems from '../components/Problems';
 import Footer from '../components/Footer';
 import Sponsors from '../components/Sponsors';
 import PreviousSponsors from '../components/PreviousSponsors';
 import Timeline from '../components/Timeline';
 import Prize from '../components/Prize';
 import Guidelines from '../components/Guidelines';
+import ProblemStatements from '../components/ProblemStatements';
 
 const Home = () => {
     return (
@@ -21,7 +21,7 @@ const Home = () => {
                 <Navbar />
                 <Hero />
                 <AboutUs />
-                <Problems />
+                <ProblemStatements />
                 <Prize />
                 <Sponsors />
                 <PreviousSponsors />

@@ -1,0 +1,11 @@
+.gradient-01 {
+  position: absolute;
+  width: 404px;
+  height: 800px;
+  left: 20%;
+  top: 5%;
+  background: rgba(128, 0, 255, 0.35);
+  filter: blur(175px);
+  transform: rotate(-114.2deg);
+  overflow: hidden;
+}
