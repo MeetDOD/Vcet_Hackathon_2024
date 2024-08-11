@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import  { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import Image1 from '../assets/moon-inverse1.png';
 import ImageRotate from '../assets/moon-sign-3-450x450.png';
@@ -31,7 +31,7 @@ const AboutUs = () => {
     return (
         <div className="min-h-screen text-white">
             <div className="flex justify-center">
-                <p className="text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold mt-5 text-[#d88a4c]">
+                <p className="text-4xl md:text-5xl lg:text-6xl font-montserrat font-medium mt-5 text-[#d88a4c]">
                     About Us
                 </p>
             </div>
