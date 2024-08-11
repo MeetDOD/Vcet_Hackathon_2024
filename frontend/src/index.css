@@ -39,3 +39,9 @@
     font-family: 'Orbiton', sans-serif;
   }
 
+  @media (max-width: 200px) and (max-height: 1216px) {
+    .custom-bg-small {
+      background-color: white;
+    }
+  }
+  
