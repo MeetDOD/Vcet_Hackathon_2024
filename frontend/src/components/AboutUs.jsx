@@ -31,7 +31,7 @@ const AboutUs = () => {
     return (
         <div className="min-h-screen text-white">
             <div className="flex justify-center">
-                <p className="text-4xl md:text-5xl lg:text-6xl font-montserrat font-medium mt-5 text-[#d88a4c]">
+                <p className="text-4xl md:text-5xl lg:text-6xl font-montserrat font-medium mt-5 text-white">
                     About Us
                 </p>
             </div>
@@ -58,7 +58,7 @@ const AboutUs = () => {
                 <div className="px-2 sm:px-3 w-full lg:w-[700px] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mx-6 lg:mx-24 font-exo text-justify text-[#999898]">
                     <p>
                         VCET Hackathon is a 30-hour hackathon organized by the Department of Information Technology of
-                        <span className="text-[#d88a4c]">
+                        <span className="text-customOrange">
                             "Vidyavardhini&apos;s College of Engineering and Technology".
                         </span>
                         By organizing this hackathon, we aim to promote a strong programming and product-building culture among students that will help them develop problem-solving, critical thinking, and software development skills. It is an opportunity to tackle challenging problems that affect us all and find solutions. Will you get time to eat? Can you ditch your sleep? Do you have a passion for building? Find out in this 30-hour long thrilling experience!

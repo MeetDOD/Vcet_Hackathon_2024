@@ -33,7 +33,7 @@ function Gallery() {
             <div className="gallery_1" unique-script-id="w-w-dm-id">
                 <div className="responsive-container-block bigContainer">
                     <div className="responsive-container-block Container">
-                        <p className="text-blk heading">Gallery</p>
+                        <p className="text-blk heading font-montserrat font-medium">Gallery</p>
                         <div className="responsive-container-block imgContainer">
                             <div className="project project1">
                                 <img className="smallImage" src={img1} alt="Project 1" />

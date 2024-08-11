@@ -18,13 +18,13 @@ const Guidelines = () => {
 
         <div className="flex justify-center mt-8">
           <div className="bg-[#212529] w-full max-w-7xl rounded-[25px] p-6">
-            <h3 className="my-3 text-[#af6af0] text-lg sm:text-xl md:text-2xl font-bold">Rules</h3>
+            <h3 className="my-3 text-customOrange text-lg sm:text-xl md:text-2xl font-bold">Rules</h3>
             <ul className="list-disc pl-5 space-y-2 text-sm sm:text-base md:text-lg">
-              <li>The VCET Hackathon will take place on <span className="text-[#af6af0]">6th and 7th October 2023.</span></li>
+              <li>The VCET Hackathon will take place on <span className="text-customOrange">6th and 7th October 2023.</span></li>
               <li>A team can consist of 1 to 4 members. Every member of the team must be a student of a university or a college. A team can have members from different colleges.</li>
-              <li>Entry fee is <span className="text-[#af6af0]">₹500</span> per head (Includes 3 meals, breakfasts, snacks, and sleeping accommodation).</li>
+              <li>Entry fee is <span className="text-customOrange">₹500</span> per head (Includes 3 meals, breakfasts, snacks, and sleeping accommodation).</li>
               <li>Participants are free to use open standard repositories, APIs, and publicly available libraries.</li>
-              <li>Progress of the project will be tracked during the Hackathon. <span className="text-[#af6af0]">Use of readymade or precompiled code will lead to disqualification.</span></li>
+              <li>Progress of the project will be tracked during the Hackathon. <span className="text-customOrange">Use of readymade or precompiled code will lead to disqualification.</span></li>
               <li>Participants are expected to promptly push their code changes on GitHub.</li>
               <li>Participants are expected to behave professionally and responsibly.</li>
               <li>Decisions made by organizers and judges are final.</li>
@@ -33,7 +33,7 @@ const Guidelines = () => {
             </ul>
             <div className="mt-4">
               <button
-                className="border border-white text-white py-2 px-4 rounded hover:bg-[#af6af0] hover:border-[#af6af0] transition"
+                className="border border-white text-white py-2 px-4 rounded hover:bg-customOrange hover:border-customOrange transition"
                 onClick={() => setRegistration(true)}
               >
                 Register Now
@@ -41,22 +41,22 @@ const Guidelines = () => {
             </div>
             <ul className="list-disc pl-5 space-y-2 mt-4 text-sm sm:text-base md:text-lg">
               <li>NOTE: The order preference of the problem statements is solely for our reference. We do not assure that the topic allocation will be based on your top preferences only.</li>
-              <li>Last date for submission of abstract is <span className="text-[#af6af0]">September 27, 2023</span>.</li>
-              <li>The selected teams will get a confirmation after <span className="text-[#af6af0]">September 28, 2023</span>.</li>
-              <li>Payment for the selected teams i.e. ₹500 per head should be made by <span className="text-[#af6af0]">October 1, 2023</span>. Entry fee payment of the entire team should be done in a single transaction.</li>
-              <li>Out of the 5 abstracts submitted, the final Problem Statement for your team will be disclosed on <span className="text-[#af6af0]">October 5, 2023.</span></li>
+              <li>Last date for submission of abstract is <span className="text-customOrange">September 27, 2023</span>.</li>
+              <li>The selected teams will get a confirmation after <span className="text-customOrange">September 28, 2023</span>.</li>
+              <li>Payment for the selected teams i.e. ₹500 per head should be made by <span className="text-customOrange">October 1, 2023</span>. Entry fee payment of the entire team should be done in a single transaction.</li>
+              <li>Out of the 5 abstracts submitted, the final Problem Statement for your team will be disclosed on <span className="text-customOrange">October 5, 2023.</span></li>
               <li>All done, your squad is all set to seize the Unleash The Unreal for VCET HACKATHON'23.</li>
               <li>Following are the details of payment.</li>
             </ul>
             <div className="mt-4 flex flex-row space-x-4 sm:space-x-8 ">
               <button
-                className="border border-white text-white py-2 px-4 rounded hover:bg-[#af6af0] hover:border-[#af6af0] transition"
+                className="border border-white text-white py-2 px-4 rounded hover:bg-customOrange hover:border-customOrange transition"
                 onClick={() => setNeftModalOpen(true)}
               >
                 NEFT
               </button>
               <button
-                className="border border-white text-white py-2 px-4 rounded hover:bg-[#af6af0] hover:border-[#af6af0] transition"
+                className="border border-white text-white py-2 px-4 rounded hover:bg-customOrange hover:border-customOrange transition"
                 onClick={() => setUpiModalOpen(true)}
               >
                 UPI
