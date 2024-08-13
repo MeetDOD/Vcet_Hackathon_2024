@@ -5,17 +5,16 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
     return (
-        <div className=' overflow-hidden relative flex flex-col justify-center text-center min-h-screen 
-        [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_60%,transparent)]'
+        <div className=' overflow-hidden relative flex flex-col justify-center text-center min-h-screen
+        [mask-image:linear-gradient(to_top,transparent,black_15%,black_100%,transparent)]'
         >
-
             <div className='absolute inset-0 
                 bg-[radial-gradient(75%_75%_at_center_center,rgb(140,69,255,.3)_15%,rgb(14,0,36,.7)_50%,transparent)]'>
             </div>
 
             <div className='absolute h-64 w-64 md:h-96 md:w-96 bg-customPurpleDark rounded-full border border-white/20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
                 bg-[radial-gradient(50%_50%_at_16.8%_10%,white,rgb(184,148,255)_15%,rgb(24,0,66))] 
-                shadow-[-20px_-20px_50px_rgb(255,255,255,.7),-20px_-20px_80px_rgb(255,255,255,.5),0_0_50px_rgb(140,69,255)]'>
+                shadow-[-20px_-20px_50px_rgb(255,255,255,.5),-20px_-20px_80px_rgb(255,255,255,.7),0_0_50px_rgb(140,69,255)]'>
             </div>
 
             <motion.div
@@ -97,7 +96,7 @@ const Hero = () => {
 
             <div className='relative mt-12 flex flex-col items-center'>
                 <img src={vcet} alt='vcet' className='py-2 w-24 md:w-28 lg:w-32' />
-                <p className='font-semibold text-white text-xl md:text-2xl lg:text-3xl py-2 font-sans'>
+                <p className='font-semibold text-white text-xl md:text-2xl lg:text-3xl py-2 font-montserrat'>
                     Vidyavardhini's College of Engineering and Technology
                 </p>
                 <p className='py-2 text-white text-xl lg:text-2xl font-sans'>

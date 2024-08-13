@@ -8,6 +8,7 @@ import { SiNeptune, SiPlanetscale } from "react-icons/si";
 import { FaEarthAmericas } from "react-icons/fa6";
 import { GiJupiter, GiRingedPlanet } from "react-icons/gi";
 import "../global.css"
+import Heading from './Heading'
 
 const problemData = [
     {
@@ -65,15 +66,12 @@ const ClipPath = () => {
 const ProblemStatements = () => {
     return (
         <div className='overflow-hidden text-white font-montserrat'>
-            <div className="gradient-02"></div>
-            <div className="flex flex-col justify-center items-center py-[72px]">
-                <div className="container">
-                    <h2 className="text-5xl md:text-6xl font-medium text-center tracking-tighter">Problem Statements</h2>
-                    <p className="text-white/70 text-lg md:text-xl tracking-tight text-center my-5">
-                        Code the Cosmos, Code for Cosmos and Code by Cosmos
-                    </p>
-                </div>
-            </div>
+            <Heading
+                title1="Problem"
+                title2="Statements"
+                subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
+                sectionId="problmes"
+            />
             <div className='px-10 sm:px-32 relative'>
                 <div className='flex flex-wrap gap-10 mb-10 justify-center items-center'>
                     {problemData.map((item) => (

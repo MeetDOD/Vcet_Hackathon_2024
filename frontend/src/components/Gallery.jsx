@@ -7,6 +7,7 @@ import img4 from "../assets/img/2.jpg";
 import img5 from "../assets/img/3.jpg";
 import img6 from "../assets/img/winners.jpg";
 import img7 from "../assets/img/2021.jpeg";
+import Heading from "./Heading";
 
 function Gallery() {
     useEffect(() => {
@@ -32,8 +33,13 @@ function Gallery() {
         <>
             <div className="gallery_1" unique-script-id="w-w-dm-id">
                 <div className="responsive-container-block bigContainer">
-                    <div className="responsive-container-block Container">
-                        <p className="text-blk heading font-montserrat font-medium">Gallery</p>
+                    <div className="responsive-container-block Container text-white font-montserrat">
+                        <Heading
+                            title1="Our"
+                            title2="Gallery"
+                            subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
+                            sectionId="gallery"
+                        />
                         <div className="responsive-container-block imgContainer">
                             <div className="project project1">
                                 <img className="smallImage" src={img1} alt="Project 1" />
