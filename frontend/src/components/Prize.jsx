@@ -13,8 +13,8 @@ const Prize = () => {
   });
 
   return (
-    <div className="relative w-full h-full bg-darkBackground"> {/* Dark space-like background */}
-      <div className="relative z-10 px-4 py-8 bg-opacity-90 shadow-2xl rounded-lg">
+    <div className="relative w-full h-full"> 
+      <div className="relative z-10 px-4 py-8 rounded-lg">
         <div className="flex justify-center">
           <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-montserrat font-medium mt-5 text-white drop-shadow-lg">
             Prizes
@@ -26,22 +26,22 @@ const Prize = () => {
             <PrizeCard
               animationData={goldenAnimation}
               amount="50,000"
-              color="#F5AF64"  // customOrange
+              color="customPurple"  
               gradientFrom="from-customBlue1"
               gradientTo="to-customBlue1"
               size="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-[450px] lg:h-[450px]"  // Responsive sizes
               scale={0.9}
-              moveUp={true}  // Add prop to move animation upward
+              moveUp={true}  
             />
             {/* Silver Prize */}
             <PrizeCard
               animationData={silverAnimation}
               amount="20,000"
-              color="#F5AF64"  // customOrange
+              color="#F5AF64"  
               gradientFrom="from-customBlue1"
               gradientTo="to-customBlue1"
               size="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-[450px] lg:h-[450px]"  // Responsive sizes
-              scale={0.7}  // Scale down the animation
+              scale={0.7}  
             />
           </div>
           {/* Bronze Prizes */}
@@ -51,11 +51,11 @@ const Prize = () => {
                 key={index}
                 animationData={prize.animationData}
                 amount={prize.amount}
-                color="#F5AF64"  // customOrange
+                color="#F5AF64" 
                 gradientFrom="from-customBlue1"
                 gradientTo="to-customBlue1"
-                size={prize.size}  // Responsive container sizes
-                scale={0.7}  // Scale down the animation inside the container
+                size={prize.size}  
+                scale={0.7}  
                 moveUp={true}
               />
             ))}
@@ -88,9 +88,16 @@ const PrizeCard = ({ animationData, amount, color, gradientFrom, gradientTo, siz
     };
   }, [offSetX, offSetY]);
 
+  const shadowStyle = {
+    boxShadow: isHovered
+      ? '0 15px 30px rgba(0, 0, 0, 0.5), 0 6px 12px rgba(0, 0, 0, 0.4)' 
+      : '0 12px 24px rgba(0, 0, 0, 0.4), 0 6px 12px rgba(0, 0, 0, 0.3)' 
+  };
+
   return (
     <motion.div
-      className={`relative flex flex-col items-center overflow-hidden transition-transform transform border-[1px] border-white border-opacity-15 rounded-lg ${size}`}  // Responsive container sizes
+      className={`relative flex flex-col items-center overflow-hidden transition-transform transform border-[1px] border-white border-opacity-15 rounded-lg ${size}`}
+      style={shadowStyle}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       ref={borderTrack}
@@ -102,13 +109,13 @@ const PrizeCard = ({ animationData, amount, color, gradientFrom, gradientTo, siz
           loop 
           style={{ 
             transform: `scale(${scale})`, 
-            marginTop: moveUp ? '-30px' : '0'  // Move the animation upward
+            marginTop: moveUp ? '-30px' : '0'
           }}  
           speed={0.5}
         />
       </div>
       <motion.div
-        className="absolute inset-0 border-[6px] rounded-lg"  // Keep the motion border size as is
+        className="absolute inset-0 border-[6px] rounded-lg"
         style={{
           maskImage,
           WebkitMaskImage: maskImage,
@@ -117,15 +124,15 @@ const PrizeCard = ({ animationData, amount, color, gradientFrom, gradientTo, siz
           transition: 'opacity 0.3s ease, box-shadow 0.3s ease'
         }}
       />
-      <div className="absolute bottom-4 text-center">
-        <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-montserrat font-semibold text-white"
-           style={{
-             textShadow: '0 0 5px rgba(255, 255, 255, 0.6), 0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.2)',
-             marginTop: '2rem',  // Increased margin to separate the amount from the trophy
-           }}
+      <div className="absolute bottom-4 text-center px-2 sm:px-4 md:px-6 lg:px-8">
+        <p className="text-sm sm:text-sm md:text-md lg:text-lg xl:text-xl mt-16 font-montserrat font-semibold text-white"
+          style={{
+            textShadow: '0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2)',
+            marginTop: '5rem', 
+          }}
         >
-          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-montserrat font-semibold">₹</span>
-          <span className="ml-2 md:ml-3 lg:ml-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-mono font-semibold">{amount}</span>
+          <span className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-montserrat font-semibold">₹</span>
+          <span className="ml-1 sm:ml-2 md:ml-3 lg:ml-4 xl:ml-5 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-mono font-semibold">{amount}</span>
         </p>
       </div>
     </motion.div>
