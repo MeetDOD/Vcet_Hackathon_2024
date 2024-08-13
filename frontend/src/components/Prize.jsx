@@ -1,72 +1,135 @@
+import { motion, useMotionTemplate, useMotionValue } from 'framer-motion';
 import Lottie from 'lottie-react';
 import goldenAnimation from '../assets/prize/golden-trophy.json'; 
 import silverAnimation from '../assets/prize/silver-trophy.json';
 import bronzeAnimation from '../assets/prize/bronze-trophy.json';
+import { useEffect, useState, useRef } from 'react';
 
 const Prize = () => {
-
   const bronzePrizes = Array(3).fill({
     animationData: bronzeAnimation,
-    amount: "₹ 5,000",
-    size: 300
+    amount: "5,000",
+    size: "w-32 h-32 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-[350px] lg:h-[350px]"  // Responsive sizes
   });
 
   return (
-    <div className="relative w-full h-full">
-      <div className="relative z-10 px-4">
+    <div className="relative w-full h-full bg-darkBackground"> {/* Dark space-like background */}
+      <div className="relative z-10 px-4 py-8 bg-opacity-90 shadow-2xl rounded-lg">
         <div className="flex justify-center">
-          <p className="text-3xl md:text-4xl lg:text-5xl font-montserrat font-medium mt-5 text-white">PRIZES</p>
+          <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-montserrat font-medium mt-5 text-white drop-shadow-lg">
+            Prizes
+          </p>
         </div>
         <div className='p-4 md:p-8'>
-          <div className="flex flex-row justify-center items-end gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-24 2xl:gap-48 mt-7">
+          <div className="flex flex-row justify-center items-end gap-4 sm:gap-6 md:gap-8 lg:gap-20 xl:gap-56 mt-[50px]">
             {/* Golden Prize */}
-            <div className='relative flex flex-col items-center h-[200px] w-[200px] sm:h-[250px] sm:w-[250px] md:h-[300px] md:w-[300px] lg:h-[400px] lg:w-[400px] xl:h-[450px] xl:w-[450px]'>
-              <Lottie 
-                animationData={goldenAnimation} 
-                loop 
-                className='h-full w-full'
-                speed={0.01} 
-              />
-              <p className="absolute bottom-[-20px] text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl font-exo text-white flex items-center justify-center">
-                <span className="text-xl sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-montserrat font-medium">₹</span>
-                <span className="ml-1 sm:ml-1 md:ml-2 lg:ml-2 xl:ml-3 text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl font-montserrat font-medium">50,000</span>
-              </p>
-            </div>
+            <PrizeCard
+              animationData={goldenAnimation}
+              amount="50,000"
+              color="#F5AF64"  // customOrange
+              gradientFrom="from-customBlue1"
+              gradientTo="to-customBlue1"
+              size="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-[450px] lg:h-[450px]"  // Responsive sizes
+              scale={0.9}
+              moveUp={true}  // Add prop to move animation upward
+            />
             {/* Silver Prize */}
-            <div className='relative flex flex-col items-center h-[150px] w-[150px] sm:h-[200px] sm:w-[200px] md:h-[250px] md:w-[250px] lg:h-[300px] lg:w-[300px] xl:h-[350px] xl:w-[350px]'>
-              <Lottie 
-                animationData={silverAnimation} 
-                loop 
-                className='h-full w-full'
-                speed={0.01} 
-              />
-              <p className="absolute bottom-[-20px] text-xs sm:text-xs md:text-sm lg:text-lg xl:text-xl font-exo text-white flex items-center justify-center">
-                <span className="text-xl sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-montserrat font-medium">₹</span>
-                <span className="ml-1 sm:ml-1 md:ml-2 lg:ml-2 xl:ml-3 text-xs sm:text-xs md:text-sm lg:text-lg xl:text-xl font-montserrat font-medium">20,000</span>
-              </p>
-            </div>
+            <PrizeCard
+              animationData={silverAnimation}
+              amount="20,000"
+              color="#F5AF64"  // customOrange
+              gradientFrom="from-customBlue1"
+              gradientTo="to-customBlue1"
+              size="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-[450px] lg:h-[450px]"  // Responsive sizes
+              scale={0.7}  // Scale down the animation
+            />
           </div>
           {/* Bronze Prizes */}
-          <div className="flex flex-row justify-center items-center mt-20 sm:mt-24 md:mt-28 lg:mt-32 xl:mt-40 gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-24 2xl:gap-48">
+          <div className="flex flex-row justify-center items-center mt-10 sm:mt-12 md:mt-16 lg:mt-20 gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-56">
             {bronzePrizes.map((prize, index) => (
-              <div key={index} className="relative flex flex-col items-center h-[150px] w-[150px] sm:h-[200px] sm:w-[200px] md:h-[250px] md:w-[250px] lg:h-[300px] lg:w-[300px]">
-                <Lottie 
-                  animationData={prize.animationData} 
-                  loop 
-                  className="h-full w-full"
-                  speed={0.01} 
-                />
-                <p className="absolute bottom-[-20px] text-xs sm:text-xs md:text-sm lg:text-lg font-exo text-white flex items-center justify-center">
-                  <span className="text-xl sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-montserrat font-medium">₹</span>
-                  <span className="ml-1 sm:ml-1 md:ml-2 lg:ml-2 xl:ml-3 text-xs sm:text-xs md:text-sm lg:text-lg xl:text-xl font-montserrat font-medium">5,000</span>
-                </p>
-              </div>
+              <PrizeCard
+                key={index}
+                animationData={prize.animationData}
+                amount={prize.amount}
+                color="#F5AF64"  // customOrange
+                gradientFrom="from-customBlue1"
+                gradientTo="to-customBlue1"
+                size={prize.size}  // Responsive container sizes
+                scale={0.7}  // Scale down the animation inside the container
+                moveUp={true}
+              />
             ))}
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+const PrizeCard = ({ animationData, amount, color, gradientFrom, gradientTo, size, scale = 1, moveUp = false }) => {
+  const offSetX = useMotionValue(-100);
+  const offSetY = useMotionValue(-100);
+  const maskImage = useMotionTemplate`radial-gradient(200px 200px at ${offSetX}px ${offSetY}px, black, transparent)`;
+  const borderTrack = useRef();
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    const updateMouseMove = (e) => {
+      const rect = borderTrack.current.getBoundingClientRect();
+      offSetX.set(e.clientX - rect.x);
+      offSetY.set(e.clientY - rect.y);
+    };
+
+    const cardElement = borderTrack.current;
+    cardElement.addEventListener('mousemove', updateMouseMove);
+
+    return () => {
+      cardElement.removeEventListener('mousemove', updateMouseMove);
+    };
+  }, [offSetX, offSetY]);
+
+  return (
+    <motion.div
+      className={`relative flex flex-col items-center overflow-hidden transition-transform transform border-[1px] border-white border-opacity-15 rounded-lg ${size}`}  // Responsive container sizes
+      onHoverStart={() => setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
+      ref={borderTrack}
+    >
+      <div className={`absolute inset-[-2px] bg-gradient-to-r ${gradientFrom} ${gradientTo} opacity-25 rounded-lg blur-3xl`} />
+      <div className="relative flex justify-center items-center w-full h-full">
+        <Lottie 
+          animationData={animationData} 
+          loop 
+          style={{ 
+            transform: `scale(${scale})`, 
+            marginTop: moveUp ? '-30px' : '0'  // Move the animation upward
+          }}  
+          speed={0.5}
+        />
+      </div>
+      <motion.div
+        className="absolute inset-0 border-[6px] rounded-lg"  // Keep the motion border size as is
+        style={{
+          maskImage,
+          WebkitMaskImage: maskImage,
+          opacity: isHovered ? 1 : 0,
+          borderColor: color,
+          transition: 'opacity 0.3s ease, box-shadow 0.3s ease'
+        }}
+      />
+      <div className="absolute bottom-4 text-center">
+        <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-montserrat font-semibold text-white"
+           style={{
+             textShadow: '0 0 5px rgba(255, 255, 255, 0.6), 0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.2)',
+             marginTop: '2rem',  // Increased margin to separate the amount from the trophy
+           }}
+        >
+          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-montserrat font-semibold">₹</span>
+          <span className="ml-2 md:ml-3 lg:ml-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-mono font-semibold">{amount}</span>
+        </p>
+      </div>
+    </motion.div>
+  );
+};
 
 export default Prize;
