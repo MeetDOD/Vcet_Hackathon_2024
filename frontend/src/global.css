@@ -1,0 +1,13 @@
+.gradient-01 {
+  position: absolute;
+  width: 100px;
+  height: 500px;
+  left: 10%;
+  top: 20%;
+  background: linear-gradient(45deg, #7034b5, #7a00ff);
+  filter: blur(200px);
+  transform: rotate(-45deg);
+  overflow: hidden;
+  opacity: 0.8;
+  z-index: 1;
+}

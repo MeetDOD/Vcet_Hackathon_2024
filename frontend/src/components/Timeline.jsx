@@ -4,6 +4,7 @@ import 'react-vertical-timeline-component/style.min.css';
 import { FaEarthAmericas } from "react-icons/fa6";
 import { GiJupiter, GiRingedPlanet } from "react-icons/gi";
 import { SiNeptune, SiPlanetscale } from "react-icons/si";
+import Heading from './Heading';
 
 const timelineData = [
     {
@@ -62,14 +63,12 @@ const Timeline = () => {
     return (
         <div>
             <div className='mt-20 text-white flex flex-col font-montserrat'>
-                <div className="container mb-5">
-                    <h2 className="text-5xl md:text-6xl font-medium text-center tracking-tighter">
-                        Timeline
-                    </h2>
-                    <p className="text-white/70 text-lg md:text-xl tracking-tight text-center my-5">
-                        Code the Cosmos, Code for Cosmos and Code by Cosmos
-                    </p>
-                </div>
+                <Heading
+                    title1="Our"
+                    title2="Timeline"
+                    subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
+                    sectionId="timeline"
+                />
                 <VerticalTimeline>
                     {timelineData.map((timeline, index) => (
                         <VerticalTimelineElement

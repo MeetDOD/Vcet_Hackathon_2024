@@ -11,6 +11,7 @@ import s5 from "../assets/sponsors/s5.png";
 import s6 from "../assets/sponsors/s6.png";
 import s7 from "../assets/sponsors/s7.png";
 import s8 from "../assets/sponsors/s8.png";
+import Heading from './Heading';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,13 +48,12 @@ const Sponsors = () => {
     return (
         <div className=" py-[72px]">
             <div className="container mx-auto text-white font-montserrat">
-                <h2 className="text-5xl md:text-6xl font-medium text-center tracking-tighter">
-                    Our Sponsors
-                </h2>
-                <p className="text-white/70 text-lg md:text-xl tracking-tight text-center my-5">
-                    Code the Cosmos, Code for Cosmos and Code by Cosmos
-                </p>
-
+                <Heading
+                    title1="Our"
+                    title2="Sponsors"
+                    subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
+                    sectionId="sponsors"
+                />
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-10 px-5">
                     {sponsors.map((sponsor, index) => (
                         <motion.div

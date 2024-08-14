@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Heading from './Heading';
 
 const FAQ = () => {
     const [activeIndexLeft, setActiveIndexLeft] = useState(null);
@@ -87,8 +88,13 @@ const FAQ = () => {
     ];
 
     return (
-        <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
-            <h1 className="text-4xl font-bold mb-8 text-center text-white">FAQs</h1>
+        <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12 font-montserrat text-white">
+            <Heading
+                title1="Our"
+                title2="FAQs"
+                subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
+                sectionId="faq"
+            />
             <div className="flex flex-col md:flex-row justify-between gap-y-8 md:gap-x-6">
                 <div className="w-full md:w-1/2 space-y-4">
                     {questionsLeft.map((item, index) => (

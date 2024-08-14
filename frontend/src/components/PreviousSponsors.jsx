@@ -11,6 +11,7 @@ import s5 from "../assets/sponsors/s5.png";
 import s6 from "../assets/sponsors/s6.png";
 import s7 from "../assets/sponsors/s7.png";
 import s8 from "../assets/sponsors/s8.png";
+import Heading from './Heading';
 
 const sponsors = [
     { src: s1, title: "Sponsor 1" },
@@ -58,14 +59,12 @@ const PreviousSponsors = () => {
     return (
         <div className="relative py-[72px]">
             <div className="flex flex-col justify-center items-center text-white font-montserrat">
-                <div className="container">
-                    <h2 className="text-5xl md:text-6xl font-medium text-center tracking-tighter">
-                        Previous Sponsors
-                    </h2>
-                    <p className="text-white/70 text-lg md:text-xl tracking-tight text-center my-5">
-                        Code the Cosmos, Code for Cosmos and Code by Cosmos
-                    </p>
-                </div>
+                <Heading
+                    title1="Previous"
+                    title2="Sponsors"
+                    subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
+                    sectionId="previoussponsors"
+                />
 
                 <div className="relative w-full mt-10 px-10">
                     <Slider {...settings} className="relative">

@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from 'react';
+import Heading from './Heading';
 
 const Guidelines = () => {
   // State to manage modal visibility
@@ -9,12 +10,13 @@ const Guidelines = () => {
 
   return (
     <div className="relative w-full h-full custom-bg-small">
-      <div className="min-h-screen text-white py-10 px-4 md:px-8 lg:px-16">
-        <div className="flex justify-center items-center text-center">
-          <p className="text-[28px] sm:text-[32px] md:text-[40px] lg:text-[50px] font-montserrat font-medium text-White">
-            Event Guidelines
-          </p>
-        </div>
+      <div className="min-h-screen text-white py-10 px-4 md:px-8 lg:px-16 font-montserrat">
+        <Heading
+          title1="Event"
+          title2="Guidelines"
+          subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
+          sectionId="guidelines"
+        />
 
         <div className="flex justify-center mt-8">
           <div className="bg-[#212529] w-full max-w-7xl rounded-[25px] p-6">
@@ -126,7 +128,7 @@ const Guidelines = () => {
                   </svg>
                 </button>
               </div>
-             
+
             </div>
           </div>
         )}
