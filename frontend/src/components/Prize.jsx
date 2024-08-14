@@ -26,7 +26,7 @@ const Prize = () => {
             <PrizeCard
               animationData={goldenAnimation}
               amount="50,000"
-              color="customPurple"  
+              color="#F5AF64"  
               gradientFrom="from-customBlue1"
               gradientTo="to-customBlue1"
               size="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-[450px] lg:h-[450px]"  // Responsive sizes
