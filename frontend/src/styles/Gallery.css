@@ -21,7 +21,7 @@
   
   .gallery_1 .responsive-container-block {
     min-height: 75px;
-    height: 80%;
+    max-height: 50%;
     width: 90%;
     padding-top: 10px;
     padding-right: 10px;
