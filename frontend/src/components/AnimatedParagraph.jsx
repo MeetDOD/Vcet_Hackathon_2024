@@ -21,9 +21,9 @@ const AnimatedParagraph = ({ text }) => {
             scrollTrigger: {
                 trigger: paragraph,
                 start: "top 95%",
-                end: "bottom 55%",
+                end: "bottom 60%",
                 scrub: 0.5,
-                markers: true,
+                // markers: true,
             },
             stagger: 0.02,
             color: "#fff",
