@@ -38,8 +38,11 @@ const Sponsors = () => {
                 ease: "power4.out",
                 scrollTrigger: {
                     trigger: ".sponsor-item",
-                    start: "top 80%",
-                    toggleActions: "play none none none"
+                    start: "top 90%",
+                    end: "buttom 45%",
+                    toggleActions: "play none none none",
+                    scrub: 1,
+                    markers: true
                 }
             }
         );
