@@ -1,22 +1,16 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
-import { useState, useEffect, useRef } from "react";
-import preloader from "./assets/preloader.mp4";
+import { useState, useEffect } from "react";
+import preloader from "./assets/preloader2.mp4";
 
 function App() {
   const [loading, setLoading] = useState(true);
-  const videoRef = useRef(null);
 
   useEffect(() => {
     setLoading(true);
-
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 2.5;
-    }
-
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 5200);
+    }, 7500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -24,15 +18,17 @@ function App() {
   return (
     <Router>
       {loading ? (
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+        <div className="flex justify-center items-center h-screen">
           <video
-            ref={videoRef}
             src={preloader}
             autoPlay
             loop
             muted
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            className="hidden lg:block w-full h-full object-cover"
           />
+          <div className="lg:hidden flex justify-center items-center">
+            <p className="text-xl">Loading...</p>
+          </div>
         </div>
       ) : (
         <Routes>
