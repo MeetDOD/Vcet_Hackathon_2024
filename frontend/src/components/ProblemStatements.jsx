@@ -65,7 +65,7 @@ const ClipPath = () => {
 
 const ProblemStatements = () => {
     return (
-        <div className='overflow-hidden text-white font-montserrat'>
+        <div className='overflow-hidden mt-0 text-white font-montserrat'>
             <Heading
                 title1="Problem"
                 title2="Statements"

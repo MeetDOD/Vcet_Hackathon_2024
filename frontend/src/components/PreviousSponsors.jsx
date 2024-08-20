@@ -57,7 +57,7 @@ const PreviousSponsors = () => {
     };
 
     return (
-        <div className="relative py-[72px]">
+        <div className="relative py-[60px] mt-0">
             <div className="flex flex-col justify-center items-center text-white font-montserrat">
                 <Heading
                     title1="Previous"
@@ -66,7 +66,7 @@ const PreviousSponsors = () => {
                     sectionId="previoussponsors"
                 />
 
-                <div className="relative w-full mt-10 px-10">
+                <div className="relative w-full mt-5 px-10">
                     <Slider {...settings} className="relative">
                         {sponsors.map((sponsor, index) => (
                             <div key={index} className="px-3">

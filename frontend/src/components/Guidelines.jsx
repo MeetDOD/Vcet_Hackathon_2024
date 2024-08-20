@@ -10,7 +10,7 @@ const Guidelines = () => {
 
   return (
     <div className="relative w-full h-full custom-bg-small">
-      <div className="min-h-screen text-white py-10 px-4 md:px-8 lg:px-16 font-montserrat">
+      <div className="min-h-screen text-white mt-4 py-10 px-4 md:px-8 lg:px-16 font-montserrat">
         <Heading
           title1="Event"
           title2="Guidelines"
@@ -18,7 +18,7 @@ const Guidelines = () => {
           sectionId="guidelines"
         />
 
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center">
           <div className="bg-[#212529] w-full max-w-7xl rounded-[25px] p-6">
             <h3 className="my-3 text-customOrange text-lg sm:text-xl md:text-2xl font-bold">Rules</h3>
             <ul className="list-disc pl-5 space-y-2 text-sm sm:text-base md:text-lg">

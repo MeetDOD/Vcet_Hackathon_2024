@@ -27,29 +27,26 @@ const sponsors = [
 ];
 
 const Sponsors = () => {
-    React.useEffect(() => {
-        gsap.fromTo(".sponsor-item",
-            { opacity: 0, y: 50 },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 1,
-                stagger: 0.2,
-                ease: "power4.out",
-                scrollTrigger: {
-                    trigger: ".sponsor-item",
-                    start: "top 90%",
-                    end: "buttom 45%",
-                    toggleActions: "play none none none",
-                    scrub: 1,
-                    markers: true
-                }
-            }
-        );
-    }, []);
+    // React.useEffect(() => {
+    //     gsap.fromTo(".sponsor-item",
+    //         { opacity: 0, y: 50 },
+    //         {
+    //             opacity: 1,
+    //             y: 0,
+    //             duration: 1,
+    //             stagger: 0.2,
+    //             ease: "power4.out",
+    //             scrollTrigger: {
+    //                 trigger: ".sponsor-item",
+    //                 start: "top 80%",
+    //                 toggleActions: "play none none none"
+    //             }
+    //         }
+    //     );
+    // }, []);
 
     return (
-        <div className=" py-[72px]">
+        <div className=" py-[px]">
             <div className="container mx-auto text-white font-montserrat">
                 <Heading
                     title1="Our"
@@ -57,7 +54,7 @@ const Sponsors = () => {
                     subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
                     sectionId="sponsors"
                 />
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-10 px-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-5 px-5">
                     {sponsors.map((sponsor, index) => (
                         <motion.div
                             key={index}

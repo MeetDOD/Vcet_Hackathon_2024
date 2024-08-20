@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger as GSAPScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(GSAPScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 const AnimatedParagraph = ({ text }) => {
     const paragraphRef = useRef(null);
@@ -13,20 +13,21 @@ const AnimatedParagraph = ({ text }) => {
 
         let clutter = "";
         paragraph.textContent.split("").forEach((char) => {
-            clutter += `<span>${char}</span>`;
+            clutter += `<span style="opacity: 0;">${char}</span>`;
         });
         paragraph.innerHTML = clutter;
 
         gsap.to(paragraph.querySelectorAll("span"), {
             scrollTrigger: {
                 trigger: paragraph,
-                start: "top 95%",
-                end: "bottom 60%",
-                scrub: 0.5,
-                // markers: true,
+                start: "top 80%", 
+                scrub: false,
             },
-            stagger: 0.02,
+            opacity: 1,
+            stagger: 0.014,
+            duration: 1,
             color: "#fff",
+            ease: "power1.inOut",
         });
     }, [text]);
 

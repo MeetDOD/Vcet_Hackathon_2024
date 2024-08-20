@@ -16,6 +16,7 @@ export default {
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
+        ethnocentric: ['EthnocentricRG', 'sans-serif'],
       },
     },
   },
