@@ -27,23 +27,23 @@ const sponsors = [
 ];
 
 const Sponsors = () => {
-    // React.useEffect(() => {
-    //     gsap.fromTo(".sponsor-item",
-    //         { opacity: 0, y: 50 },
-    //         {
-    //             opacity: 1,
-    //             y: 0,
-    //             duration: 1,
-    //             stagger: 0.2,
-    //             ease: "power4.out",
-    //             scrollTrigger: {
-    //                 trigger: ".sponsor-item",
-    //                 start: "top 80%",
-    //                 toggleActions: "play none none none"
-    //             }
-    //         }
-    //     );
-    // }, []);
+    React.useEffect(() => {
+        gsap.fromTo(".sponsor-item",
+            { opacity: 0, y: 50 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                stagger: 0.2,
+                ease: "power4.out",
+                scrollTrigger: {
+                    trigger: ".sponsor-item",
+                    start: "top 80%",
+                    toggleActions: "play none none none"
+                }
+            }
+        );
+    }, []);
 
     return (
         <div className=" py-[px]">
