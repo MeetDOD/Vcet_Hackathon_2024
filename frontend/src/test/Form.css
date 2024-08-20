@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Mea+Culpa&family=Poppins:wght@100&family=Tektur&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=Mea+Culpa&family=Poppins:wght@100&family=Tektur&display=swap");
+
+:root {
+  --c1: #114a49;
+  --c2: #08b2aa;
+  --c3: #180828;
+  --c4: #9cf5fd;
+  --c5: #08b2aa;
+  --font_paragraph: "Inter", sans-serif;
+  --font_heading: "Tektur", cursive;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 1.5vmin;
+}
+
+.form-h3 {
+  text-align: center;
+  color: #08b2aa;
+  font-size: 36px;
+  font-weight: 400;
+  text-shadow: 0 0 3px black;
+  font-family: var(--font_heading);
+}
+
+.problem-statement-container {
+  width: 100vw;
+}
+
+.problem-statement-container textarea {
+  max-height: none;
+  height: 150px;
+  resize: none;
+  font-family: var(--font_paragraph);
+}
+
+.team-container {
+  width: 100%;
+}
+
+.problem-statement-container {
+  width: 100%;
+}
+
+.problem-statement-container textarea {
+  max-height: none;
+  height: 150px;
+  resize: none;
+  font-family: var(--font_paragraph);
+}
+
+.team-container {
+  width: 100vw;
+}
+
+.details-container {
+  width: 100%;
+  height: 100%;
+}
+
+.form-heading {
+  margin: 1vmin 0 0 0;
+  grid-column: 1/13;
+  grid-row: span 1;
+  padding: 0 0 0 10px;
+  font-size: 2.4vmin;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: var(--c5);
+  font-family: var(--font_heading);
+}
+
+.form-heading:nth-child(1) {
+  margin: 0;
+}
+
+.form-control {
+  grid-column: 1/13;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 5px 0 5px 10px;
+  letter-spacing: 1.1px;
+  border: 3px solid #00000000;
+  color: 9cf5fd;
+  background: var(--c2);
+  font-weight: 500;
+}
+
+.form-control::placeholder {
+  color: #1f1f1f;
+  font-weight: 400;
+  font-size: 15px;
+  /* font-family: var(--font_paragraph); */
+}
+
+.form-control:focus {
+  border: 2px solid var(--c5);
+  font-weight: 500;
+  font-family: var(--font_paragraph);
+}
+
+.half-form {
+  grid-column: span 6 !important;
+}
+.team-leader-container,
+.team-member1-container,
+.team-member2-container,
+.team-member3-container,
+.blur-container {
+  z-index: 99;
+  padding: 2vmin;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.362);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 0.5vmin 0vh;
+}
+
+@media only screen and (max-width: 600px) {
+  .problem-statement-container,
+  .team-container {
+    padding: 0 2.5vw;
+  }
+  .form-heading {
+    font-size: 18px;
+  }
+
+  .form-control {
+    height: auto;
+    font-size: 13px;
+  }
+  .form-h1 {
+    font-size: 35px;
+  }
+  .form-h3 {
+    font-size: 25px;
+  }
+  .team-container {
+    padding: 4vh 2vw;
+  }
+
+  .team-leader-container {
+    grid-column: 1/13;
+  }
+
+  .team-member1-container {
+    grid-column: 1/13;
+  }
+
+  .team-member2-container {
+    grid-column: 1/13;
+  }
+
+  .team-member3-container {
+    grid-column: 1/13;
+  }
+
+  .form-heading {
+    grid-column: 1/13;
+    font-size: 18px;
+  }
+
+  .form-control {
+    grid-column: 1/13;
+  }
+  .problem1-container,
+  .problem2-container,
+  .problem3-container,
+  .problem4-container,
+  .problem5-container {
+    grid-column: span 12;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .team-container,
+  .problem-statement-container {
+    padding: 4vh 5vw;
+  }
+
+  .team-leader-container {
+    grid-column: 5/9;
+    grid-row: 1/2;
+  }
+
+  .team-member1-container {
+    grid-column: 1/5;
+    grid-row: 2/3;
+  }
+
+  .team-member2-container {
+    grid-column: 5/9;
+    grid-row: 2/3;
+  }
+
+  .team-member3-container {
+    grid-column: 9/13;
+    grid-row: 2/3;
+  }
+
+  .form-heading {
+    grid-column: 1/13;
+    font-size: 22px;
+  }
+
+  .form-control {
+    grid-column: 1/13;
+  }
+
+  .problem1-container,
+  .problem2-container,
+  .problem3-container,
+  .problem4-container,
+  .problem5-container {
+    grid-column: span 4;
+  }
+}
+
+/* ==================== Loader ==================== */
+.loader {
+  /* width: 60px; */
+}
+
+.loader-wheel {
+  animation: spin 1s infinite linear;
+  border: 2px solid rgba(30, 30, 30, 0.5);
+  border-left: 4px solid #fff;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: flex;
+}
+
+.loader-text {
+  color: #fff;
+  font-family: arial, sans-serif;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==================== Loader end ==================== */
+
+.form-grid-note {
+  display: grid;
+  grid-gap: 4.5vmin;
+}
+
+@media (max-width: 1270px) {
+  .form-grid-note {
+    grid-gap: 3.5vmin;
+  }
+}
+
+@media (max-width: 1104px) {
+  .form-grid-note {
+    grid-gap: 3vmin;
+  }
+}
+
+@media (max-width: 992px) {
+  .form-grid-note {
+    grid-gap: 2.5vmin;
+  }
+}
+
+@media (max-width: 894px) {
+  .form-grid-note {
+    grid-gap: 2vmin;
+  }
+}
+
+@media (max-width: 750px) {
+  .form-grid-note {
+    grid-gap: 1.5vmin;
+  }
+}
+
+@media (max-width: 595px) {
+  .form-grid-note {
+    display: grid;
+    grid-gap: 5.5vmin;
+    margin-left: 45px;
+    margin-bottom: 10px;
+  }
+}
