@@ -32,15 +32,15 @@ function Gallery() {
     return (
         <>
             <div className="gallery_1" unique-script-id="w-w-dm-id">
-                <div className="responsive-container-block bigContainer">
-                    <div className="responsive-container-block Container text-white font-montserrat">
+                <div className="responsive-container-block bigContainer ">
+                    <div className="responsive-container-block Container text-white font-montserrat ">
                         <Heading
                             title1="Our"
                             title2="Gallery"
                             subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
                             sectionId="gallery"
                         />
-                        <div className="responsive-container-block imgContainer">
+                        <div className="responsive-container-block imgContainer border border-red-500">
                             <div className="project project1">
                                 <img className="smallImage" src={img1} alt="Project 1" />
                                 <div className="overlay">
@@ -77,7 +77,7 @@ function Gallery() {
                             {/* Repeat the similar structure for other projects */}
                             {projects.map(project => (
                                 <div className={`project ${project.id}`} key={project.id}>
-                                    <img className="smallImage" src={project.imgSrc} alt={project.alt} />
+                                    <img className="smallImage " src={project.imgSrc} alt={project.alt} />
                                     <div className="overlay">
                                         <div className="overlay-inner">
                                             <button className="close">

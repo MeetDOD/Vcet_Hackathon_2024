@@ -447,3 +447,14 @@
       top: 680px;
     }
   }
+  .imgContainer {
+    margin: 8px; /* Adjust this value as needed */
+    padding: 8px; /* Adjust padding if needed */
+}
+
+@media (max-width: 640px) {
+  /* Reduce margin on small screens */
+  .imgContainer {
+      margin: 2px; /* Smaller margin for mobile devices */
+  }
+}
