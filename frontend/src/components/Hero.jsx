@@ -2,10 +2,22 @@ import React from 'react';
 import vcet from "../assets/vcetLogo.png";
 import { Button } from "./Button";
 import { motion } from "framer-motion";
+import saturn from "../assets/lottie/saturn.json"
+import Lottie from 'react-lottie';
 
 const Hero = () => {
+
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: saturn,
+        rendererSettings: {
+            preserveAspectRatio: "xMidYMid slice"
+        }
+    };
+
     return (
-        <div className=' overflow-hidden relative flex flex-col justify-center text-center min-h-screen
+        <div id='#home' className='mb-20 overflow-hidden relative flex flex-col justify-center text-center min-h-screen
         [mask-image:linear-gradient(to_top,transparent,black_15%,black_100%,transparent)]'
         >
             <div className='absolute inset-0 
@@ -93,19 +105,23 @@ const Hero = () => {
                 className='absolute h-[644px] w-[644px] md:h-[1180px] md:w-[1180px] rounded-full border border-white/20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border-dashed'>
             </motion.div>
 
-            <div className='relative mt-12 flex flex-col items-center'>
+            <div className='relative mt-12 flex flex-col items-center font-montserrat'>
                 <img src={vcet} alt='vcet' className='py-2 w-24 md:w-28 lg:w-32' />
-                <p className='font-semibold text-white text-xl md:text-2xl lg:text-3xl py-2 font-montserrat'>
+                <p className='font-semibold text-white text-xl md:text-2xl lg:text-3xl py-2 tracking-tighter'>
                     Vidyavardhini's College of Engineering and Technology
                 </p>
-                <p className='py-2 text-white text-xl lg:text-2xl font-sans'>
+                <p className='py-2 text-white text-xl lg:text-2xl font-semibold tracking-tighter'>
                     presents
                 </p>
-                <p className='text-white py-2 text-3xl md:text-4xl lg:text-5xl font-semibold font-montserrat'>
+                <p className='text-white py-2 text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight'>
                     VCET HACKATHON
                 </p>
-                <div className='text-white text-2xl md:text-3xl lg:text-4xl font-bold py-3 font-montserrat'>
-                    Code The Cosmos
+                <div className='tracking-wide text-transparent text-3xl md:text-5xl lg:text-6xl font-bold py-3 bg-clip-text bg-gradient-to-r from-gray-100 via-violet-500 to-customOrange animate-gradient-x'>
+                    Code The Cosm
+                    <div className='-mr-2 -ml-2 inline-block w-14 md:w-20 lg:w-24 h-auto align-middle'>
+                        <Lottie options={defaultOptions} />
+                    </div>
+                    s
                 </div>
                 <Button />
             </div>
