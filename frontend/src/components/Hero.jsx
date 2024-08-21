@@ -13,8 +13,7 @@ const Hero = () => {
             </div>
 
             <div className='absolute h-64 w-64 md:h-96 md:w-96 bg-customPurpleDark rounded-full border border-white/20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-                bg-[radial-gradient(50%_50%_at_16.8%_10%,white,rgb(184,148,255)_15%,rgb(24,0,66))] 
-                shadow-[-20px_-20px_50px_rgb(255,255,255,.5),-20px_-20px_80px_rgb(255,255,255,.7),0_0_50px_rgb(140,69,255)]'>
+                bg-[radial-gradient(50%_50%_at_1%_5%,white,rgb(184,148,255)_10%,rgb(24,0,66))]'>
             </div>
 
             <motion.div

@@ -22,8 +22,8 @@ const Home = () => {
                 <Hero />
                 <AboutUs />
                 <ProblemStatements />
-                <Prize />
-                <Sponsors />
+                {/* <Prize /> */}
+                {/* <Sponsors /> */}
                 <PreviousSponsors />
                 <Timeline />
                 <Guidelines />

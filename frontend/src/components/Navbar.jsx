@@ -64,7 +64,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <nav className={`fixed w-full z-50 py-1 text-white font-montserrat transition-colors duration-300 ${isScrolled ? "bg-gray-800 shadow-lg" : ""}`}>
+            <nav className={`fixed w-full z-50 py-1 text-white font-montserrat transition-colors duration-300 ${isScrolled ? "bg-gray-900 shadow-lg" : ""}`}>
                 <div className="mx-auto max-w-7xl px-2 md:px-6 lg:px-8">
                     <div className="relative flex h-16 items-center justify-between">
                         <Link to="/app" className="flex items-center duration-300" animate="true">
@@ -144,7 +144,7 @@ const Navbar = () => {
                                 </svg>
                             </button>
                             {isProfileDropdownOpen && (
-                                <div className="absolute right-0 mt-72 w-48 bg-gray-800 border-2 border-gray-900 text-white rounded-md shadow-lg z-10">
+                                <div className="absolute right-0 mt-72 w-48 bg-gray-900 border-2 border-gray-900 text-white rounded-md shadow-lg z-10">
                                     <Link
                                         to="/app/guidelines"
                                         className="block px-4 py-2 rounded-md m-2 hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition-colors duration-300"
@@ -208,7 +208,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 {isMenuOpen && (
-                    <div className="lg:hidden mx-5 rounded-lg text-gray-100 text-center bg-gray-800">
+                    <div className="lg:hidden mx-5 rounded-lg text-gray-100 text-center bg-gray-900">
                         <div className="space-y-1 px-2 pt-2 pb-3">
                             <Link
                                 to="/app/home"
