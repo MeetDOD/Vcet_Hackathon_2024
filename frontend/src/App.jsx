@@ -5,6 +5,8 @@ import preloader from "./assets/MainComp.mp4";
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const isDevMode = import.meta.env.VITE_DEV_MODE == "true";
+
 
   useEffect(() => {
     setLoading(true);
@@ -14,6 +16,8 @@ function App() {
 
     return () => clearTimeout(timer);
   }, []);
+
+
 
   return (
     <Router>
