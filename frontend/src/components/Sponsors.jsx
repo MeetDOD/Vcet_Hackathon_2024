@@ -9,7 +9,7 @@ import s3 from "../assets/sponsors/s3.png";
 import s4 from "../assets/sponsors/s4.png";
 import s5 from "../assets/sponsors/s5.png";
 import s6 from "../assets/sponsors/s6.png";
-import s7 from "../assets/sponsors/s7.png";
+import s7 from "../assets/sponsors/s7.jpg";
 import s8 from "../assets/sponsors/s8.png";
 import Heading from './Heading';
 

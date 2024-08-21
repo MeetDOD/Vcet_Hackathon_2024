@@ -62,19 +62,19 @@ const timelineData = [
 const Timeline = () => {
     return (
         <div>
-            <div className='mt-20 text-white flex flex-col font-montserrat'>
+            <div className='text-white flex flex-col font-montserrat'>
                 <Heading
                     title1="Our"
                     title2="Timeline"
                     subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
                     sectionId="timeline"
                 />
-                <VerticalTimeline>
+                <VerticalTimeline className='sectionMargin'>
                     {timelineData.map((timeline, index) => (
                         <VerticalTimelineElement
                             key={`timeline-element-${index}`}
                             contentStyle={{
-                                background: "#422C7A"
+                                background: "#1f2937"
                             }}
                             iconStyle={{
                                 background: timeline.iconBg,

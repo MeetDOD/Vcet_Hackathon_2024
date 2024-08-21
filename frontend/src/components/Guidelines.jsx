@@ -1,9 +1,7 @@
-/* eslint-disable react/no-unescaped-entities */
 import { useState } from 'react';
 import Heading from './Heading';
 
 const Guidelines = () => {
-  // State to manage modal visibility
   const [isNeftModalOpen, setNeftModalOpen] = useState(false);
   const [isUpiModalOpen, setUpiModalOpen] = useState(false);
   const [isRegister, setRegistration] = useState(false);
@@ -18,7 +16,7 @@ const Guidelines = () => {
           sectionId="guidelines"
         />
 
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center tracking-tight sectionMargin">
           <div className="bg-[#212529] w-full max-w-7xl rounded-[25px] p-6">
             <h3 className="my-3 text-customOrange text-lg sm:text-xl md:text-2xl font-bold">Rules</h3>
             <ul className="list-disc pl-5 space-y-2 text-sm sm:text-base md:text-lg">

@@ -9,7 +9,7 @@ import s3 from "../assets/sponsors/s3.png";
 import s4 from "../assets/sponsors/s4.png";
 import s5 from "../assets/sponsors/s5.png";
 import s6 from "../assets/sponsors/s6.png";
-import s7 from "../assets/sponsors/s7.png";
+import s7 from "../assets/sponsors/s7.jpg";
 import s8 from "../assets/sponsors/s8.png";
 import Heading from './Heading';
 
@@ -28,7 +28,7 @@ const PreviousSponsors = () => {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 2000,
+        speed: 500,
         slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
@@ -57,7 +57,7 @@ const PreviousSponsors = () => {
     };
 
     return (
-        <div className="relative py-[72px]">
+        <div className="relative">
             <div className="flex flex-col justify-center items-center text-white font-montserrat">
                 <Heading
                     title1="Previous"
@@ -66,7 +66,7 @@ const PreviousSponsors = () => {
                     sectionId="previoussponsors"
                 />
 
-                <div className="relative w-full mt-10 px-10">
+                <div className="relative w-full sectionMargin">
                     <Slider {...settings} className="relative">
                         {sponsors.map((sponsor, index) => (
                             <div key={index} className="px-3">

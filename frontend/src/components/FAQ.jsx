@@ -95,7 +95,7 @@ const FAQ = () => {
                 subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
                 sectionId="faq"
             />
-            <div className="flex flex-col md:flex-row justify-between gap-y-8 md:gap-x-6">
+            <div className="flex flex-col md:flex-row justify-between gap-y-8 md:gap-x-6 sectionMargin">
                 <div className="w-full md:w-1/2 space-y-4">
                     {questionsLeft.map((item, index) => (
                         <div

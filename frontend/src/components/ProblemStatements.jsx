@@ -7,7 +7,6 @@ import card5 from "../assets/problemStatements/card-5.png"
 import { SiNeptune, SiPlanetscale } from "react-icons/si";
 import { FaEarthAmericas } from "react-icons/fa6";
 import { GiJupiter, GiRingedPlanet } from "react-icons/gi";
-import "../global.css"
 import Heading from './Heading'
 
 const problemData = [
@@ -72,8 +71,8 @@ const ProblemStatements = () => {
                 subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
                 sectionId="problmes"
             />
-            <div className='px-10 sm:px-32 relative'>
-                <div className='flex flex-wrap gap-10 mb-10 justify-center items-center'>
+            <div className='px-10 sm:px-32 relative sectionMargin'>
+                <div className='flex flex-wrap gap-10 justify-center items-center'>
                     {problemData.map((item) => (
                         <div key={item.id}
                             className='block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]'

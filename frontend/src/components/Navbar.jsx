@@ -73,7 +73,7 @@ const Navbar = () => {
                         <div className="hidden lg:flex items-center space-x-4">
                             <Link
                                 to="/app/home"
-                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition-colors duration-300"
+                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -81,7 +81,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/about"
-                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition-colors duration-300"
+                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -89,7 +89,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/problems"
-                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition-colors duration-300"
+                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -97,7 +97,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/prizes"
-                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition-colors duration-300"
+                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -105,13 +105,13 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/sponsors"
-                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition-colors duration-300"
+                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
                                 Sponsors
                             </Link>
-                            <button animate="true" className='my-3 relative py-3 px-4 md:px-8 lg:px-6 rounded-lg font-medium text-sm md:text-lg lg:text-sm bg-gradient-to-b from-customOrange to-customPurpleDark text-white shadow-[0px_0px_12px_#8c45ff]'>
+                            <button animate="true" className='my-3 relative py-3 px-4 md:px-8 lg:px-6 rounded-lg font-medium text-sm md:text-lg lg:text-sm bg-gradient-to-b from-customOrange to-customPurpleDark text-white shadow-[0px_0px_12px_#8c45ff] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>
                                 <div className='absolute inset-0'>
                                     <div className='rounded-lg border border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]'></div>
                                     <div className='rounded-lg border absolute inset-0 border-white/40 [mask-image:linear-gradient(to_top,black,transparent)]'></div>
@@ -123,7 +123,7 @@ const Navbar = () => {
                         <div className="relative flex items-center" ref={dropdownRef}>
                             <button
                                 type="button"
-                                className="hidden lg:inline-flex items-center px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition-colors duration-300"
+                                className="hidden lg:inline-flex items-center px-3 py-2 rounded-md text-base font-medium hover"
                                 onClick={toggleProfileDropdown}
                                 animate="true"
                             >
@@ -147,35 +147,35 @@ const Navbar = () => {
                                 <div className="absolute right-0 mt-72 w-48 bg-gray-900 border-2 border-gray-900 text-white rounded-md shadow-lg z-10">
                                     <Link
                                         to="/app/guidelines"
-                                        className="block px-4 py-2 rounded-md m-2 hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition-colors duration-300"
+                                        className="block px-4 py-2 rounded-md m-2 hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                         onClick={closeMenu}
                                     >
                                         Timeline
                                     </Link>
                                     <Link
                                         to="/app/guidelines"
-                                        className="block px-4 py-2 rounded-md m-2 hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition-colors duration-300"
+                                        className="block px-4 py-2 rounded-md m-2 hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                         onClick={closeMenu}
                                     >
                                         Guidelines
                                     </Link>
                                     <Link
                                         to="/app/gallery"
-                                        className="block px-4 py-2 rounded-md m-2 hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition-colors duration-300"
+                                        className="block px-4 py-2 rounded-md m-2 hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                         onClick={closeMenu}
                                     >
                                         Gallery
                                     </Link>
                                     <Link
                                         to="/app/faq"
-                                        className="block px-4 py-2 rounded-md m-2 hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition-colors duration-300"
+                                        className="block px-4 py-2 rounded-md m-2 hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                         onClick={closeMenu}
                                     >
                                         FAQ
                                     </Link>
                                     <Link
                                         to="/app/contact"
-                                        className="block px-4 py-2 rounded-md m-2 hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition-colors duration-300"
+                                        className="block px-4 py-2 rounded-md m-2 hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                         onClick={closeMenu}
                                     >
                                         Contact
@@ -212,7 +212,7 @@ const Navbar = () => {
                         <div className="space-y-1 px-2 pt-2 pb-3">
                             <Link
                                 to="/app/home"
-                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition-colors duration-300"
+                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -220,7 +220,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/about"
-                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition-colors duration-300"
+                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -228,7 +228,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/problems"
-                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition-colors duration-300"
+                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -236,7 +236,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/prizes"
-                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition-colors duration-300"
+                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -244,7 +244,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/sponsors"
-                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition-colors duration-300"
+                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -252,7 +252,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/timeline"
-                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition-colors duration-300"
+                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -260,7 +260,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/guidelines"
-                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition-colors duration-300"
+                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -268,7 +268,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/gallery"
-                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition-colors duration-300"
+                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -276,7 +276,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/faq"
-                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition-colors duration-300"
+                                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
@@ -284,13 +284,13 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/app/contact"
-                                className="block px-3 py-2 mb-5 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition-colors duration-300"
+                                className="block px-3 py-2 mb-5 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
                                 Contact
                             </Link>
-                            <button className='w-full relative py-3 px-4 md:px-8 lg:px-6 rounded-lg font-medium text-base bg-gradient-to-b from-customOrange to-customPurpleDark text-white shadow-[0px_0px_12px_#8c45ff]'>
+                            <button className='w-full relative py-3 px-4 md:px-8 lg:px-6 rounded-lg font-medium text-base bg-gradient-to-b from-customOrange to-customPurpleDark text-white shadow-[0px_0px_12px_#8c45ff] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>
                                 <div className='absolute inset-0'>
                                     <div className='rounded-lg border border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]'></div>
                                     <div className='rounded-lg border absolute inset-0 border-white/40 [mask-image:linear-gradient(to_top,black,transparent)]'></div>
