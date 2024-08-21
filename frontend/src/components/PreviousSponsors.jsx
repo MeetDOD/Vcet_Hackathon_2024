@@ -9,8 +9,9 @@ import s3 from "../assets/sponsors/s3.png";
 import s4 from "../assets/sponsors/s4.png";
 import s5 from "../assets/sponsors/s5.png";
 import s6 from "../assets/sponsors/s6.png";
-import s7 from "../assets/sponsors/s7.jpg";
+import s7 from "../assets/sponsors/s7.png";
 import s8 from "../assets/sponsors/s8.png";
+import s9 from "../assets/sponsors/s9.png";
 import Heading from './Heading';
 
 const sponsors = [
@@ -22,6 +23,7 @@ const sponsors = [
     { src: s6, title: "Sponsor 6" },
     { src: s7, title: "Sponsor 7" },
     { src: s8, title: "Sponsor 8" },
+    { src: s9, title: "Sponsor 9" },
 ];
 
 const PreviousSponsors = () => {
