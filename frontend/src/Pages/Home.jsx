@@ -3,7 +3,7 @@ import StarsCanvas from '../components/StarBackground';
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import AboutUs from '../components/AboutUs';
-import Gallery from '../components/Gallery';
+import OurGallery from '../components/OurGallery';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
 import Sponsors from '../components/Sponsors';
@@ -27,7 +27,7 @@ const Home = () => {
                 <PreviousSponsors />
                 <Timeline />
                 <Guidelines />
-                <Gallery />
+                <OurGallery />
                 <FAQ />
                 <Footer />
             </div>
