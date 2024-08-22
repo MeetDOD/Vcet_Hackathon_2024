@@ -41,6 +41,9 @@ const validateUsers = (users) => {
       if (users[i].email === users[j].email) {
         return "Duplicate emails are not allowed";
       }
+      if (users[i].gitHubUrl === users[j].gitHubUrl) {
+        return "Duplicate gitHubUrls are not allowed";
+      }
     }
   }
   return null;
@@ -49,6 +52,7 @@ const validateUsers = (users) => {
 // Function to check if users or team already exist
 const checkExistingUsersAndTeam = async (usersToAdd, teamName) => {
   for (const user of usersToAdd) {
+    
     const userExists = await User.findOne({ email: user.email });
     if (userExists) {
       return `${user.email} - Email already exists`;
@@ -57,7 +61,17 @@ const checkExistingUsersAndTeam = async (usersToAdd, teamName) => {
     if (phoneExists) {
       return `${user.phoneNo} - Phone number already exists`;
     }
-  }
+
+
+    const existingGithubUrl = await User.findOne({ gitHubUrl: user.gitHubUrl });
+        if (existingGithubUrl) {
+            return "Github url already exists";
+        }
+
+return null;
+
+}
+  
 
   const existingTeamName = await Team.findOne({ name: teamName });
   if (existingTeamName) {
