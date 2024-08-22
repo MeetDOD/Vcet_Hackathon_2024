@@ -2,6 +2,10 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import { useState, useEffect } from "react";
 import preloader from "./assets/MainComp.mp4";
+import Registration from "./test/Registration";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -38,6 +42,7 @@ function App() {
       )} */}
       <Routes>
         <Route path="/" Component={Home} />
+        <Route path="/register" Component={Registration} />
       </Routes>
     </Router>
   );
