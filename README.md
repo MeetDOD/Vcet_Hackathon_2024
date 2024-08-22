@@ -21,4 +21,4 @@ Make sure you have the following installed:
 
 ### Screenshot:
 
-![image](https://github.com/user-attachments/assets/08417713-60e8-4a99-830f-24586dfa2a0d)
+![image](https://github.com/user-attachments/assets/94673bce-19c8-4880-bf46-6cec8e16a4d3)
