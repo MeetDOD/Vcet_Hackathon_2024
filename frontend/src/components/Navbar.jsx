@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import SplitType from "split-type";
 import logo from "../assets/logo.png";
-import { HashLink } from 'react-router-hash-link'; 
+import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -68,7 +68,7 @@ const Navbar = () => {
             <nav className={`fixed w-full z-50 py-1 text-white font-montserrat transition-colors duration-300 ${isScrolled ? "bg-gray-900 shadow-lg" : ""}`}>
                 <div className="mx-auto max-w-7xl px-2 md:px-6 lg:px-8">
                     <div className="relative flex h-16 items-center justify-between">
-                        <Link to="/app" className="flex items-center duration-300" animate="true">
+                        <Link to="/" className="flex items-center duration-300" animate="true">
                             <img src={logo} className="w-56" alt="Styleshare Logo" />
                         </Link>
                         <div className="hidden lg:flex items-center space-x-4">
@@ -105,10 +105,10 @@ const Navbar = () => {
                                 Prizes
                             </HashLink>
                             <HashLink
-                                 to="#sponsors"
-                                 className="px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
-                                 onClick={closeMenu}
-                                 animate="true"
+                                to="#sponsors"
+                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                                onClick={closeMenu}
+                                animate="true"
                             >
                                 Sponsors
                             </HashLink>

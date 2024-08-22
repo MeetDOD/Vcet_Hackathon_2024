@@ -81,8 +81,8 @@ const Registration = () => {
                         Note
                       </label>
                       <div
-                        className="container form-control text-dark"
-                        style={{ backgroundColor: "#f5af64", color: "#fff" }}
+                        className="container form-control text-dark font-montserrat"
+                        style={{ backgroundColor: "#f5af64", color: 'black' }}
                       >
                         <ol className="list-group">
                           <label>
