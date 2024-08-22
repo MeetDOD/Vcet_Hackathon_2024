@@ -5,6 +5,7 @@ import preloader from "./assets/MainComp.mp4";
 import Registration from "./test/Registration";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import Navbar from "./components/Navbar";
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
         </div>
       ) : (
       )} */}
+      <Navbar />
       <Routes>
         <Route path="/" Component={Home} />
         <Route path="/register" Component={Registration} />

@@ -45,10 +45,7 @@ const Registration = () => {
     <>
       <div style={{ backgroundColor: "black" }}>
         <ToastContainer />
-
         <div>
-          <br />
-          <br />
           <br />
           <br />
           <div className="glitch-wrapper mb-3">
@@ -85,7 +82,7 @@ const Registration = () => {
                       </label>
                       <div
                         className="container form-control text-dark"
-                        style={{ backgroundColor: "#08b2aa" }}
+                        style={{ backgroundColor: "#f5af64", color: "#fff" }}
                       >
                         <ol className="list-group">
                           <label>
@@ -579,7 +576,7 @@ const Registration = () => {
             </div>
 
             <div style={{ textAlign: "center" }}>
-              <button
+              {/* <button
                 disabled={submitting}
                 className={`btn btn-brand text-light px-5 my-5`}
                 style={{ fontSize: "20px", backgroundColor: "green" }}
@@ -596,6 +593,14 @@ const Registration = () => {
                     <span className="loader-wheel"></span>
                   </span>
                 </span>
+              </button> */}
+              <button className='relative my-10 py-3 px-4 md:px-8 lg:px-6 rounded-lg font-medium text-base bg-gradient-to-b from-customOrange to-customPurpleDark text-white shadow-[0px_0px_12px_#8c45ff] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>
+                <div className='absolute inset-0'>
+                  <div className='rounded-lg border border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]'></div>
+                  <div className='rounded-lg border absolute inset-0 border-white/40 [mask-image:linear-gradient(to_top,black,transparent)]'></div>
+                  <div className='absolute inset-0 shadow-[0_0_10px_rgb(140,69,255,.7)_inset] rounded-lg'></div>
+                </div>
+                Submit
               </button>
             </div>
           </form>
