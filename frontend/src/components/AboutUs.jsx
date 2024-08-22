@@ -1,4 +1,3 @@
-import React from 'react';
 import Heading from './Heading';
 import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';

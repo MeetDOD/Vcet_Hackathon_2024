@@ -1,14 +1,53 @@
 import { useState } from 'react';
 import Heading from './Heading';
+import Lottie from 'react-lottie';
+import Planet from '../assets/prize/Planet.json';
+
+const Modal = ({ title, children, onClose }) => (
+  <div className="fixed inset-0 bg-gray-800 bg-opacity-70 flex items-center justify-center z-50">
+    <div className="bg-[#212529] p-4 sm:p-6 rounded-lg w-full max-w-md">
+      <div className="flex justify-between items-center border-b border-white pb-3 mb-3">
+        <h5 className="text-lg sm:text-xl font-exo text-white">{title}</h5>
+        <button className="text-white" onClick={onClose}>
+          <svg
+            className="w-6 h-6 sm:w-8 sm:h-8 text-black bg-gray-400 rounded-sm"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div className="text-white text-center">{children}</div>
+    </div>
+  </div>
+);
 
 const Guidelines = () => {
   const [isNeftModalOpen, setNeftModalOpen] = useState(false);
   const [isUpiModalOpen, setUpiModalOpen] = useState(false);
   const [isRegister, setRegistration] = useState(false);
 
+  const handleModalClose = () => {
+    setNeftModalOpen(false);
+    setUpiModalOpen(false);
+    setRegistration(false);
+  };
+
+  const lottieOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: Planet,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  };
+
   return (
     <div className="relative w-full h-full custom-bg-small">
-      <div className="min-h-screen text-white py-10 px-4 md:px-8 lg:px-16 font-montserrat">
+      <div className="min-h-screen text-white py-8 px-4 sm:py-10 sm:px-6 lg:px-8 xl:px-16 font-montserrat">
         <Heading
           title1="Event"
           title2="Guidelines"
@@ -17,20 +56,31 @@ const Guidelines = () => {
         />
 
         <div className="flex justify-center tracking-tight sectionMargin">
-          <div className="bg-[#212529] w-full max-w-7xl rounded-[25px] p-6">
+          <div className="bg-[#212529] w-full max-w-7xl rounded-2xl p-4 sm:p-6">
             <h3 className="my-3 text-customOrange text-lg sm:text-xl md:text-2xl font-bold">Rules</h3>
-            <ul className="list-disc pl-5 space-y-2 text-sm sm:text-base md:text-lg">
-              <li>The VCET Hackathon will take place on <span className="text-customOrange">6th and 7th October 2023.</span></li>
-              <li>A team can consist of 1 to 4 members. Every member of the team must be a student of a university or a college. A team can have members from different colleges.</li>
-              <li>Entry fee is <span className="text-customOrange">₹500</span> per head (Includes 3 meals, breakfasts, snacks, and sleeping accommodation).</li>
-              <li>Participants are free to use open standard repositories, APIs, and publicly available libraries.</li>
-              <li>Progress of the project will be tracked during the Hackathon. <span className="text-customOrange">Use of readymade or precompiled code will lead to disqualification.</span></li>
-              <li>Participants are expected to promptly push their code changes on GitHub.</li>
-              <li>Participants are expected to behave professionally and responsibly.</li>
-              <li>Decisions made by organizers and judges are final.</li>
-              <li>Participants will have to submit abstracts for all 5 problem statements.</li>
-              <li>All updates regarding the event will be posted on Social Media handles and mailed to each team.</li>
+            <ul className="list-none space-y-4">
+              {/* Event rules */}
+              {[
+                "The VCET Hackathon will take place on 4th and 5th October 2024.",
+                "A team can consist of 1 to 4 members. Every member of the team must be a student of a university or a college. A team can have members from different colleges.",
+                "Entry fee is ₹500 per person (Includes 3 meals, breakfasts, snacks, and sleeping accommodation).",
+                "Participants are free to use open standard repositories, APIs, and publicly available libraries.",
+                "Progress of the project will be tracked during the Hackathon. Use of readymade or precompiled code will lead to disqualification.",
+                "Participants are expected to promptly push their code changes on GitHub.",
+                "Participants are expected to behave professionally and responsibly.",
+                "Decisions made by organizers and judges are final.",
+                "Please submit a 300-500 word abstract on the provided example problem statement along with the GitHub profile of any member of the team for shortlisting.",
+                "All updates regarding the event will be posted on Social Media handles and mailed to each team.",
+              ].map((text, index) => (
+                <li key={index} className="flex items-start space-x-3">
+                  <div className="w-8 h-8 sm:w-12 sm:h-12 flex-shrink-0">
+                    <Lottie options={lottieOptions} />
+                  </div>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg flex-grow">{text}</span>
+                </li>
+              ))}
             </ul>
+
             <div className="mt-4">
               <button
                 className="border border-white text-white py-2 px-4 rounded hover:bg-customOrange hover:border-customOrange transition"
@@ -39,16 +89,27 @@ const Guidelines = () => {
                 Register Now
               </button>
             </div>
-            <ul className="list-disc pl-5 space-y-2 mt-4 text-sm sm:text-base md:text-lg">
-              <li>NOTE: The order preference of the problem statements is solely for our reference. We do not assure that the topic allocation will be based on your top preferences only.</li>
-              <li>Last date for submission of abstract is <span className="text-customOrange">September 27, 2023</span>.</li>
-              <li>The selected teams will get a confirmation after <span className="text-customOrange">September 28, 2023</span>.</li>
-              <li>Payment for the selected teams i.e. ₹500 per head should be made by <span className="text-customOrange">October 1, 2023</span>. Entry fee payment of the entire team should be done in a single transaction.</li>
-              <li>Out of the 5 abstracts submitted, the final Problem Statement for your team will be disclosed on <span className="text-customOrange">October 5, 2023.</span></li>
-              <li>All done, your squad is all set to seize the Unleash The Unreal for VCET HACKATHON'23.</li>
-              <li>Following are the details of payment.</li>
+            <ul className="list-none space-y-4 mt-4 text-xs sm:text-sm md:text-base lg:text-lg">
+              {/* Additional notes */}
+              {[
+                "NOTE: The order preference of the problem statements is solely for our reference. We do not assure that the topic allocation will be based on your top preferences only.",
+                "Last date for submission of abstract is September 27, 2024.",
+                "The selected teams will get a confirmation after September 25, 2024.",
+                "Payment for the selected teams i.e. ₹500 per head should be made by September 28, 2024. Entry fee payment of the entire team should be done in a single transaction.",
+                "Out of the 5 abstracts submitted, the final Problem Statement for your team will be disclosed on October 5, 2024.",
+                "All done, your squad is all set to seize the Code The Cosmos for VCET HACKATHON'24.",
+                "Following are the details of payment.",
+              ].map((text, index) => (
+                <li key={index} className="flex items-start space-x-3">
+                  <div className="w-8 h-8 sm:w-12 sm:h-12 flex-shrink-0">
+                    <Lottie options={lottieOptions} />
+                  </div>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg flex-grow">{text}</span>
+                </li>
+              ))}
             </ul>
-            <div className="mt-4 flex flex-row space-x-4 sm:space-x-8 ">
+
+            <div className="mt-4 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <button
                 className="border border-white text-white py-2 px-4 rounded hover:bg-customOrange hover:border-customOrange transition"
                 onClick={() => setNeftModalOpen(true)}
@@ -67,68 +128,25 @@ const Guidelines = () => {
 
         {/* NEFT Modal */}
         {isNeftModalOpen && (
-          <div className="fixed inset-0 bg-gray-800 bg-opacity-70 flex items-center justify-center z-50">
-            <div className="bg-[#212529] p-6 rounded-lg w-full max-w-md">
-              <div className="flex justify-between items-center border-b border-white pb-3 mb-3">
-                <h5 className="text-xl font-exo text-white">NEFT Details</h5>
-                <button
-                  className="text-white"
-                  onClick={() => setNeftModalOpen(false)}
-                >
-                  <svg className="w-8 h-8 text-black bg-gray-400 rounded-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-                  </svg>
-                </button>
-              </div>
-              <div className="text-white text-center">
-                <p>NAME: Mrs. Archana Babaji Rawool</p>
-                <p>Account No: 68012823017</p>
-                <p>IFSC: MAHB0000299</p>
-              </div>
-            </div>
-          </div>
+          <Modal title="NEFT Details" onClose={handleModalClose}>
+            <p>NAME: Mrs. Archana Babaji Rawool</p>
+            <p>Account No: 68012823017</p>
+            <p>IFSC: MAHB0000299</p>
+          </Modal>
         )}
 
         {/* UPI Modal */}
         {isUpiModalOpen && (
-          <div className="fixed inset-0 bg-gray-800 bg-opacity-70 flex items-center justify-center z-50">
-            <div className="bg-[#212529] p-6 rounded-lg w-full max-w-md">
-              <div className="flex justify-between items-center border-b border-white pb-3 mb-3">
-                <h5 className="text-xl font-exo text-white">UPI Details</h5>
-                <button
-                  className="text-white"
-                  onClick={() => setUpiModalOpen(false)}
-                >
-                  <svg className="w-8 h-8 text-black bg-gray-400 rounded-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-                  </svg>
-                </button>
-              </div>
-              <div className="text-center">
-                <img src="/assets/upi-13bc9438.png" alt="UPI QR Code" className="w-full" />
-              </div>
-            </div>
-          </div>
+          <Modal title="UPI Details" onClose={handleModalClose}>
+            <img src="/assets/upi-13bc9438.png" alt="UPI QR Code" className="w-full" />
+          </Modal>
         )}
 
         {/* Registration Modal */}
         {isRegister && (
-          <div className="fixed inset-0 bg-gray-800 bg-opacity-70 flex items-center justify-center z-50">
-            <div className="bg-[#212529] p-6 rounded-lg w-full max-w-md">
-              <div className="flex justify-between items-center border-b border-white pb-3 mb-3">
-                <h5 className="text-xl font-exo text-white">Registration Form</h5>
-                <button
-                  className="text-white"
-                  onClick={() => setRegistration(false)}
-                >
-                  <svg className="w-8 h-8 text-black bg-gray-400 rounded-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-                  </svg>
-                </button>
-              </div>
-
-            </div>
-          </div>
+          <Modal title="Registration Form" onClose={handleModalClose}>
+            {/* Registration form fields can go here */}
+          </Modal>
         )}
       </div>
     </div>

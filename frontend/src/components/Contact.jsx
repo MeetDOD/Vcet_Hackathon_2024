@@ -10,7 +10,7 @@ const Contact = () => {
                 title1="Contact"
                 title2="Us"
                 subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
-                sectionId="problmes"
+                sectionId="contact"
             />
             <div className='px-10 sm:px-32 sectionMargin'>
                 <div className='flex flex-col gap-6 lg:grid lg:grid-cols-2' style={{ gridAutoRows: "96px" }}>
