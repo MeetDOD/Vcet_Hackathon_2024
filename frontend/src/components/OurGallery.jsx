@@ -6,7 +6,7 @@ import { Gallery, Item } from 'react-photoswipe-gallery';
 // Import images
 import img1 from '../assets/img/1.jpg';
 import img2 from '../assets/img/2.jpg';
-import img7 from '../assets/img/7.jpeg'; 
+import img7 from '../assets/img/7.jpeg';
 import img4 from '../assets/img/4.jpg';
 import img5 from '../assets/img/5.jpg';
 import img6 from '../assets/img/3.jpg';
@@ -21,7 +21,7 @@ const OurGallery = () => {
                 subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
                 sectionId="gallery"
             />
-            <div className='flex items-center justify-center'>
+            <div className='flex items-center justify-center sectionMargin'>
                 <div className="flex justify-center items-center w-full max-w-screen-lg p-4">
                     <Gallery>
                         <div className="w-full">
@@ -96,7 +96,7 @@ const OurGallery = () => {
                                             </div>
                                         )}
                                     </Item>
-                                    
+
                                     {/* Image 4 */}
                                     <Item
                                         original={img4}
@@ -118,7 +118,7 @@ const OurGallery = () => {
                                             </div>
                                         )}
                                     </Item>
-                                    
+
                                     {/* Image 6 */}
                                     <Item
                                         original={img6}
@@ -140,7 +140,7 @@ const OurGallery = () => {
                                             </div>
                                         )}
                                     </Item>
-                                    
+
                                     {/* Image 7 */}
                                     <Item
                                         original={img7}
@@ -162,7 +162,7 @@ const OurGallery = () => {
                                             </div>
                                         )}
                                     </Item>
-                                    
+
                                     {/* Image 8 */}
                                     <Item
                                         original={img8}
@@ -258,7 +258,7 @@ const OurGallery = () => {
                                             </div>
                                         )}
                                     </Item>
-                                    
+
                                     {/* Image 4 */}
                                     <Item
                                         original={img4}
@@ -280,7 +280,7 @@ const OurGallery = () => {
                                             </div>
                                         )}
                                     </Item>
-                                    
+
                                     {/* Image 6 */}
                                     <Item
                                         original={img6}
@@ -302,7 +302,7 @@ const OurGallery = () => {
                                             </div>
                                         )}
                                     </Item>
-                                    
+
                                     {/* Image 7 */}
                                     <Item
                                         original={img7}
@@ -324,7 +324,7 @@ const OurGallery = () => {
                                             </div>
                                         )}
                                     </Item>
-                                    
+
                                     {/* Image 8 */}
                                     <Item
                                         original={img8}

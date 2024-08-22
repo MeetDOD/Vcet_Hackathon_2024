@@ -1,6 +1,6 @@
 import { motion, useMotionValue } from 'framer-motion';
 import Lottie from 'lottie-react';
-import goldenAnimation from '../assets/prize/golden-trophy.json'; 
+import goldenAnimation from '../assets/prize/golden-trophy.json';
 import silverAnimation from '../assets/prize/silver-trophy.json';
 import bronzeAnimation from '../assets/prize/bronze-trophy.json';
 import Heading from './Heading';
@@ -21,13 +21,13 @@ const Prize = () => {
         subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
         sectionId="prizes"
       />
-      <div className='mt-[-90px]'>
-        <div className="flex flex-row justify-center items-end gap-4 sm:gap-6 md:gap-8 lg:gap-20 xl:gap-56 mt-[120px]">
+      <div className='sectionMargin  px-10 sm:px-32'>
+        <div className="flex flex-row justify-center items-end gap-4 sm:gap-6 md:gap-8 lg:gap-20 xl:gap-56">
           {/* Golden Prize */}
           <PrizeCard
             animationData={goldenAnimation}
             amount="50,000"
-            color="#F5AF64"  
+            color="#F5AF64"
             gradientFrom="from-customBlue1"
             gradientTo="to-customBlue1"
             size="w-40 h-40 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-[450px] lg:h-[450px]"  // Adjusted size
@@ -38,12 +38,12 @@ const Prize = () => {
           <PrizeCard
             animationData={silverAnimation}
             amount="20,000"
-            color="#F5AF64"  
+            color="#F5AF64"
             gradientFrom="from-customBlue1"
             gradientTo="to-customBlue1"
             size="w-40 h-40 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-[450px] lg:h-[450px]"  // Adjusted size
             scale={0.7}
-            moveUp={true}   
+            moveUp={true}
           />
         </div>
         {/* Bronze Prizes */}
@@ -53,11 +53,11 @@ const Prize = () => {
               key={index}
               animationData={prize.animationData}
               amount={prize.amount}
-              color="#F5AF64" 
+              color="#F5AF64"
               gradientFrom="from-customBlue1"
               gradientTo="to-customBlue1"
               size={prize.size}
-              scale={0.7}  
+              scale={0.7}
               moveUp={true}
             />
           ))}
@@ -93,18 +93,18 @@ const PrizeCard = ({ animationData, amount, gradientFrom, gradientTo, size, scal
 
   return (
     <motion.div
-      className={`relative flex flex-col items-center overflow-hidden rounded-lg ${size}`}
+      className={`relative flex flex-col items-center overflow-hidden rounded-2xl  ${size}`}
       style={shadowStyle}
       ref={borderTrack}
     >
       <motion.div
-        className={`absolute inset-[-2px] bg-gradient-to-r ${gradientFrom} ${gradientTo} rounded-lg blur-3xl`}
+        className='group absolute inset-[-2px] p-0.5 bg-gray-800 hover:bg-gradient-to-br hover:from-gray-300 hover:via-gray-600 hover:to-gray-900 transition duration-300 rounded-2xl blur-3xl'
         style={{
-          opacity: 0.2, // Increased opacity
+          opacity: 0.2,
           animation: 'spin 5s linear infinite',
         }}
       />
-      <div className="relative flex flex-col justify-center items-center w-full h-full">
+      <div className="bg-gray-900 relative flex flex-col justify-center items-center w-full h-full group-hover:bg-gradient-to-br group-hover:from-gray-300/10 group-hover:via-gray-600/10 group-hover:to-gray-900/10 transition duration-300">
         <Lottie
           animationData={animationData}
           loop
@@ -116,7 +116,7 @@ const PrizeCard = ({ animationData, amount, gradientFrom, gradientTo, size, scal
         />
         <div className="relative flex flex-col items-center justify-center mt-0">
           <p
-            className="text-sm sm:text-sm md:text-md lg:text-lg xl:text-xl font-montserrat font-semibold text-white"
+            className="pb-0 lg:pb-10 text-sm sm:text-sm md:text-md lg:text-lg xl:text-xl font-montserrat font-semibold text-white"
             style={{
               textShadow: '0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2)',
             }}
