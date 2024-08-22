@@ -37,6 +37,7 @@ const Timer = () => {
 
     return (
         <div className='text-white font-montserrat'>
+            <br/><br/><br/>
             <Heading
                 title1="Time is "
                 title2="Ticking"

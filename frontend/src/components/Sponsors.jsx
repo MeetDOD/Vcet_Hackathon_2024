@@ -47,7 +47,7 @@ const Sponsors = () => {
 
     return (
         <div className=" py-[72px] ">
-            <div className="container mx-auto text-white font-montserrat">
+            <div id='sponsors' className="container mx-auto text-white font-montserrat">
                 <Heading
                     title1="Our"
                     title2="Sponsors"

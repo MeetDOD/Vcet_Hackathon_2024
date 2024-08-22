@@ -88,12 +88,13 @@ const FAQ = () => {
     ];
 
     return (
-        <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12 font-montserrat text-white">
+        <div id='faq' className=" w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12 font-montserrat text-white">
+            <br/><br/><br/><br/>
             <Heading
                 title1="Our"
                 title2="FAQs"
                 subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
-                sectionId="faq"
+                sectionId="faqs"
             />
             <div className="flex flex-col md:flex-row justify-between gap-y-8 md:gap-x-6 sectionMargin">
                 <div className="w-full md:w-1/2 space-y-4">

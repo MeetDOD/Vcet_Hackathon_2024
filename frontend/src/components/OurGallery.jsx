@@ -14,7 +14,8 @@ import img8 from '../assets/img/8.jpg';
 
 const OurGallery = () => {
     return (
-        <div className="font-montserrat text-white">
+        <div id='gallerys' className="font-montserrat text-white">
+            <br/><br/><br/><br/>
             <Heading
                 title1="Event"
                 title2="Gallery"

@@ -14,7 +14,8 @@ const Prize = () => {
   });
 
   return (
-    <div className="font-montserrat text-white">
+    <div id='prizes' className="font-montserrat text-white">
+      <br/><br/><br/><br/>
       <Heading
         title1="Prize"
         title2="Money"
@@ -70,16 +71,16 @@ const Prize = () => {
 const PrizeCard = ({ animationData, amount, gradientFrom, gradientTo, size, scale = 1, moveUp = false }) => {
   const offSetX = useMotionValue(-100);
   const offSetY = useMotionValue(-100);
-  const borderTrack = useRef();
+  const cardRef = useRef();
 
   useEffect(() => {
     const updateMouseMove = (e) => {
-      const rect = borderTrack.current.getBoundingClientRect();
+      const rect = cardRef.current.getBoundingClientRect();
       offSetX.set(e.clientX - rect.x);
       offSetY.set(e.clientY - rect.y);
     };
 
-    const cardElement = borderTrack.current;
+    const cardElement = cardRef.current;
     cardElement.addEventListener('mousemove', updateMouseMove);
 
     return () => {
@@ -95,12 +96,12 @@ const PrizeCard = ({ animationData, amount, gradientFrom, gradientTo, size, scal
     <motion.div
       className={`relative flex flex-col items-center overflow-hidden rounded-lg ${size}`}
       style={shadowStyle}
-      ref={borderTrack}
+      ref={cardRef}
     >
       <motion.div
         className={`absolute inset-[-2px] bg-gradient-to-r ${gradientFrom} ${gradientTo} rounded-lg blur-3xl`}
         style={{
-          opacity: 0.2, // Increased opacity
+          opacity: 0.2,
           animation: 'spin 5s linear infinite',
         }}
       />

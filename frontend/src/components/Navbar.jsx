@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import SplitType from "split-type";
 import logo from "../assets/logo.png";
+import { HashLink } from 'react-router-hash-link'; 
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -71,47 +72,47 @@ const Navbar = () => {
                             <img src={logo} className="w-56" alt="Styleshare Logo" />
                         </Link>
                         <div className="hidden lg:flex items-center space-x-4">
-                            <a
-                                to='/#home'
+                            <HashLink
+                                to='##home'
                                 className="px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
                                 Home
-                            </a>
-                            <Link
-                                to="/app/about"
+                            </HashLink>
+                            <HashLink
+                                to="#aboutUs"
                                 className="px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
                                 About
-                            </Link>
-                            <Link
-                                to="/app/problems"
+                            </HashLink>
+                            <HashLink
+                                to="#problems"
                                 className="px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
                                 Problems
-                            </Link>
-                            <Link
-                                to="/app/prizes"
+                            </HashLink>
+                            <HashLink
+                                to="#prizes"
                                 className="px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
                                 Prizes
-                            </Link>
-                            <Link
-                                to="/app/sponsors"
-                                className="px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
-                                onClick={closeMenu}
-                                animate="true"
+                            </HashLink>
+                            <HashLink
+                                 to="#sponsors"
+                                 className="px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                                 onClick={closeMenu}
+                                 animate="true"
                             >
                                 Sponsors
-                            </Link>
-                            <button animate="true" className='my-3 relative py-3 px-4 md:px-8 lg:px-6 rounded-lg font-medium text-sm md:text-lg lg:text-sm bg-gradient-to-b from-customOrange to-customPurpleDark text-white shadow-[0px_0px_12px_#8c45ff] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>
+                            </HashLink>
+                            <button animate="true" className='`my-3 relative py-3 px-4 md:px-8 lg:px-6 rounded-lg font-medium text-sm md:text-lg lg:text-sm bg-gradient-to-b from-customOrange to-customPurpleDark text-white shadow-[0px_0px_12px_#8c45ff] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300`'>
                                 <div className='absolute inset-0'>
                                     <div className='rounded-lg border border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]'></div>
                                     <div className='rounded-lg border absolute inset-0 border-white/40 [mask-image:linear-gradient(to_top,black,transparent)]'></div>
@@ -145,41 +146,41 @@ const Navbar = () => {
                             </button>
                             {isProfileDropdownOpen && (
                                 <div className="absolute right-0 mt-72 w-48 bg-gray-900 border-2 border-gray-900 text-white rounded-md shadow-lg z-10">
-                                    <Link
-                                        to="/app/guidelines"
+                                    <HashLink
+                                        to="#timelines"
                                         className="block px-4 py-2 rounded-md m-2 hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                         onClick={closeMenu}
                                     >
                                         Timeline
-                                    </Link>
-                                    <Link
-                                        to="/app/guidelines"
+                                    </HashLink>
+                                    <HashLink
+                                        to="#guidelines"
                                         className="block px-4 py-2 rounded-md m-2 hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                         onClick={closeMenu}
                                     >
                                         Guidelines
-                                    </Link>
-                                    <Link
-                                        to="/app/gallery"
+                                    </HashLink>
+                                    <HashLink
+                                        to="#gallerys"
                                         className="block px-4 py-2 rounded-md m-2 hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                         onClick={closeMenu}
                                     >
                                         Gallery
-                                    </Link>
-                                    <Link
-                                        to="/app/faq"
+                                    </HashLink>
+                                    <HashLink
+                                        to="#faq"
                                         className="block px-4 py-2 rounded-md m-2 hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                         onClick={closeMenu}
                                     >
                                         FAQ
-                                    </Link>
-                                    <Link
-                                        to="/app/contact"
+                                    </HashLink>
+                                    <HashLink
+                                        to="#contactUs"
                                         className="block px-4 py-2 rounded-md m-2 hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                         onClick={closeMenu}
                                     >
                                         Contact
-                                    </Link>
+                                    </HashLink>
                                 </div>
                             )}
                             <button
@@ -210,86 +211,86 @@ const Navbar = () => {
                 {isMenuOpen && (
                     <div className="lg:hidden mx-5 rounded-lg text-gray-100 text-center bg-gray-900">
                         <div className="space-y-1 px-2 pt-2 pb-3">
-                            <Link
-                                to="/app/home"
+                            <HashLink
+                                to="##home"
                                 className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
                                 Home
-                            </Link>
-                            <Link
-                                to="/app/about"
+                            </HashLink>
+                            <HashLink
+                                to="#aboutUs"
                                 className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
                                 About
-                            </Link>
-                            <Link
-                                to="/app/problems"
+                            </HashLink>
+                            <HashLink
+                                to="#problems"
                                 className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
                                 Problems
-                            </Link>
-                            <Link
-                                to="/app/prizes"
+                            </HashLink>
+                            <HashLink
+                                to="#prizes"
                                 className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
                                 Prizes
-                            </Link>
-                            <Link
-                                to="/app/sponsors"
+                            </HashLink>
+                            <HashLink
+                                to="#Sponsors"
                                 className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
                                 Sponsors
-                            </Link>
-                            <Link
-                                to="/app/timeline"
+                            </HashLink>
+                            <HashLink
+                                to="#timeline"
                                 className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
                                 Timeline
-                            </Link>
-                            <Link
-                                to="/app/guidelines"
+                            </HashLink>
+                            <HashLink
+                                to="#guidelines"
                                 className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
                                 Guidelines
-                            </Link>
-                            <Link
-                                to="/app/gallery"
+                            </HashLink>
+                            <HashLink
+                                to="#gallery"
                                 className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
                                 Gallery
-                            </Link>
-                            <Link
-                                to="/app/faq"
+                            </HashLink>
+                            <HashLink
+                                to="#faq"
                                 className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
                                 FAQ
-                            </Link>
-                            <Link
-                                to="/app/contact"
+                            </HashLink>
+                            <HashLink
+                                to="#contact"
                                 className="block px-3 py-2 mb-5 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customPurpleDark transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
                                 Contact
-                            </Link>
+                            </HashLink>
                             <button className='w-full relative py-3 px-4 md:px-8 lg:px-6 rounded-lg font-medium text-base bg-gradient-to-b from-customOrange to-customPurpleDark text-white shadow-[0px_0px_12px_#8c45ff] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>
                                 <div className='absolute inset-0'>
                                     <div className='rounded-lg border border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]'></div>
