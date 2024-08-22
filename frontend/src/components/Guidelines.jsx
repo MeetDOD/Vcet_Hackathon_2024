@@ -29,9 +29,9 @@ const Guidelines = () => {
   };
 
   return (
-    
+
     <div id='guidelines' className="relative w-full h-full custom-bg-small">
-      <br/><br/>
+      <br /><br />
       <div className="min-h-screen text-white py-10 px-4 md:px-8 lg:px-16 font-montserrat">
         <Heading
           title1="Event"
@@ -67,10 +67,10 @@ const Guidelines = () => {
             <ul className="list-disc pl-5 space-y-2 mt-4 text-sm sm:text-base md:text-lg">
               {/* Additional notes */}
               <li>NOTE: The order preference of the problem statements is solely for our reference. We do not assure that the topic allocation will be based on your top preferences only.</li>
-              <li>Last date for submission of abstract is <span className="text-customOrange">September 27, 2024</span>.</li>
+              <li>Last date for submission of abstract is <span className="text-customOrange">September 22, 2024</span>.</li>
               <li>The selected teams will get a confirmation after <span className="text-customOrange">September 25, 2024</span>.</li>
-              <li>Payment for the selected teams i.e. ₹500 per head should be made by <span className="text-customOrange">September 28, 2024</span>. Entry fee payment of the entire team should be done in a single transaction.</li>
-              <li>Out of the 5 abstracts submitted, the final Problem Statement for your team will be disclosed on <span className="text-customOrange">October 5, 2024.</span></li>
+              <li>Payment for the selected teams i.e. ₹500 per person should be made by <span className="text-customOrange">September 29, 2024</span>. Entry fee payment of the entire team should be done in a single transaction.</li>
+              <li>Out of the 5 abstracts submitted, the final Problem Statement for your team will be disclosed on <span className="text-customOrange">October 4, 2024.</span></li>
               <li>All done, your squad is all set to seize the Code The Cosmos for VCET HACKATHON'24.</li>
               <li>Following are the details of payment.</li>
             </ul>
