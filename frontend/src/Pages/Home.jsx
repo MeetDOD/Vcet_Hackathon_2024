@@ -12,6 +12,7 @@ import ProblemStatements from '../components/ProblemStatements';
 import Contact from '../components/Contact';
 import "../index.css"
 import GoToTop from '../components/GoToTop';
+import Timer from '../components/Timer';
 
 const Home = () => {
     return (
@@ -22,6 +23,7 @@ const Home = () => {
                 <Navbar />
                 <Hero />
                 <AboutUs />
+                <Timer />
                 <ProblemStatements />
                 <PreviousSponsors />
                 <Timeline />
