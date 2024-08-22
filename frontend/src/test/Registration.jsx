@@ -86,16 +86,15 @@ const Registration = () => {
                       >
                         <ol className="list-group">
                           <label>
-                            👉 No Special Characters are Allowed in College
-                            Name.
+                            ✏️ No Special Characters are Allowed in College Name.
                           </label>
+                          <br />
                           <label>
-                            👉 Avoid selecting the input field within the member
-                            form for individuals you do not wish to include.
+                            ✏️ Avoid selecting the input field within the member form for individuals you do not wish to include.
                           </label>
+                          <br />
                           <label>
-                            👉 Ensure that phone numbers and email addresses are
-                            unique, with no duplicates permitted.
+                            ✏️ Ensure that phone numbers and email addresses are unique, with no duplicates permitted.
                           </label>
                         </ol>
                       </div>
@@ -594,7 +593,7 @@ const Registration = () => {
                   </span>
                 </span>
               </button> */}
-              <button className='relative my-10 py-3 px-4 md:px-8 lg:px-6 rounded-lg font-medium text-base bg-gradient-to-b from-customOrange to-customPurpleDark text-white shadow-[0px_0px_12px_#8c45ff] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>
+              <button className='relative my-10 py-3 px-8 md:px-10 lg:px-14 rounded-lg font-medium text-base bg-gradient-to-b from-customOrange to-customPurpleDark text-white shadow-[0px_0px_12px_#8c45ff] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>
                 <div className='absolute inset-0'>
                   <div className='rounded-lg border border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]'></div>
                   <div className='rounded-lg border absolute inset-0 border-white/40 [mask-image:linear-gradient(to_top,black,transparent)]'></div>
