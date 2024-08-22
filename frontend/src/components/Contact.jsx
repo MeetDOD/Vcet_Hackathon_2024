@@ -5,7 +5,8 @@ import Heading from './Heading';
 
 const Contact = () => {
     return (
-        <div className='text-white font-montserrat'>
+        <div id='contactUs' className='text-white font-montserrat'>
+            <br/><br/><br/><br/>
             <Heading
                 title1="Contact"
                 title2="Us"

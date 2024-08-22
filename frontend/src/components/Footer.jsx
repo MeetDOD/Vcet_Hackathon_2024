@@ -14,10 +14,10 @@ const quickLinks = [
     { id: 'aboutus', label: 'About', hash: '#aboutUs' },
     { id: 'problems', label: 'Problem Statements', hash: '#problems' },
     { id: 'guidelines', label: 'Rules & Registration', hash: '#guidelines' },
-    { id: 'timeline', label: 'Event Schedule', hash: '#timeline' },
-    { id: 'gallery', label: 'Photo Gallery', hash: '#gallery' },
+    { id: 'timelines', label: 'Event Schedule', hash: '#timelines' },
+    { id: 'gallerys', label: 'Photo Gallery', hash: '#gallerys' },
     { id: 'faq', label: 'Questions', hash: '#faq' },
-    { id: 'contact', label: 'Contact', hash: '#contact' },
+    { id: 'contactUs', label: 'Contact', hash: '#contactUs' },
 ];
 
 const Footer = () => {
