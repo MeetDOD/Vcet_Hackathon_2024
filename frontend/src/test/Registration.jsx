@@ -427,7 +427,7 @@ const Registration = () => {
                       placeholder="Github"
                       value={usersToAdd[_]?.gitHubUrl || ""}
                       onChange={(e) =>
-                        handleUserChange(0, "gitHubUrl", e.target.value)
+                        handleUserChange(_, "gitHubUrl", e.target.value)
                       }
                       data-error="Please enter your Github url"
                       required={checkIfAnyFieldIsFilled(_)}
