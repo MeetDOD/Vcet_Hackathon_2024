@@ -46,7 +46,7 @@ const Sponsors = () => {
     }, []);
 
     return (
-        <div className=" py-[72px] mt-[100px]">
+        <div className=" py-[72px] ">
             <div className="container mx-auto text-white font-montserrat">
                 <Heading
                     title1="Our"
@@ -87,7 +87,7 @@ const Sponsors = () => {
                     ))}
                 </div>
             </div>
-        </div>
+         </div>
     );
 };
 
