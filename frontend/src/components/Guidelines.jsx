@@ -5,12 +5,12 @@ import Planet from '../assets/prize/Planet.json';
 
 const Modal = ({ title, children, onClose }) => (
   <div className="fixed inset-0 bg-gray-800 bg-opacity-70 flex items-center justify-center z-50">
-    <div className="bg-[#212529] p-6 rounded-lg w-full max-w-md">
+    <div className="bg-[#212529] p-4 sm:p-6 rounded-lg w-full max-w-md">
       <div className="flex justify-between items-center border-b border-white pb-3 mb-3">
-        <h5 className="text-xl font-exo text-white">{title}</h5>
+        <h5 className="text-lg sm:text-xl font-exo text-white">{title}</h5>
         <button className="text-white" onClick={onClose}>
           <svg
-            className="w-8 h-8 text-black bg-gray-400 rounded-sm"
+            className="w-6 h-6 sm:w-8 sm:h-8 text-black bg-gray-400 rounded-sm"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -47,7 +47,7 @@ const Guidelines = () => {
 
   return (
     <div className="relative w-full h-full custom-bg-small">
-      <div className="min-h-screen text-white py-10 px-4 md:px-8 lg:px-16 font-montserrat">
+      <div className="min-h-screen text-white py-8 px-4 sm:py-10 sm:px-6 lg:px-8 xl:px-16 font-montserrat">
         <Heading
           title1="Event"
           title2="Guidelines"
@@ -56,7 +56,7 @@ const Guidelines = () => {
         />
 
         <div className="flex justify-center tracking-tight sectionMargin">
-          <div className="bg-[#212529] w-full max-w-7xl rounded-2xl p-6">
+          <div className="bg-[#212529] w-full max-w-7xl rounded-2xl p-4 sm:p-6">
             <h3 className="my-3 text-customOrange text-lg sm:text-xl md:text-2xl font-bold">Rules</h3>
             <ul className="list-none space-y-4">
               {/* Event rules */}
@@ -72,11 +72,11 @@ const Guidelines = () => {
                 "Please submit a 300-500 word abstract on the provided example problem statement along with the GitHub profile of any member of the team for shortlisting.",
                 "All updates regarding the event will be posted on Social Media handles and mailed to each team.",
               ].map((text, index) => (
-                <li key={index} className="flex items-center">
-                  <div className="w-12 h-12 mr-3">
+                <li key={index} className="flex items-start space-x-3">
+                  <div className="w-8 h-8 sm:w-12 sm:h-12 flex-shrink-0">
                     <Lottie options={lottieOptions} />
                   </div>
-                  <span className="text-sm sm:text-base md:text-lg">{text}</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg flex-grow">{text}</span>
                 </li>
               ))}
             </ul>
@@ -89,7 +89,7 @@ const Guidelines = () => {
                 Register Now
               </button>
             </div>
-            <ul className="list-none space-y-4 mt-4 text-sm sm:text-base md:text-lg">
+            <ul className="list-none space-y-4 mt-4 text-xs sm:text-sm md:text-base lg:text-lg">
               {/* Additional notes */}
               {[
                 "NOTE: The order preference of the problem statements is solely for our reference. We do not assure that the topic allocation will be based on your top preferences only.",
@@ -100,16 +100,16 @@ const Guidelines = () => {
                 "All done, your squad is all set to seize the Code The Cosmos for VCET HACKATHON'24.",
                 "Following are the details of payment.",
               ].map((text, index) => (
-                <li key={index} className="flex items-center">
-                  <div className="w-12 h-12 mr-3">
+                <li key={index} className="flex items-start space-x-3">
+                  <div className="w-8 h-8 sm:w-12 sm:h-12 flex-shrink-0">
                     <Lottie options={lottieOptions} />
                   </div>
-                  <span className="text-sm sm:text-base md:text-lg">{text}</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg flex-grow">{text}</span>
                 </li>
               ))}
             </ul>
 
-            <div className="mt-4 flex flex-row space-x-4 sm:space-x-8">
+            <div className="mt-4 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <button
                 className="border border-white text-white py-2 px-4 rounded hover:bg-customOrange hover:border-customOrange transition"
                 onClick={() => setNeftModalOpen(true)}
