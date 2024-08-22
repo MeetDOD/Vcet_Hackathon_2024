@@ -69,7 +69,7 @@ const ProblemStatements = () => {
                 title1="Problem"
                 title2="Statements"
                 subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
-                sectionId="problmes"
+                sectionId="problems"
             />
             <div className='px-10 sm:px-32 relative sectionMargin'>
                 <div className='flex flex-wrap gap-10 justify-center items-center'>

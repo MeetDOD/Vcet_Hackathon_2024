@@ -62,7 +62,7 @@ const timelineData = [
 const Timeline = () => {
     return (
         <div>
-            <div className='text-white flex flex-col font-montserrat'>
+            <div className='text-white flex flex-col font-montserrat '>
                 <Heading
                     title1="Our"
                     title2="Timeline"
