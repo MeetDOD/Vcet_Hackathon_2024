@@ -1,9 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import { useState, useEffect } from "react";
-import preloader from "./assets/preloader2.mp4";
-import Registration from "./test/Registration";
-import "react-toastify/dist/ReactToastify.css";
+import preloader from "./assets/MainComp.mp4";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -19,11 +17,11 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  
+
 
   return (
     <Router>
-      {!isDevMode && loading ? (
+      {/* {loading ? (
         <div className="flex justify-center items-center h-screen">
           <video
             src={preloader}
@@ -37,12 +35,10 @@ function App() {
           </div>
         </div>
       ) : (
-        <Routes>
-          <Route path="/" Component={Home} />
-          <Route path="/register" Component={Registration} />
-        </Routes>
-        
-      )}
+      )} */}
+      <Routes>
+        <Route path="/" Component={Home} />
+      </Routes>
     </Router>
   );
 }

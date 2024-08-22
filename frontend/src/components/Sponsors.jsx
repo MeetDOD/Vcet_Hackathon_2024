@@ -9,7 +9,7 @@ import s3 from "../assets/sponsors/s3.png";
 import s4 from "../assets/sponsors/s4.png";
 import s5 from "../assets/sponsors/s5.png";
 import s6 from "../assets/sponsors/s6.png";
-import s7 from "../assets/sponsors/s7.png";
+import s7 from "../assets/sponsors/s7.jpg";
 import s8 from "../assets/sponsors/s8.png";
 import Heading from './Heading';
 
@@ -46,13 +46,13 @@ const Sponsors = () => {
     }, []);
 
     return (
-        <div className=" py-[72px]">
+        <div className=" py-[72px] mt-[100px]">
             <div className="container mx-auto text-white font-montserrat">
                 <Heading
                     title1="Our"
                     title2="Sponsors"
                     subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
-                    sectionId="sponsors"
+                    sectionId="Sponsors"
                 />
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-10 px-5">
                     {sponsors.map((sponsor, index) => (

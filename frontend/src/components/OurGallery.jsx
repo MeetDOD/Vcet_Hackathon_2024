@@ -19,7 +19,7 @@ const OurGallery = () => {
                 title1="Event"
                 title2="Gallery"
                 subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
-                sectionId="aboutUs"
+                sectionId="gallery"
             />
             <div className='flex items-center justify-center'>
                 <div className="flex justify-center items-center w-full max-w-screen-lg p-4">

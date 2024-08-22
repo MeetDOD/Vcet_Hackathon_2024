@@ -33,7 +33,8 @@
     "react-toastify": "^10.0.5",
     "react-vertical-timeline-component": "^3.6.0",
     "slick-carousel": "^1.8.1",
-    "split-type": "^0.3.4"
+    "split-type": "^0.3.4",
+    "styled-components": "^6.1.12"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
