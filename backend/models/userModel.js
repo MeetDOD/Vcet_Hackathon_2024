@@ -68,7 +68,10 @@ const UserSchema = mongoose.Schema(
         isAdmin:{
             type: Boolean,
             default: false
-        }
+        },
+        gitHubUrl:{
+            type: String,
+        },
     },
     { timestamps: true }
 );

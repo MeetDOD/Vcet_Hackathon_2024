@@ -51,6 +51,18 @@ export const handleFormSubmit = async (
         return;
       }
 
+      const githubUrlRegex = /^https:\/\/(www\.)?github\.com\/[A-Za-z0-9_-]+(\/[A-Za-z0-9_-]+)?\/?$/;
+
+      if (!user.gitHubUrl || !githubUrlRegex.test(user.gitHubUrl)) {
+        toast.error(
+          `Please enter a valid GitHub URL for ${
+            i === 0 ? "team leader" : `Teammate ${i}`
+          }`
+        );
+        return;
+      }
+
+
       if (!user.gender) {
         toast.error(
           `Please enter a gender for ${
