@@ -60,7 +60,8 @@ const PreviousSponsors = () => {
 
     return (
         <div className="relative">
-            <div className="flex flex-col justify-center items-center text-white font-montserrat">
+            <div id='sponsors' className="flex flex-col justify-center items-center text-white font-montserrat">
+                <br/><br/><br/><br/><br/><br/><br/>
                 <Heading
                     title1="Previous"
                     title2="Sponsors"

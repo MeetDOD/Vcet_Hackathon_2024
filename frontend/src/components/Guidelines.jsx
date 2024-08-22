@@ -29,13 +29,15 @@ const Guidelines = () => {
   };
 
   return (
-    <div className="relative w-full h-full custom-bg-small">
+    
+    <div id='guidelines' className="relative w-full h-full custom-bg-small">
+      <br/><br/>
       <div className="min-h-screen text-white py-10 px-4 md:px-8 lg:px-16 font-montserrat">
         <Heading
           title1="Event"
           title2="Guidelines"
           subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
-          sectionId="guidelines"
+          sectionId="guideline"
         />
 
         <div className="flex justify-center tracking-tight sectionMargin">
