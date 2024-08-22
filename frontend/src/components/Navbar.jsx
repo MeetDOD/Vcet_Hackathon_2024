@@ -119,7 +119,7 @@ const Navbar = () => {
                                     <div className='absolute inset-0 shadow-[0_0_10px_rgb(140,69,255,.7)_inset] rounded-lg'></div>
                                 </div>
                                 Register
-                            </button>
+                            </Link>
                         </div>
                         <div className="relative flex items-center" ref={dropdownRef}>
                             <button
