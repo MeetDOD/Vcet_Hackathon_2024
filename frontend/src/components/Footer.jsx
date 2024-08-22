@@ -46,8 +46,8 @@ const Footer = () => {
                     <ul className="list-none p-0">
                         {quickLinks.map((link) => (
                             <li key={link.id} className="mb-2.5">
-                                <HashLink 
-                                    to={link.hash} 
+                                <HashLink
+                                    to={link.hash}
                                     smooth
                                     className="text-white text-[1rem] font-normal relative before:content-[''] before:absolute before:bottom-[-2px] before:left-0 before:w-0 before:h-[2px] before:bg-white hover:before:w-full before:transition-all before:duration-300 hover:text-customOrange"
                                 >
@@ -68,7 +68,7 @@ const Footer = () => {
             </div>
 
             <div className="text-center text-sm text-white font-semibold mt-7 pt-4 mb-2.5">
-                Copyright © 2023 All rights reserved by Vidyavardhini's College Of Engineering & Technology
+                Copyright © 2024 All rights reserved by Vidyavardhini's College Of Engineering & Technology
             </div>
         </footer>
     );

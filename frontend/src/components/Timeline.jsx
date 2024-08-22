@@ -27,11 +27,11 @@ const timelineData = [
     },
     {
         title: "25th September, 2024",
-        subtitle: "Shortlisted Participants will get confirmation Mail.",
+        subtitle: "Sending Mails.",
         icon: <GiRingedPlanet />,
         iconBg: "#18508B",
         points: [
-
+            "Shortlisted Participants will get confirmation.",
         ],
     },
     {
@@ -44,8 +44,8 @@ const timelineData = [
         ],
     },
     {
-        title: "Day 01",
-        subtitle: "4th October, 2024",
+        title: "4th October, 2024",
+        subtitle: "Day 01",
         icon: <SiPlanetscale />,
         iconBg: "#582692",
         points: [
@@ -55,8 +55,8 @@ const timelineData = [
         ],
     },
     {
-        title: "Day 02",
-        subtitle: "5th October, 2024",
+        title: "5th October, 2024",
+        subtitle: "Day 02",
         icon: <SiPlanetscale />,
         iconBg: "#582692",
         points: [

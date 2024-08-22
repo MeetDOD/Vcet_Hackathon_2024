@@ -65,7 +65,7 @@ const ClipPath = () => {
 const ProblemStatements = () => {
     return (
         <div id='problems' className='overflow-hidden text-white font-montserrat'>
-            <br/> <br/> <br/><br/>
+            <br /> <br /> <br /><br />
             <Heading
                 title1="Problem"
                 title2="Statements"
@@ -88,7 +88,7 @@ const ProblemStatements = () => {
                                     <div className='text-white bg-customPurpleDark p-2.5 rounded-lg shadow-[0px_0.5px_5px_#8c45ff]'>
                                         {item.iconUrl}
                                     </div>
-                                    <button className='my-3 ml-auto relative py-3 px-4 md:px-8 lg:px-6 rounded-lg font-medium text-sm md:text-lg lg:text-sm bg-gradient-to-b from-customOrange to-customPurpleDark text-white shadow-[0px_0px_12px_#8c45ff]'>
+                                    <button className='my-3 ml-auto relative py-3 px-4 md:px-8 lg:px-6 rounded-lg font-medium text-sm md:text-lg lg:text-sm bg-gradient-to-b from-customOrange to-customOrange/90 text-white shadow-[0px_0px_12px_#8c45ff]'>
                                         Coming Soon
                                     </button>
                                 </div>
