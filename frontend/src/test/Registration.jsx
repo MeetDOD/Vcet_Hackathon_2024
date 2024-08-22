@@ -182,7 +182,7 @@ const Registration = () => {
                     className="form-control email-input"
                     id="id_team_leader_email"
                     name="to_email"
-                    placeholder="Github"
+                    placeholder="Github Profile URL"
                     value={usersToAdd[0]?.gitHubUrl || ""}
                     onChange={(e) =>
                       handleUserChange(0, "gitHubUrl", e.target.value)
@@ -424,7 +424,7 @@ const Registration = () => {
                       className="form-control email-input"
                       id="id_team_leader_email"
                       name="to_email"
-                      placeholder="Github"
+                      placeholder="Github Profile URL"
                       value={usersToAdd[_]?.gitHubUrl || ""}
                       onChange={(e) =>
                         handleUserChange(0, "gitHubUrl", e.target.value)
