@@ -119,22 +119,22 @@ export const handleFormSubmit = async (
       toast.success(
         `"You have successfully registered! Please check your email at ${usersToAdd[0].email} for further instructions."`
       );
-      //   setUsersToAdd([
-      //     {
-      //       fname: "",
-      //       lname: "",
-      //       email: "",
-      //       phoneNo: "",
-      //       gender: "",
-      //       city: "",
-      //       pincode: "",
-      //       college: "",
-      //       degree: "",
-      //       dept: "",
-      //       year: "",
-      //     },
-      //   ]);
-      //   setTeamName("");
+        setUsersToAdd([
+          {
+            fname: "",
+            lname: "",
+            email: "",
+            phoneNo: "",
+            gender: "",
+            city: "",
+            pincode: "",
+            college: "",
+            degree: "",
+            dept: "",
+            year: "",
+          },
+        ]);
+        setTeamName("");
     } else {
       console.log(toast);
       toast.error(`${data.message}`);
