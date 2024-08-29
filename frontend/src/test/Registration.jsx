@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./Form.css";
 import { toast, ToastContainer } from "react-toastify";
-import { handleFormSubmit, isAnyFieldFilled } from "./helper";
+import { fillTestFormData, handleFormSubmit, isAnyFieldFilled } from "./helper";
 const Registration = () => {
   const [teamName, setTeamName] = useState("");
   let [submitText, setSubmitText] = useState("Submit");
   let [submitting, setSubmitting] = useState(false);
+  const [teamL, setTeamL] = useState(null);
 
   const [usersToAdd, setUsersToAdd] = useState([
     {
@@ -42,6 +43,10 @@ const Registration = () => {
     return isAnyFieldFilled(index, usersToAdd);
   };
 
+  const dummyData = (teamL) => {
+    const data = fillTestFormData(teamL);
+    setUsersToAdd(data);
+  }
   return (
     <>
       <div style={{ backgroundColor: "black" }}>
@@ -53,6 +58,7 @@ const Registration = () => {
             <h1 className="glitch" data-text="Registration">
               Registration
             </h1>
+
           </div>
           <form
             className="form-main-container marginal mt-5"
@@ -107,7 +113,16 @@ const Registration = () => {
                 </div>
               </div>
               <div className="team-leader-container">
+                {import.meta.env.VITE_DEV_MODE === "true" ? (<>
+                  <div className="form-grid">
+                    <input type="number" name="fillRandomData" className="glitch" onChange={(e) => setTeamL(Number(e.target.value))} />
+                    <button className="glitch" type="button" style={{ backgroundColor: "red", color: 'white' }} onClick={() => dummyData(teamL)}>
+                      Fill
+                    </button>
+                  </div>
+                </>) : <></>}
                 <div className="details-container form-grid">
+
                   <label className="form-heading" htmlFor="id_team_name">
                     Team Name
                     <span style={{ color: "tomato" }}> *</span>
@@ -629,13 +644,21 @@ const Registration = () => {
                   </span>
                 </span>
               </button> */}
-              <button className="relative my-10 py-3 px-8 md:px-10 lg:px-14 rounded-lg font-medium text-base bg-gradient-to-b from-customOrange to-customOrange/90 text-white shadow-[0px_0px_12px_#8c45ff] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+              <button
+                disabled={submitting}
+                className="relative my-10 py-3 px-8 md:px-10 lg:px-14 rounded-lg font-medium text-base bg-gradient-to-b from-customOrange to-customOrange/90 text-white shadow-[0px_0px_12px_#8c45ff] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                 <div className="absolute inset-0">
                   <div className="rounded-lg border border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]"></div>
                   <div className="rounded-lg border absolute inset-0 border-white/40 [mask-image:linear-gradient(to_top,black,transparent)]"></div>
                   <div className="absolute inset-0 shadow-[0_0_10px_rgb(140,69,255,.7)_inset] rounded-lg"></div>
                 </div>
-                Submit
+                {submitting ? (
+                  <span className="flex justify-center items-center">
+                    <span className="animate-spin rounded-full h-6 w-6 border-b-2 border-white"></span>
+                  </span>
+                ) : (
+                  <span>{submitText}</span>
+                )}
               </button>
             </div>
           </form>

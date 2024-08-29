@@ -8,15 +8,19 @@ const prolmRoutes = require('./routes/problRoutes');
 const dRoutes = require('./routes/dRoutes');
 const mealRoutes = require('./routes/mealRoutes');
 const mealRecordRoutes = require('./routes/mealRecordRoutes');
+const path = require('path');   
 
 require('dotenv').config();
 const app = express();
 
 
 const port = process.env.PORT || 8000
+ 
 
 app.use(express.json());
 app.use(cors());
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 
@@ -37,6 +41,13 @@ app.use('/api/v1/problems', prolmRoutes);
 app.use('/extra/api', dRoutes);
 app.use('/api/v1/meals', mealRoutes);
 app.use('/api/v1/mealRecords', mealRecordRoutes);
+
+app.get('/', (req,res) => {
+    res.sendFile(path.join(__dirname, 'public','index.html'));
+})
+
+
+
 
 app.use(errorHandler);
 
