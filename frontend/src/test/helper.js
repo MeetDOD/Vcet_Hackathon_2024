@@ -156,3 +156,108 @@ export const isAnyFieldFilled = (index, usersToAdd) => {
     return flag;
   }
 };
+
+
+export const fillTestFormData = (teamL) => {
+
+  const usersToAdd = [];
+
+  alert(teamL)
+
+  const generateRandomString = (length) => {
+    let result = "";
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    const charactersLength = characters.length;
+    for (let i = 0; i < length; i++) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+  };
+
+  const generateRandomNumber = (length) => {
+    let result = "";
+    const characters = "0123456789";
+    const charactersLength = characters.length;
+    for (let i = 0; i < length; i++) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+  };
+
+  const generateRandomEmail = () => {
+    return `${generateRandomString(5)}@gmail.com`;
+  };
+
+  const generateRandomPhoneNo = () => {
+    return `9${generateRandomNumber(9)}`;
+  };
+
+  const generateRandomPincode = () => {
+    return generateRandomNumber(6);
+  };
+
+  const generateRandomGender = () => {
+    const availableGender = ["male", "female"];
+    return availableGender[Math.floor(Math.random() * availableGender.length)];
+  };
+
+  const generateRandomYear = () => {
+    const availableYear = ["FE", "SE", "TE", "BE"];
+    return availableYear[Math.floor(Math.random() * availableYear.length)];
+  };
+
+  const generateRandomDept = () => {
+    const availableDept = ["IT", "COMP", "EXTC", "ETRX"];
+    return availableDept[Math.floor(Math.random() * availableDept.length)];
+  };
+
+  const generateRandomCollege = () => {
+    const availableCollege = ["VJTI", "SPIT", "VESIT", "DJ"];
+    return availableCollege[Math.floor(Math.random() * availableCollege.length)];
+  };
+
+  const generateRandomDegree = () => {
+    const availableDegree = ["B.Tech", "M.Tech", "B.E", "M.E"];
+    return availableDegree[Math.floor(Math.random() * availableDegree.length)];
+  };
+
+  const generateRandomCity = () => {
+    const availableCity = ["Mumbai", "Pune", "Nashik", "Nagpur"];
+    return availableCity[Math.floor(Math.random() * availableCity.length)];
+  };
+
+  const generateRandomGitHubUrl = () => {
+    const username = generateRandomString(8); // Increased length for more realistic GitHub usernames
+    return `https://github.com/${username}`;
+  };
+
+  const fillRandomData = () => {
+    return {
+      fname: generateRandomString(5),
+      lname: generateRandomString(5),
+      email: generateRandomEmail(),
+      phoneNo: generateRandomPhoneNo(),
+      gender: generateRandomGender(),
+      city: generateRandomCity(),
+      pincode: generateRandomPincode(),
+      college: generateRandomCollege(),
+      degree: generateRandomDegree(),
+      dept: generateRandomDept(),
+      year: generateRandomYear(),
+      gitHubUrl: generateRandomGitHubUrl(),
+    };
+  };
+
+  console.log(teamL)
+
+  for (let i = 0; i < teamL; i++) {
+    const randomData = fillRandomData();
+    usersToAdd.push(randomData);
+  }
+
+  console.log(usersToAdd);
+
+
+
+  return usersToAdd;
+};
