@@ -48,7 +48,7 @@ const AboutUs = () => {
     const text = `VCET Hackathon is a 30-hour event organized by the Department of Information Technology at "Vidyavardhini's College of Engineering and Technology". We aim to foster a strong programming culture and build critical problem-solving skills among students. Can you take on the challenge? It is an opportunity to take on challenging problems that revolve around us all the time and crack them down. Will you get time to eat ? Can you ditch your sleep ? Do you have passion to build? Find out in this 30 hours long thrilling experience.`
     return (
         <div id='aboutUs' className='overflow-hidden relative text-white font-montserrat'>
-            <br /> <br /> <br /> <br /> 
+            <br /> <br /> <br /> <br />
             <Heading
                 title1="About"
                 title2="Us"
@@ -56,7 +56,7 @@ const AboutUs = () => {
                 sectionId="aboutUs"
             />
             <div className='text relative z-10 px-10 sm:px-32 sectionMargin'>
-                <p className='font-semibold text-white text-lg sm:max-w-7xl mx-auto leading-relaxed text-center tracking-tight inl'>
+                <p className='font-semibold text-white/50 text-lg sm:max-w-7xl mx-auto leading-relaxed text-center tracking-tight inl'>
                     <AnimatedParagraph text={text} />
                 </p>
                 <div className='mt-16 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10'>

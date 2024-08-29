@@ -17,7 +17,7 @@ const Hero = () => {
     };
 
     return (
-        <div id='#home' className='mb-20 overflow-hidden relative flex flex-col justify-center text-center min-h-screen
+        <div id='home' className='mb-20 overflow-hidden relative flex flex-col justify-center text-center min-h-screen
         [mask-image:linear-gradient(to_top,transparent,black_15%,black_100%,transparent)]'
         >
             <div className='absolute inset-0 

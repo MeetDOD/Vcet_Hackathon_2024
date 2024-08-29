@@ -38,11 +38,6 @@ const FAQ = () => {
                 "No, every member of the team must be a current student of a university or a college. (Members from different colleges allowed).",
         },
         {
-            id: 4,
-            question: "What are the Problems Statements that can be selected?",
-            answer: "Problem Statements will be provided from our end. You have to submit abstracts for all 5 Problem Statements, out of which 1 will be allocated."
-        },
-        {
             id: 5,
             question: "How much is the entry fee and the last date for registration?",
             answer: "Entry fee is 500/- per head and the last date of registration is September 22, 2023."
@@ -59,11 +54,6 @@ const FAQ = () => {
             id: 7,
             question: "Will a dataset be provided?",
             answer: "No, the data has to be collected on your own."
-        },
-        {
-            id: 8,
-            question: "What is the selection criteria?",
-            answer: "Innovation, Technology, Completion & Business Values are some of the criterias."
         },
         {
             id: 9,
@@ -89,7 +79,7 @@ const FAQ = () => {
 
     return (
         <div id='faq' className=" w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12 font-montserrat text-white">
-            <br/><br/><br/><br/>
+            <br /><br /><br /><br />
             <Heading
                 title1="Our"
                 title2="FAQs"
