@@ -110,6 +110,9 @@ const Hero = () => {
                 <p className='font-semibold text-white text-xl md:text-2xl lg:text-3xl py-2 tracking-tighter'>
                     Vidyavardhini's College of Engineering and Technology
                 </p>
+                <p className='font-semibold text-white text-lg md:text-xl lg:text-2xl py-2 tracking-tighter'>
+                    Department of Information Technology
+                </p>
                 <p className='py-2 text-white text-xl lg:text-2xl font-semibold tracking-tighter'>
                     presents
                 </p>
