@@ -94,6 +94,7 @@ const registration = asyncHandler(async (req, res) => {
     }));
 
     const N8N_URL = process.env.DEV_MODE == "true" ? process.env.N8N_DEV_URL : process.env.N8N_PROD_URL;
+    console.log(N8N_URL);
     // Asynchronous trigger, non-blocking
     const triggerN8nWorkflow = fetch(N8N_URL, {
       method: "POST",
@@ -114,6 +115,7 @@ const registration = asyncHandler(async (req, res) => {
           "Degree": user.degree,
           "Github URL": user.gitHubUrl,
           "Leader": leaderEmail,
+          "LeaderName": leaderId.fname + " " + leaderId.lname,
         })),
       }),
     });
