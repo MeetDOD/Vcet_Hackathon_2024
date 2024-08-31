@@ -79,7 +79,7 @@ const Registration = () => {
             <div className="form-main-container form-grid">
               <div className="form-main-container formMeet">
                 <div className=" form-grid">
-                  <div className="mx-5">
+                  {/* <div className="mx-5">
                     <div className=" form-grid-note">
                       <label
                         className="form-heading text-center"
@@ -109,7 +109,7 @@ const Registration = () => {
                         </ol>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="team-leader-container">
