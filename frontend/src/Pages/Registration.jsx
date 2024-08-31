@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
-import "./Form.css";
+import React, { useState } from "react";
+import "../styles/Form.css";
 import { toast, ToastContainer } from "react-toastify";
-import { fillTestFormData, handleFormSubmit, isAnyFieldFilled } from "./helper";
+import { fillTestFormData, handleFormSubmit, isAnyFieldFilled } from "../helper/helper";
+import StarsCanvas from "../components/StarBackground";
+import Heading from "../components/Heading";
+
 const Registration = () => {
   const [teamName, setTeamName] = useState("");
   let [submitText, setSubmitText] = useState("Submit");
   let [submitting, setSubmitting] = useState(false);
   const [teamL, setTeamL] = useState(null);
-
   const [usersToAdd, setUsersToAdd] = useState([
     {
       fname: "",
@@ -50,18 +52,13 @@ const Registration = () => {
   return (
     <>
       <div style={{ backgroundColor: "black" }}>
+        <StarsCanvas />
         <ToastContainer />
-        <div>
+        <div className="relative ">
           <br />
           <br />
-          <div className="glitch-wrapper mb-3">
-            <h1 className="glitch" data-text="Registration">
-              Registration
-            </h1>
-
-          </div>
           <form
-            className="form-main-container marginal mt-5"
+            className="form-main-container marginal"
             onSubmit={(e) =>
               handleFormSubmit(
                 e,
@@ -75,7 +72,13 @@ const Registration = () => {
               )
             }
           >
-            <h3 className="form-h3">Team Details</h3>
+            <div className="pt-12 py-14 text-white font-montserrat">
+              <Heading
+                title1="Team"
+                title2="Details"
+                sectionId="register"
+              />
+            </div>
             <div className="form-main-container form-grid">
               <div className="form-main-container formMeet">
                 <div className=" form-grid">
@@ -139,7 +142,6 @@ const Registration = () => {
                     onChange={(e) => setTeamName(e.target.value)}
                     required
                   />
-
                   <label className="form-heading" htmlFor="id_team_name">
                     Team Leader
                     <span style={{ color: "tomato" }}> *</span>

@@ -1,8 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import { useState, useEffect } from "react";
-import preloader from "./assets/MainComp.mp4";
-import Registration from "./test/Registration";
+import Registration from "./Pages/Registration";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar from "./components/Navbar";
@@ -14,12 +13,11 @@ function App() {
   const [loading, setLoading] = useState(true);
   const isDevMode = import.meta.env.VITE_DEV_MODE == "true";
 
-
   useEffect(() => {
     setLoading(true);
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 4300);
+    }, 4250);
 
     return () => clearTimeout(timer);
   }, []);
