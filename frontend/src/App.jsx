@@ -6,7 +6,9 @@ import Registration from "./test/Registration";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar from "./components/Navbar";
-
+import Lottie from 'react-lottie';
+import loader from "./assets/lottie/loader.json"
+import StarsCanvas from "./components/StarBackground";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -17,35 +19,35 @@ function App() {
     setLoading(true);
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 7500);
+    }, 4300);
 
     return () => clearTimeout(timer);
   }, []);
 
-
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: loader
+  };
 
   return (
     <Router>
-      {/* {loading ? (
+      {loading ? (
         <div className="flex justify-center items-center h-screen">
-          <video
-            src={preloader}
-            autoPlay
-            loop
-            muted
-            className="hidden lg:block w-full h-full object-cover"
-          />
-          <div className="lg:hidden flex justify-center items-center">
-            <p className="text-xl">Loading...</p>
+          <div className="relative w-full h-screen">
+            <StarsCanvas />
+            <Lottie options={defaultOptions} />
           </div>
         </div>
       ) : (
-      )} */}
-      <Navbar />
-      <Routes>
-        <Route path="/" Component={Home} />
-        <Route path="/register" Component={Registration} />
-      </Routes>
+        <>
+          <Navbar />
+          <Routes>
+            <Route path="/" Component={Home} />
+            <Route path="/register" Component={Registration} />
+          </Routes>
+        </>
+      )}
     </Router>
   );
 }
