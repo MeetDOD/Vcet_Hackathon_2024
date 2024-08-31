@@ -23,7 +23,7 @@ const FAQ = () => {
         {
             id: 1,
             question: "What is the mode of the Hackathon?",
-            answer: "VCET Hackathon’23 Unleash the unreal will be held offline.",
+            answer: "VCET Hackathon’24 Code the cosmos will be held offline.",
         },
         {
             id: 2,
@@ -40,7 +40,7 @@ const FAQ = () => {
         {
             id: 5,
             question: "How much is the entry fee and the last date for registration?",
-            answer: "Entry fee is 500/- per head and the last date of registration is September 22, 2023."
+            answer: "Entry fee is 500/- per head and the last date of registration is September 22, 2024."
         },
         {
             id: 6,

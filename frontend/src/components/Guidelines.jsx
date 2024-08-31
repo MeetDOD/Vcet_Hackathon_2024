@@ -54,7 +54,7 @@ const Guidelines = () => {
               <li>Participants are expected to promptly push their code changes on GitHub.</li>
               <li>Participants are expected to behave professionally and responsibly.</li>
               <li>Decisions made by organizers and judges are final.</li>
-              <li>Please submit a 300-500 word abstract on the provided example problem statement along with the GitHub profile of any member of the team for shortlisting.</li>
+              {/* <li>Please submit a 300-500 word abstract on the provided example domain along with the GitHub profile of any member of the team for shortlisting.</li> */}
               <li>All updates regarding the event will be posted on Social Media handles and mailed to each team.</li>
             </ul>
             <div className="my-6">
@@ -66,11 +66,11 @@ const Guidelines = () => {
             </div>
             <ul className="list-disc pl-5 space-y-2 mt-4 text-sm sm:text-base md:text-lg">
               {/* Additional notes */}
-              <li>NOTE: The order preference of the problem statements is solely for our reference. We do not assure that the topic allocation will be based on your top preferences only.</li>
+              <li>NOTE: The order preference of the domain is solely for our reference. We do not assure that the topic allocation will be based on your top preferences only.</li>
               <li>Last date for submission of abstract is <span className="text-customOrange">September 22, 2024</span>.</li>
               <li>The selected teams will get a confirmation after <span className="text-customOrange">September 25, 2024</span>.</li>
               <li>Payment for the selected teams i.e. ₹500 per person should be made by <span className="text-customOrange">September 29, 2024</span>. Entry fee payment of the entire team should be done in a single transaction.</li>
-              <li>Out of the 5 abstracts submitted, the final Problem Statement for your team will be disclosed on <span className="text-customOrange">October 4, 2024.</span></li>
+              <li>Out of the 5 domains selected, the final domain for your team will be disclosed on <span className="text-customOrange">October 4, 2024.</span></li>
               <li>All done, your squad is all set to seize the Code The Cosmos for VCET HACKATHON'24.</li>
               <li>Following are the details of payment.</li>
             </ul>
