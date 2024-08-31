@@ -12,7 +12,7 @@ import Heading from './Heading'
 const problemData = [
     {
         id: "1",
-        title: "Coming Soon",
+        title: "Security",
         description: "An innovative project is on the horizon. Stay tuned for something extraordinary. Stay tuned for updates as we prepare to unveil what could change the game.",
         backgroundImage: card1,
         iconUrl: <SiPlanetscale size={24} />,
@@ -20,7 +20,7 @@ const problemData = [
     },
     {
         id: "2",
-        title: "Coming Soon",
+        title: "Social",
         description: "An innovative project is on the horizon. Stay tuned for something extraordinary. Stay tuned for updates as we prepare to unveil what could change the game.",
         backgroundImage: card2,
         iconUrl: <SiNeptune size={24} />,
@@ -28,7 +28,7 @@ const problemData = [
     },
     {
         id: "3",
-        title: "Coming Soon",
+        title: "Game Development",
         description: "An innovative project is on the horizon. Stay tuned for something extraordinary. Stay tuned for updates as we prepare to unveil what could change the game.",
         backgroundImage: card3,
         iconUrl: <FaEarthAmericas size={24} />,
@@ -36,7 +36,7 @@ const problemData = [
     },
     {
         id: "4",
-        title: "Coming Soon",
+        title: "Education",
         description: "An innovative project is on the horizon. Stay tuned for something extraordinary. Stay tuned for updates as we prepare to unveil what could change the game.",
         backgroundImage: card4,
         iconUrl: <GiJupiter size={24} />,
@@ -44,7 +44,7 @@ const problemData = [
     },
     {
         id: "5",
-        title: "Coming Soon",
+        title: "Finance",
         description: "An innovative project is on the horizon. Stay tuned for something extraordinary. Stay tuned for updates as we prepare to unveil what could change the game.",
         backgroundImage: card5,
         iconUrl: <GiRingedPlanet size={24} />,
@@ -64,13 +64,13 @@ const ClipPath = () => {
 
 const ProblemStatements = () => {
     return (
-        <div id='problems' className='overflow-hidden text-white font-montserrat'>
+        <div id='domains' className='overflow-hidden text-white font-montserrat'>
             <br /> <br /> <br /><br />
             <Heading
-                title1="Problem"
-                title2="Statements"
+                title1="Our"
+                title2="Domains"
                 subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
-                sectionId="problems"
+                sectionId="domains"
             />
             <div className='px-10 sm:px-32 relative sectionMargin'>
                 <div className='flex flex-wrap gap-10 justify-center items-center'>
