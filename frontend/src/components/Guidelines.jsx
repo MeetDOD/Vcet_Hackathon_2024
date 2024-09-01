@@ -115,8 +115,8 @@ const Guidelines = () => {
           }}
           closeIcon={closeIcon}
         >
-          <h2 className='text-2xl font-bold text-customOrange mb-4'>UPI Details</h2>
-          <img src={qr} alt="UPI QR Code" className="w-80 h-full rounded-lg shadow-lg" />
+          <h2 className='text-2xl font-bold text-customOrange mb-4'>UPI Details</h2><hr />
+          <img src={qr} alt="UPI QR Code" className="w-80 h-full rounded-lg shadow-lg mt-5" />
         </Modal>
       </div>
     </div>
