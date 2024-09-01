@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/Form.css";
 import { toast, ToastContainer } from "react-toastify";
 import { fillTestFormData, handleFormSubmit, isAnyFieldFilled } from "../helper/helper";
@@ -49,6 +49,11 @@ const Registration = () => {
     const data = fillTestFormData(teamL);
     setUsersToAdd(data);
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div style={{ backgroundColor: "black" }}>

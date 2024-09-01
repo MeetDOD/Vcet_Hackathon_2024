@@ -83,7 +83,7 @@ const FAQ = () => {
             <Heading
                 title1="Our"
                 title2="FAQs"
-                subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
+                subtitle="Everything you need to know, right at your fingertips"
                 sectionId="faqs"
             />
             <div className="flex flex-col md:flex-row justify-between gap-y-8 md:gap-x-6 sectionMargin">

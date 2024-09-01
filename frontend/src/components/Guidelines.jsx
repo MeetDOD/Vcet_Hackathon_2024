@@ -37,7 +37,7 @@ const Guidelines = () => {
         <Heading
           title1="Event"
           title2="Guidelines"
-          subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
+          subtitle="Navigate the rules and make the most of your experience"
           sectionId="guideline"
         />
 

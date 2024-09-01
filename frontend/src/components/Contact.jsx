@@ -10,7 +10,7 @@ const Contact = () => {
             <Heading
                 title1="Contact"
                 title2="Us"
-                subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
+                subtitle="We're just a message away, reach out for any help"
                 sectionId="contact"
             />
             <div className='px-10 sm:px-32 sectionMargin'>
