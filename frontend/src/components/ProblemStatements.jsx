@@ -69,7 +69,7 @@ const ProblemStatements = () => {
             <Heading
                 title1="Our"
                 title2="Domains"
-                subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
+                subtitle="Explore the challenges across various domains"
                 sectionId="domains"
             />
             <div className='px-10 sm:px-32 relative sectionMargin'>

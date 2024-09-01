@@ -37,7 +37,7 @@ const Sponsors = () => {
                 <Heading
                     title1="New"
                     title2="Sponsors"
-                    subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
+                    subtitle="Meet the partners making this event possible"
                     sectionId="Sponsors"
                 />
 

@@ -9,7 +9,7 @@ const Prize = () => {
       <Heading
         title1="Prize"
         title2="Money"
-        subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
+        subtitle="Exciting rewards for exceptional talent"
         sectionId="timer"
       />
       <div className='sectionMargin'>

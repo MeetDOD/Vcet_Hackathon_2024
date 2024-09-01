@@ -52,7 +52,7 @@ const AboutUs = () => {
             <Heading
                 title1="About"
                 title2="Us"
-                subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
+                subtitle="Learn more about our mission and vision"
                 sectionId="aboutUs"
             />
             <div className='text relative z-10 px-10 sm:px-32 sectionMargin'>

@@ -37,11 +37,11 @@ const Timer = () => {
 
     return (
         <div className='text-white font-montserrat'>
-            <br/><br/><br/>
+            <br /><br /><br />
             <Heading
                 title1="Time is "
                 title2="Ticking"
-                subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
+                subtitle="Countdown to the start of the cosmic adventure"
                 sectionId="timer"
             />
             <div className='sectionMargin px-10 sm:px-32 flex flex-col gap-6 lg:grid lg:grid-cols-4' style={{ gridAutoRows: "96px" }}>
