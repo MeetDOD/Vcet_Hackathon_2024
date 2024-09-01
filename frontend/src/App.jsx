@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import { useState, useEffect } from "react";
 import Registration from "./Pages/Registration";
-import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar from "./components/Navbar";
 import Lottie from 'react-lottie';
