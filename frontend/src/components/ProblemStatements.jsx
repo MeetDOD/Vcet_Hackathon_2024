@@ -106,7 +106,7 @@ const ProblemStatements = () => {
                             <div className='relative z-10 flex flex-col min-h-[22rem] p-[2.4rem]'>
                                 <h5 className='text-2xl font-bold mb-5 countDown'>{item.title}</h5>
                                 <p className='mb-6 font-semibold text-sm text-left'>
-                                    {item.description.split(' ').slice(0, 20).join(' ')}...
+                                    {item.description.split(' ').slice(0, 15).join(' ')}...
                                 </p>
                                 <div className='flex items-center mt-auto'>
                                     <div className='text-white bg-customPurpleDark p-2.5 rounded-lg shadow-[0px_0.5px_5px_#8c45ff]'>
