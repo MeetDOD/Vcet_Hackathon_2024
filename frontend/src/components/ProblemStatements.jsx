@@ -38,7 +38,7 @@ const problemData = [
     {
         id: "3",
         title: "Game Development",
-        description: "Dive into the world of interactive entertainment by designing engaging and immersive games. Showcase your creativity and technical prowess through innovative game mechanics and compelling storytelling.",
+        description: "Transform existing systems by integrating game-like elements to make them more interactive and engaging. Showcase your creativity and technical skills by designing innovative gamification strategies that enhance user experience and encourage participation.",
         backgroundImage: card3,
         iconUrl: <FaEarthAmericas size={24} />,
         imageUrl: "https://www.eurokidsindia.com/blog/wp-content/uploads/2023/09/solar-system.jpg",
