@@ -112,7 +112,7 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
-                    className='font-semibold text-white text-xl md:text-2xl lg:text-3xl py-2 tracking-tighter'
+                    className='font-semibold text-white text-xl md:text-2xl lg:text-3xl py-2 tracking-tighter px-2'
                 >
                     Vidyavardhini's College of Engineering and Technology
                 </motion.p>

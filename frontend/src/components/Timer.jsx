@@ -3,7 +3,7 @@ import Heading from './Heading'
 
 const Timer = () => {
     const calculateTimeLeft = () => {
-        const difference = +new Date("2024-09-22") - +new Date();
+        const difference = +new Date("2024-10-04") - +new Date();
         let timeLeft = {};
 
         if (difference > 0) {
