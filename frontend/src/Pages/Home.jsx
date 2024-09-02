@@ -1,6 +1,5 @@
 import React from 'react';
 import StarsCanvas from '../components/StarBackground';
-import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import AboutUs from '../components/AboutUs';
 import OurGallery from '../components/OurGallery';
@@ -19,7 +18,7 @@ import Sponsors from '../components/Sponsors';
 
 const Home = () => {
     return (
-        <div className="relative w-full h-screen">
+        <div className="relative w-full h-full">
             <StarsCanvas />
             <GoToTop />
             <div className="relative z-10">
