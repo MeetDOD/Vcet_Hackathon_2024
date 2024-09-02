@@ -1,19 +1,28 @@
-import React from 'react'
-import card1 from "../assets/problemStatements/card-1.png"
-import card2 from "../assets/problemStatements/card-2.png"
-import card3 from "../assets/problemStatements/card-3.png"
-import card4 from "../assets/problemStatements/card-6.png"
-import card5 from "../assets/problemStatements/card-5.png"
+import React, { useState } from 'react';
+import card1 from "../assets/problemStatements/card-1.png";
+import card2 from "../assets/problemStatements/card-2.png";
+import card3 from "../assets/problemStatements/card-3.png";
+import card4 from "../assets/problemStatements/card-6.png";
+import card5 from "../assets/problemStatements/card-5.png";
 import { SiNeptune, SiPlanetscale } from "react-icons/si";
 import { FaEarthAmericas } from "react-icons/fa6";
 import { GiJupiter, GiRingedPlanet } from "react-icons/gi";
-import Heading from './Heading'
+import Heading from './Heading';
+import { Modal } from 'react-responsive-modal';
+import 'react-responsive-modal/styles.css';
+import { IoClose } from "react-icons/io5";
+
+const closeIcon = (
+    <div className='text-customOrange'>
+        <IoClose size={30} />
+    </div>
+);
 
 const problemData = [
     {
         id: "1",
         title: "Security",
-        description: "An innovative project is on the horizon. Stay tuned for something extraordinary. Stay tuned for updates as we prepare to unveil what could change the game.",
+        description: " Innovate and develop solutions to enhance cybersecurity and protect sensitive data. Tackle challenges in encryption, secure communications, and threat detection to create a safer digital world.",
         backgroundImage: card1,
         iconUrl: <SiPlanetscale size={24} />,
         imageUrl: "https://d.newsweek.com/en/full/2308742/exoplanet.jpg?w=1200&f=d554ef6d8e154a66da9984230561f9f7",
@@ -21,7 +30,7 @@ const problemData = [
     {
         id: "2",
         title: "Social",
-        description: "An innovative project is on the horizon. Stay tuned for something extraordinary. Stay tuned for updates as we prepare to unveil what could change the game.",
+        description: "Develop technologies that improve community engagement and address social issues. This domain focuses on creating apps or platforms that promote inclusivity, mental health, and public welfare.",
         backgroundImage: card2,
         iconUrl: <SiNeptune size={24} />,
         imageUrl: "https://bigthink.com/wp-content/uploads/2021/11/https___blogs-images.forbes.com_startswithabang_files_2019_03_NASA-Dana-Berry-e1711556875766.jpg",
@@ -29,7 +38,7 @@ const problemData = [
     {
         id: "3",
         title: "Game Development",
-        description: "An innovative project is on the horizon. Stay tuned for something extraordinary. Stay tuned for updates as we prepare to unveil what could change the game.",
+        description: "Dive into the world of interactive entertainment by designing engaging and immersive games. Showcase your creativity and technical prowess through innovative game mechanics and compelling storytelling.",
         backgroundImage: card3,
         iconUrl: <FaEarthAmericas size={24} />,
         imageUrl: "https://www.eurokidsindia.com/blog/wp-content/uploads/2023/09/solar-system.jpg",
@@ -37,7 +46,7 @@ const problemData = [
     {
         id: "4",
         title: "Education",
-        description: "An innovative project is on the horizon. Stay tuned for something extraordinary. Stay tuned for updates as we prepare to unveil what could change the game.",
+        description: "Transform the way we learn by creating educational tools and platforms. Projects in this domain aim to make learning more accessible, interactive, and engaging for everyone.",
         backgroundImage: card4,
         iconUrl: <GiJupiter size={24} />,
         imageUrl: "https://media.istockphoto.com/id/865884812/photo/science-fiction-space-wallpaper-incredibly-beautiful-planets-galaxies-dark-and-cold-beauty-of.jpg?s=612x612&w=0&k=20&c=JI6MmXNSCDKpnbLJNjbHX-QE1okdAJG2kY_W8UWmDIE=",
@@ -45,7 +54,7 @@ const problemData = [
     {
         id: "5",
         title: "Finance",
-        description: "An innovative project is on the horizon. Stay tuned for something extraordinary. Stay tuned for updates as we prepare to unveil what could change the game.",
+        description: "Bring your ideas to life by developing solutions that simplify financial transactions, enhance personal finance management, or introduce new ways to invest. This domain focuses on developing tools and applications that make financial services more accessible, efficient, and user-friendly.",
         backgroundImage: card5,
         iconUrl: <GiRingedPlanet size={24} />,
         imageUrl: "https://images.theconversation.com/files/511620/original/file-20230222-16-c8nmnb.jpg?ixlib=rb-4.1.0&q=45&auto=format&w=926&fit=clip",
@@ -63,6 +72,19 @@ const ClipPath = () => {
 };
 
 const ProblemStatements = () => {
+    const [open, setOpen] = useState(false);
+    const [selectedProblem, setSelectedProblem] = useState(null);
+
+    const onOpenModal = (problem) => {
+        setSelectedProblem(problem);
+        setOpen(true);
+    };
+
+    const onCloseModal = () => {
+        setOpen(false);
+        setSelectedProblem(null);
+    };
+
     return (
         <div id='domains' className='overflow-hidden text-white font-montserrat'>
             <br /> <br /> <br /><br />
@@ -81,19 +103,24 @@ const ProblemStatements = () => {
                                 backgroundImage: `url(${item.backgroundImage})`
                             }}
                         >
-                            <div className='z-2 relative flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none'>
-                                <h5 className='text-xl font-bold mb-5'>{item.title}</h5>
-                                <p className='mb-6 font-semibold text-sm'>{item.description}</p>
+                            <div className='relative z-10 flex flex-col min-h-[22rem] p-[2.4rem]'>
+                                <h5 className='text-2xl font-bold mb-5 countDown'>{item.title}</h5>
+                                <p className='mb-6 font-semibold text-sm text-left'>
+                                    {item.description.split(' ').slice(0, 20).join(' ')}...
+                                </p>
                                 <div className='flex items-center mt-auto'>
                                     <div className='text-white bg-customPurpleDark p-2.5 rounded-lg shadow-[0px_0.5px_5px_#8c45ff]'>
                                         {item.iconUrl}
                                     </div>
-                                    <button className='my-3 ml-auto relative py-3 px-4 md:px-8 lg:px-6 rounded-lg font-medium text-sm md:text-lg lg:text-sm bg-gradient-to-b from-customOrange to-customOrange/90 text-white shadow-[0px_0px_12px_#8c45ff]'>
-                                        Coming Soon
+                                    <button
+                                        className='my-3 ml-auto relative py-3 px-4 md:px-8 lg:px-6 rounded-lg font-medium text-sm md:text-lg lg:text-sm bg-gradient-to-b from-customOrange to-customOrange/90 text-white shadow-[0px_0px_12px_#8c45ff] z-20'
+                                        onClick={() => onOpenModal(item)}
+                                    >
+                                        Read More
                                     </button>
                                 </div>
                             </div>
-                            <div className='absolute inset-0 opacity-0 transition-opacity hover:opacity-10'>
+                            <div className='absolute inset-0 opacity-15 '>
                                 <div className='absolute inset-0.5' style={{ clipPath: "url(#benefits)" }}>
                                     {item.imageUrl && (
                                         <img src={item.imageUrl} width={300} height={362} alt={item.title} className='w-full h-full object-cover' />
@@ -105,8 +132,25 @@ const ProblemStatements = () => {
                     ))}
                 </div>
             </div>
+
+            {selectedProblem && (
+                <Modal open={open} onClose={onCloseModal} center
+                    classNames={{
+                        overlay: 'customOverlay',
+                        modal: 'customModal',
+                    }}
+                    closeIcon={closeIcon} styles={{
+                        modal: { borderRadius: '12px', padding: '30px', backgroundColor: '#212529' }
+                    }}>
+                    <div className='font-montserrat text-white'>
+                        <h2 className='text-3xl font-bold mb-4 countDown'>{selectedProblem.title}</h2>
+                        <hr />
+                        <p className='mt-4 text-lg'>{selectedProblem.description}</p>
+                    </div>
+                </Modal>
+            )}
         </div>
-    )
+    );
 }
 
-export default ProblemStatements
+export default ProblemStatements;

@@ -141,7 +141,7 @@ const Hero = () => {
                     transition={{ duration: 0.5, delay: 0.4 }}
                     className='text-white py-2 text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight'
                 >
-                    VCET HACKATHON
+                    VCET <span className='countDown'>HACKATHON</span>
                 </motion.p>
 
                 <motion.div
