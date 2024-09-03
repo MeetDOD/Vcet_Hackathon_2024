@@ -1,14 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter&family=Mea+Culpa&family=Poppins:wght@100&family=Tektur&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=Mea+Culpa&family=Poppins:wght@100&family=Tektur&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --c1: #114a49;
-  --c2: #08b2aa;
-  --c3: #180828;
-  --c4: #9cf5fd;
-  --c5: #08b2aa;
-  --font_paragraph: "Inter", sans-serif;
-  --font_heading: "Tektur", cursive;
+  --c1: #f5af64;
+  --c2: #f5af64;
+  --c3: #111827;
+  --c4: #f5af64;
+  --c5: #fff;
+  --font_paragraph: "Montserrat", sans-serif;
+  --font_heading: "Montserrat", cursive;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -28,10 +27,10 @@ input[type="number"] {
 
 .form-h3 {
   text-align: center;
-  color: #08b2aa;
-  font-size: 36px;
-  font-weight: 400;
-  text-shadow: 0 0 3px black;
+  color: #f5af64;
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 0 0 3px #111827;
   font-family: var(--font_heading);
 }
 
@@ -121,7 +120,6 @@ input[type="number"] {
 .team-member2-container,
 .team-member3-container,
 .blur-container {
-  z-index: 99;
   padding: 2vmin;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.362);

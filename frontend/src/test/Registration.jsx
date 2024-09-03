@@ -21,6 +21,7 @@ const Registration = () => {
       dept: "",
       year: "",
       degree: "",
+      gitHubUrl: "",
     },
   ]);
 
@@ -45,10 +46,7 @@ const Registration = () => {
     <>
       <div style={{ backgroundColor: "black" }}>
         <ToastContainer />
-
         <div>
-          <br />
-          <br />
           <br />
           <br />
           <div className="glitch-wrapper mb-3">
@@ -84,20 +82,22 @@ const Registration = () => {
                         Note
                       </label>
                       <div
-                        className="container form-control text-dark"
-                        style={{ backgroundColor: "#08b2aa" }}
+                        className="container form-control text-dark font-montserrat"
+                        style={{ backgroundColor: "#f5af64", color: 'black' }}
                       >
                         <ol className="list-group">
                           <label>
-                            👉 No Special Characters are Allowed in College
+                            ✏️ No Special Characters are Allowed in College
                             Name.
                           </label>
+                          <br />
                           <label>
-                            👉 Avoid selecting the input field within the member
+                            ✏️ Avoid selecting the input field within the member
                             form for individuals you do not wish to include.
                           </label>
+                          <br />
                           <label>
-                            👉 Ensure that phone numbers and email addresses are
+                            ✏️ Ensure that phone numbers and email addresses are
                             unique, with no duplicates permitted.
                           </label>
                         </ol>
@@ -172,6 +172,22 @@ const Registration = () => {
                       handleUserChange(0, "email", e.target.value)
                     }
                     data-error="Please enter your Email"
+                    required
+                  />
+
+                  {/* Team Leader Github */}
+
+                  <input
+                    type="text"
+                    className="form-control email-input"
+                    id="id_team_leader_email"
+                    name="to_email"
+                    placeholder="Github Profile URL"
+                    value={usersToAdd[0]?.gitHubUrl || ""}
+                    onChange={(e) =>
+                      handleUserChange(0, "gitHubUrl", e.target.value)
+                    }
+                    data-error="Please enter your Github url"
                     required
                   />
                   {/* Team Leader Phone  */}
@@ -401,6 +417,22 @@ const Registration = () => {
                       data-error="Please enter your Email"
                     />
 
+                    {/* github */}
+
+                    <input
+                      type="text"
+                      className="form-control email-input"
+                      id="id_team_leader_email"
+                      name="to_email"
+                      placeholder="Github Profile URL"
+                      value={usersToAdd[_]?.gitHubUrl || ""}
+                      onChange={(e) =>
+                        handleUserChange(_, "gitHubUrl", e.target.value)
+                      }
+                      data-error="Please enter your Github url"
+                      required={checkIfAnyFieldIsFilled(_)}
+                    />
+
                     {/* Member Phone */}
                     <input
                       type="number"
@@ -579,7 +611,7 @@ const Registration = () => {
             </div>
 
             <div style={{ textAlign: "center" }}>
-              <button
+              {/* <button
                 disabled={submitting}
                 className={`btn btn-brand text-light px-5 my-5`}
                 style={{ fontSize: "20px", backgroundColor: "green" }}
@@ -596,6 +628,14 @@ const Registration = () => {
                     <span className="loader-wheel"></span>
                   </span>
                 </span>
+              </button> */}
+              <button className="relative my-10 py-3 px-8 md:px-10 lg:px-14 rounded-lg font-medium text-base bg-gradient-to-b from-customOrange to-customOrange/90 text-white shadow-[0px_0px_12px_#8c45ff] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                <div className="absolute inset-0">
+                  <div className="rounded-lg border border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]"></div>
+                  <div className="rounded-lg border absolute inset-0 border-white/40 [mask-image:linear-gradient(to_top,black,transparent)]"></div>
+                  <div className="absolute inset-0 shadow-[0_0_10px_rgb(140,69,255,.7)_inset] rounded-lg"></div>
+                </div>
+                Submit
               </button>
             </div>
           </form>

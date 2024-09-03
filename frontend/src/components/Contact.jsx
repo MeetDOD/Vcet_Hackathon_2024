@@ -6,7 +6,7 @@ import Heading from './Heading';
 const Contact = () => {
     return (
         <div id='contactUs' className='text-white font-montserrat'>
-            <br/><br/><br/><br/>
+            <br /><br /><br /><br />
             <Heading
                 title1="Contact"
                 title2="Us"
@@ -30,8 +30,8 @@ const Contact = () => {
                             <h3 className='text-2xl text-center text-customOrange font-semibold'>
                                 Other Queries
                             </h3>
-                            <p className='text-white'>Kashish Bhanushali<br />+91 9561650242</p>
-                            <p className='text-white'>Ramesh Yadav<br />+91 9096377491</p>
+                            <p className='text-white'>Shreyas Pathe<br />+91 8637717076</p>
+                            <p className='text-white'>Arya Sable<br />+91 8767917131</p>
                         </div>
                     </div>
 

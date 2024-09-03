@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Heading from './Heading';
+import { Link } from 'react-router-dom';
 
 const Modal = ({ title, children, onClose }) => (
   <div className="fixed inset-0 bg-gray-800 bg-opacity-70 flex items-center justify-center z-50">
@@ -29,9 +30,9 @@ const Guidelines = () => {
   };
 
   return (
-    
+
     <div id='guidelines' className="relative w-full h-full custom-bg-small">
-      <br/><br/>
+      <br /><br />
       <div className="min-h-screen text-white py-10 px-4 md:px-8 lg:px-16 font-montserrat">
         <Heading
           title1="Event"
@@ -56,13 +57,12 @@ const Guidelines = () => {
               <li>Please submit a 300-500 word abstract on the provided example problem statement along with the GitHub profile of any member of the team for shortlisting.</li>
               <li>All updates regarding the event will be posted on Social Media handles and mailed to each team.</li>
             </ul>
-            <div className="mt-4">
-              <button
-                className="border border-white text-white py-2 px-4 rounded hover:bg-customOrange hover:border-customOrange transition"
-                onClick={() => setRegistration(true)}
+            <div className="my-6">
+              <Link to="/register"
+                className="text-white py-3 px-6 rounded-lg bg-gradient-to-b from-customOrange to-customOrange/90 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
               >
                 Register Now
-              </button>
+              </Link>
             </div>
             <ul className="list-disc pl-5 space-y-2 mt-4 text-sm sm:text-base md:text-lg">
               {/* Additional notes */}
@@ -74,15 +74,15 @@ const Guidelines = () => {
               <li>All done, your squad is all set to seize the Code The Cosmos for VCET HACKATHON'24.</li>
               <li>Following are the details of payment.</li>
             </ul>
-            <div className="mt-4 flex flex-row space-x-4 sm:space-x-8">
+            <div className="mt-4 flex flex-row space-x-2 sm:space-x-4">
               <button
-                className="border border-white text-white py-2 px-4 rounded hover:bg-customOrange hover:border-customOrange transition"
+                className="text-white py-2 px-4 rounded-lg bg-gradient-to-b from-customOrange to-customOrange/90 transition"
                 onClick={() => setNeftModalOpen(true)}
               >
                 NEFT
               </button>
               <button
-                className="border border-white text-white py-2 px-4 rounded hover:bg-customOrange hover:border-customOrange transition"
+                className="text-white py-2 px-6 rounded-lg bg-gradient-to-b from-customOrange to-customOrange/90 transition"
                 onClick={() => setUpiModalOpen(true)}
               >
                 UPI
