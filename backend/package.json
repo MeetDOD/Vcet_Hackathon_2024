@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "engines":{
+  "engines": {
     "node": "18.x"
   },
   "scripts": {
@@ -15,6 +15,7 @@
   "author": "vcet",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^8.2.2",
     "cors": "^2.8.5",
     "csv-writer": "^1.6.0",
     "dotenv": "^16.3.1",
