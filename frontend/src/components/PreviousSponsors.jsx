@@ -61,11 +61,11 @@ const PreviousSponsors = () => {
     return (
         <div className="relative">
             <div id='sponsors' className="flex flex-col justify-center items-center text-white font-montserrat">
-                <br/><br/><br/><br/><br/><br/><br/>
+                <br /><br /><br /><br /><br /><br /><br />
                 <Heading
                     title1="Previous"
                     title2="Sponsors"
-                    subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
+                    subtitle="Acknowledging the supporters behind the scenes"
                     sectionId="previoussponsors"
                 />
 

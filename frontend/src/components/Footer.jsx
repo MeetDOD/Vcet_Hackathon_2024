@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/logo.png';
+import logo from '../assets/logonew.png';
 import { HashLink } from 'react-router-hash-link'; // Ensure HashLink is used for hash-based navigation
 import { FaFacebookSquare, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 

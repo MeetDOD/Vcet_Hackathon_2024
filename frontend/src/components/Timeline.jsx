@@ -76,7 +76,7 @@ const Timeline = () => {
                 <Heading
                     title1="Our"
                     title2="Timeline"
-                    subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
+                    subtitle="See what's coming up in our event schedule"
                     sectionId="timeline"
                 />
                 <VerticalTimeline className='sectionMargin'>

@@ -35,7 +35,7 @@ const Heading = ({ title1, title2, subtitle, sectionId }) => {
 
     return (
         <div id={sectionId} className="flex flex-col justify-center items-center z-10 heading-section">
-            <h2 className="font-semibold  text-3xl md:text-4xl lg:text-5xl text-center tracking-tighter relative inline-block">
+            <h2 className="countDown font-semibold  text-3xl md:text-4xl lg:text-5xl text-center tracking-tighter relative inline-block">
                 {title1}
                 <span className='rocket-icon inline-block align-middle pb-3 h-14 md:h-20'>
                     <Lottie options={defaultOptions} />

@@ -2,29 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-import s1 from "../assets/sponsors/s1.png";
-import s2 from "../assets/sponsors/s2.png";
-import s3 from "../assets/sponsors/s3.png";
-import s4 from "../assets/sponsors/s4.png";
-import s5 from "../assets/sponsors/s5.png";
-import s6 from "../assets/sponsors/s6.png";
-import s7 from "../assets/sponsors/s7.jpg";
-import s8 from "../assets/sponsors/s8.png";
+import s1 from "../assets/currentSponsors/contentstack.jpg";
+import s2 from "../assets/currentSponsors/edba.png";
 import Heading from './Heading';
 
 gsap.registerPlugin(ScrollTrigger);
-
-const sponsors = [
-    { src: s1, title: "Sponsor 1" },
-    { src: s2, title: "Sponsor 2" },
-    { src: s3, title: "Sponsor 3" },
-    { src: s4, title: "Sponsor 4" },
-    { src: s5, title: "Sponsor 5" },
-    { src: s6, title: "Sponsor 6" },
-    { src: s7, title: "Sponsor 7" },
-    { src: s8, title: "Sponsor 8" },
-];
 
 const Sponsors = () => {
     React.useEffect(() => {
@@ -46,48 +28,86 @@ const Sponsors = () => {
     }, []);
 
     return (
-        <div className=" py-[72px] ">
+        <div>
             <div id='sponsors' className="container mx-auto text-white font-montserrat">
+                <br />
+                <br />
+                <br />
+                <br />
                 <Heading
-                    title1="Our"
+                    title1="New"
                     title2="Sponsors"
-                    subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
+                    subtitle="Meet the partners making this event possible"
                     sectionId="Sponsors"
                 />
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-10 px-5">
-                    {sponsors.map((sponsor, index) => (
-                        <motion.div
-                            key={index}
-                            className="shadow-2xl w-full sponsor-item flex flex-col items-center bg-gray-50 p-3 rounded-xl h-32 justify-center"
-                            whileHover={{
-                                scale: 1.05,
-                                transition: {
-                                    type: "spring",
-                                    stiffness: 300,
-                                    damping: 10,
-                                },
-                            }}
-                            whileTap={{
-                                scale: 0.95,
-                                transition: {
-                                    type: "spring",
-                                    stiffness: 300,
-                                    damping: 20,
-                                },
-                            }}
-                        >
-                            <div className="relative">
-                                <img
-                                    src={sponsor.src}
-                                    alt={sponsor.title}
-                                    className="w-52 transition-transform duration-300 ease-in-out transform"
-                                />
-                            </div>
-                        </motion.div>
-                    ))}
+
+                <div className='flex my-5 mt-10  justify-center font-semibold  text-xl md:text-2xl lg:text-3xl text-center tracking-tighter relative countDown'>
+                    Title Sponsor
+                </div>
+                <div className="flex justify-center my-5 pb-10 items-center">
+                    <motion.div
+                        className="shadow-2xl sponsor-item flex flex-col items-center bg-gray-50 rounded-xl h-32 justify-center"
+                        whileHover={{
+                            scale: 1.05,
+                            transition: {
+                                type: "spring",
+                                stiffness: 300,
+                                damping: 10,
+                            },
+                        }}
+                        whileTap={{
+                            scale: 0.95,
+                            transition: {
+                                type: "spring",
+                                stiffness: 300,
+                                damping: 20,
+                            },
+                        }}
+                    >
+                        <a href="https://www.contentstack.com" target="_blank" className="relative">
+                            <img
+                                src={s1}
+                                alt="Title Sponsor"
+                                className="w-80 p-5 px-10 transition-transform duration-300 ease-in-out transform"
+                            />
+                        </a>
+                    </motion.div>
+                </div>
+
+                <div className='flex my-5 justify-center font-semibold  text-xl md:text-2xl lg:text-3xl text-center tracking-tighter relative countDown'>
+                    Training Partner
+                </div>
+                <div className="flex justify-center my-5 pb-10 items-center">
+                    <motion.div
+                        className="shadow-2xl sponsor-item flex flex-col items-center bg-gray-50 rounded-xl h-32 justify-center"
+                        whileHover={{
+                            scale: 1.05,
+                            transition: {
+                                type: "spring",
+                                stiffness: 300,
+                                damping: 10,
+                            },
+                        }}
+                        whileTap={{
+                            scale: 0.95,
+                            transition: {
+                                type: "spring",
+                                stiffness: 300,
+                                damping: 20,
+                            },
+                        }}
+                    >
+                        <a href="https://www.edba-academy.com" target='_blank' className="relative">
+                            <img
+                                src={s2}
+                                alt="Title Sponsor"
+                                className="w-80 p-5 px-10 transition-transform duration-300 ease-in-out transform"
+                            />
+                        </a>
+                    </motion.div>
                 </div>
             </div>
-         </div>
+        </div>
     );
 };
 

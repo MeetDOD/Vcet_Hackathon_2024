@@ -1,6 +1,5 @@
 import React from 'react';
 import StarsCanvas from '../components/StarBackground';
-import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import AboutUs from '../components/AboutUs';
 import OurGallery from '../components/OurGallery';
@@ -15,10 +14,11 @@ import Prize from '../components/Prize'
 import "../index.css"
 import GoToTop from '../components/GoToTop';
 import Timer from '../components/Timer';
+import Sponsors from '../components/Sponsors';
 
 const Home = () => {
     return (
-        <div className="relative w-full h-screen">
+        <div className="relative w-full h-full">
             <StarsCanvas />
             <GoToTop />
             <div className="relative z-10">
@@ -27,6 +27,7 @@ const Home = () => {
                 <Timer />
                 <ProblemStatements />
                 <Prize />
+                <Sponsors />
                 <PreviousSponsors />
                 <Timeline />
                 <Guidelines />
