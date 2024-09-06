@@ -101,7 +101,6 @@ export const handleFormSubmit = async (
       leaderEmail: usersToAdd[0].email,
       name: teamName,
     };
-    console.log("adddata",addData)
 
     let res = await fetch(
       `${import.meta.env.VITE_BACKEND_URL}/api/v1/users/register`,
@@ -255,10 +254,6 @@ export const fillTestFormData = (teamL) => {
     const randomData = fillRandomData();
     usersToAdd.push(randomData);
   }
-
-  console.log(usersToAdd);
-
-
 
   return usersToAdd;
 };
