@@ -101,6 +101,7 @@ export const handleFormSubmit = async (
       leaderEmail: usersToAdd[0].email,
       name: teamName,
     };
+    console.log("adddata",addData)
 
     let res = await fetch(
       `${import.meta.env.VITE_BACKEND_URL}/api/v1/users/register`,
