@@ -12,7 +12,7 @@ const socialLinks = [
 
 const quickLinks = [
     { id: 'aboutus', label: 'About', hash: '#aboutUs' },
-    { id: 'problems', label: 'Problem Statements', hash: '#problems' },
+    { id: 'domains', label: 'Domains', hash: '#domains' },
     { id: 'guidelines', label: 'Rules & Registration', hash: '#guidelines' },
     { id: 'timelines', label: 'Event Schedule', hash: '#timelines' },
     { id: 'gallerys', label: 'Photo Gallery', hash: '#gallerys' },
