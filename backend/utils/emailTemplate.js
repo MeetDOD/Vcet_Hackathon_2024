@@ -1,25 +1,26 @@
-const generateVerificationEmail = (user, teamLeader) => `
+const generateVerificationEmail = (teamLeader, teamName) => `
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: "Poppins","Arial";
+        font-family: "Poppins", "Arial";
         color: #fff;
         text-align: center;
       }
-      
+
       .mailTemplateMainContainer {
         margin: 5px auto;
         max-width: 768px;
         background-color: #0b0b0b;
-        background-image: url("https://hackathonvcet.s3.amazonaws.com/email2.png");
+
+        background-image: url("https://share1.cloudhq-mkt3.net/ebf6aff5ea6946.png");
         background-size: cover;
         background-position: top;
         background-repeat: no-repeat;
@@ -34,9 +35,9 @@ const generateVerificationEmail = (user, teamLeader) => `
       }
 
       .mailTemplateMainContainer .mailDiv .collegeDetails .collegeLogo {
-        width: 80px; /* Increased size */
-        height: 80px; /* Increased size */
-        background-image: url("https://hackathonvcet.s3.amazonaws.com/CLG+LOGO.png");
+        width: 100px; /* Increased size */
+        height: 100px; /* Increased size */
+        background-image: url("https://share1.cloudhq-mkt3.net/08b4f31ba091f0.jpeg");
         background-size: cover;
         margin: 5px auto;
       }
@@ -76,7 +77,7 @@ const generateVerificationEmail = (user, teamLeader) => `
       }
 
       .mailTemplateMainContainer .mailDiv .mailContent .mainMessage {
-        background-color: #34e8da75;
+        background-color: #f2a657;
         width: 100%;
         margin: 0 auto;
         text-align: center;
@@ -109,7 +110,7 @@ const generateVerificationEmail = (user, teamLeader) => `
 
       .mailTemplateMainContainer .mailDiv .mailContent .longMessage a {
         text-decoration: none;
-        color: rgb(134, 242, 248);
+        color: #f2a657;
       }
 
       .note {
@@ -120,8 +121,8 @@ const generateVerificationEmail = (user, teamLeader) => `
         color: #252525;
         padding: 10px;
       }
-      .imp{
-        color: rgb(134, 242, 248);
+      .imp {
+        color: #f2a657;
       }
       @media only screen and (max-width: 425px) {
         .mailTemplateMainContainer {
@@ -164,10 +165,7 @@ const generateVerificationEmail = (user, teamLeader) => `
       <div class="mailDiv">
         <div class="collegeDetails">
           <div class="collegeLogo">
-            <img
-              src="https://hackathonvcet.s3.amazonaws.com/CLG+LOGO.png"
-              alt=""
-            />
+            <img src="" alt="" />
           </div>
           <div class="collegeName">
             Vidyavardhini's College of Engineering & Technology
@@ -179,51 +177,240 @@ const generateVerificationEmail = (user, teamLeader) => `
         <div class="hackathon">
           <div class="department">Department of Information Technology</div>
           <div>PRESENTS</div>
-          <div class="hackathonLogo">
+          <div class="hackathonLogo" style="margin-bottom: 20px">
             <img
-              src="https://hackathonvcet.s3.amazonaws.com/hack+(1)+(1).png"
+              src="https://share1.cloudhq-mkt3.net/ea446c54e9e79a.png"
               alt=""
             />
           </div>
         </div>
         <div class="mailContent">
-          <div class="mainMessage">Successfully registered !</div>
+          <div class="mainMessage">Successfully registered!</div>
           <div class="longMessage">
             Dear ${teamLeader},
-            <br /><br/>  
-            We hope this message finds you well. We are delighted to inform you that your registration for the VCET Hackathon: Unleash The Unreal has been successfully received. Thank you for expressing your interest in our event!
-            We have received an overwhelming response, and we are excited about the incredible projects that will come to life during this hackathon. Our team is dedicated to ensuring a fair and competitive selection process for all participants.
-            <br/>
-            <br/>
+            <br /><br />
+            We hope this message finds you well. We are delighted to inform you
+            that your registration for the VCET Hackathon: Code The Cosmos has
+            been successfully received. Thank you for expressing your interest
+            in our event! We have received an overwhelming response, and we are
+            excited about the incredible projects that will come to life during
+            this hackathon. Our team is dedicated to ensuring a fair and
+            competitive selection process for all participants.
+            <br />
+            <br />
             Here are the next steps in the process:
-            <br/>
-            <b class="imp">Abstract Review:</b> Our team will now begin the process of reviewing the abstracts submitted by all registered participants. The abstract is a critical part of the selection process, and it provides us with insight into your project idea and its potential impact.
-            <br/>
-            <b class="imp">Shortlisting Teams:</b> After carefully reviewing all abstracts, we will shortlist teams based on the quality and feasibility of the project ideas presented. Shortlisted teams will be notified via email.
-            <br/>
-            <b class="imp">Hackathon Details:</b> Once teams are finalized, we will share additional details about the hackathon, including the schedule, rules, and resources, to help you prepare for the event.
-            <br/><br/>
-            We encourage you to check your email regularly for updates and announcements regarding the hackathon. If you have any questions or require further assistance, please do not hesitate to reach out to us at <a href="mailto:vcet.hackathon@vcet.edu.in">vcet.hackathon@vcet.edu.in</a>.
-            
-            We appreciate your enthusiasm and commitment to making VCET Hackathon: Unleash The Unreal a success. We look forward to seeing your innovative ideas come to life during the event.
+            <br />
+            <b class="imp">Abstract Review:</b> Our team will now begin the
+            process of reviewing the abstracts submitted by all registered
+            participants. The abstract is a critical part of the selection
+            process, and it provides us with insight into your project idea and
+            its potential impact.
+            <br />
+            <b class="imp">Shortlisting Teams:</b> After carefully reviewing all
+            abstracts, we will shortlist teams based on the quality and
+            feasibility of the project ideas presented. Shortlisted teams will
+            be notified via email.
+            <br />
+            <b class="imp">Hackathon Details:</b> Once teams are finalized, we
+            will share additional details about the hackathon, including the
+            schedule, rules, and resources, to help you prepare for the event.
+            <br /><br />
+            We encourage you to check your email regularly for updates and
+            announcements regarding the hackathon. If you have any questions or
+            require further assistance, please do not hesitate to reach out to
+            us at
+            <a href="mailto:vcet.hackathon@vcet.edu.in"
+              >vcet.hackathon@vcet.edu.in</a
+            >. We appreciate your enthusiasm and commitment to making VCET
+            Hackathon: Code The Cosmos a success. We look forward to seeing your
+            innovative ideas come to life during the event.
 
             <br />
             <br />
             Visit our
-            <a href="https://vcet-hackathon.web.app" target="_blank"
-              >official website-https://vcet-hackathon.web.app</a
+            <a href="https://vcet-hackathon.com" target="_blank"
+              >official website-https://vcet-hackathon.com</a
             >
             for more details and updates.
+            <br>
+            <br>
+            To proceed further, please fill out the provided form : 
+            <a href="https://forms.gle/QfvBxe5u6avockT28" target="_blank"
+              >FORM LINK</a
+            >
+            <br>
+            <br>
+            
           </div>
+          
         </div>
       </div>
     </div>
+
+
+    <div style="display: flex; justify-content: center; align-items: center; background-color: #ffffff; ">
+            <table
+                      class="row-content stack"
+                      align="center"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      role="presentation"
+                      style="
+                        mso-table-lspace: 0pt;
+                        mso-table-rspace: 0pt;
+                        border-radius: 0;
+                        color: #000000;
+                        width: 600px;
+                        margin: 0 auto;
+                      "
+                      width="600"
+                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            class="column column-1"
+                            width="100%"
+                            style="
+                              mso-table-lspace: 0pt;
+                              mso-table-rspace: 0pt;
+                              font-weight: 400;
+                              text-align: left;
+                              padding-bottom: 5px;
+                              padding-top: 5px;
+                              vertical-align: top;
+                              border-top: 0px;
+                              border-right: 0px;
+                              border-bottom: 0px;
+                              border-left: 0px;
+                            "
+                          >
+                            <table
+                              class="social_block block-1"
+                              width="100%"
+                              border="0"
+                              cellpadding="10"
+                              cellspacing="0"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div class="alignment" align="center">
+                                    <table
+                                      class="social-table"
+                                      width="180px"
+                                      border="0"
+                                      cellpadding="0"
+                                      cellspacing="0"
+                                      role="presentation"
+                                      style="
+                                        mso-table-lspace: 0pt;
+                                        mso-table-rspace: 0pt;
+                                        display: inline-block;
+                                      "
+                                    >
+                                      <tr>
+                                        <td style="padding: 0 2px 0 2px">
+                                          <a
+                                            href="https://facebook.com/vcet.hackathon"
+                                            target="_blank"
+                                            ><img
+                                              src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-only-logo-dark-gray/facebook@2x.png"
+                                              width="32"
+                                              height="auto"
+                                              alt="Facebook"
+                                              title="facebook"
+                                              style="
+                                                display: block;
+                                                height: auto;
+                                                border: 0;
+                                              "
+                                          /></a>
+                                        </td>
+                                        <td style="padding: 0 2px 0 2px">
+                                          <a
+                                            href="https://twitter.com/VcetHackathon?t=bGmgk92_qLXIO41MbQj-9g&s=08"
+                                            target="_blank"
+                                            ><img
+                                              src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-only-logo-dark-gray/twitter@2x.png"
+                                              width="32"
+                                              height="auto"
+                                              alt="Twitter"
+                                              title="twitter"
+                                              style="
+                                                display: block;
+                                                height: auto;
+                                                border: 0;
+                                              "
+                                          /></a>
+                                        </td>
+                                        <td style="padding: 0 2px 0 2px">
+                                          <a
+                                            href="https://www.linkedin.com/in/vcet-hackathon"
+                                            target="_blank"
+                                            ><img
+                                              src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-only-logo-dark-gray/linkedin@2x.png"
+                                              width="32"
+                                              height="auto"
+                                              alt="Linkedin"
+                                              title="linkedin"
+                                              style="
+                                                display: block;
+                                                height: auto;
+                                                border: 0;
+                                              "
+                                          /></a>
+                                        </td>
+                                        <td style="padding: 0 2px 0 2px">
+                                          <a
+                                            href="https://instagram.com/hackathon_vcet"
+                                            target="_blank"
+                                            ><img
+                                              src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-only-logo-dark-gray/instagram@2x.png"
+                                              width="32"
+                                              height="auto"
+                                              alt="Instagram"
+                                              title="instagram"
+                                              style="
+                                                display: block;
+                                                height: auto;
+                                                border: 0;
+                                              "
+                                          /></a>
+                                        </td>
+                                        <td style="padding: 0 2px 0 2px">
+                                          <a
+                                            href="https://youtube.com/channel/UCiXUwtsG0IsktJ69rjPZTgQ"
+                                            target="_blank"
+                                            ><img
+                                              src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-only-logo-dark-gray/youtube@2x.png"
+                                              width="32"
+                                              height="auto"
+                                              alt="YouTube"
+                                              title="YouTube"
+                                              style="
+                                                display: block;
+                                                height: auto;
+                                                border: 0;
+                                              "
+                                          /></a>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+          </div>
     <div class="note">
       This is a system-generated email; please do not reply to this.
     </div>
   </body>
 </html>
-
 `;
 
 

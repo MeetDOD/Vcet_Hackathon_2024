@@ -93,34 +93,36 @@ const registration = asyncHandler(async (req, res) => {
       return user.save();
     }));
 
-    const N8N_URL = process.env.DEV_MODE == "true" ? process.env.N8N_DEV_URL : process.env.N8N_PROD_URL;
-    console.log(N8N_URL);
-    // Asynchronous trigger, non-blocking
-    const triggerN8nWorkflow = fetch(N8N_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        usersToAdd: usersToAdd.map(user => ({
-          "First Name": user.fname,
-          "Last Name": user.lname,
-          "Team Name": name,
-          "Email": user.email,
-          "Contact": user.phoneNo,
-          "Gender": user.gender,
-          "State": user.state,
-          "Pincode": user.pincode,
-          "College": user.college,
-          "Department": user.dept,
-          "Year": user.year,
-          "Degree": user.degree,
-          "Github URL": user.gitHubUrl,
-          "Leader": leaderEmail,
-          "LeaderName": leaderId.fname + " " + leaderId.lname,
-        })),
-      }),
-    });
+    await sendVerification(leaderId.email, leaderId.fname, newTeam.name?.toUpperCase());
 
-    triggerN8nWorkflow.then(() => console.log("Workflow triggered"));
+    // const N8N_URL = process.env.DEV_MODE == "true" ? process.env.N8N_DEV_URL : process.env.N8N_PROD_URL;
+    // console.log(N8N_URL);
+    // // Asynchronous trigger, non-blocking
+    // const triggerN8nWorkflow = fetch(N8N_URL, {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify({
+    //     usersToAdd: usersToAdd.map(user => ({
+    //       "First Name": user.fname,
+    //       "Last Name": user.lname,
+    //       "Team Name": name,
+    //       "Email": user.email,
+    //       "Contact": user.phoneNo,
+    //       "Gender": user.gender,
+    //       "State": user.state,
+    //       "Pincode": user.pincode,
+    //       "College": user.college,
+    //       "Department": user.dept,
+    //       "Year": user.year,
+    //       "Degree": user.degree,
+    //       "Github URL": user.gitHubUrl,
+    //       "Leader": leaderEmail,
+    //       "LeaderName": leaderId.fname + " " + leaderId.lname,
+    //     })),
+    //   }),
+    // });
+
+    // triggerN8nWorkflow.then(() => console.log("Workflow triggered"));
 
     res.status(201).json({ message: "Registration successful, email sent" });
   } catch (error) {

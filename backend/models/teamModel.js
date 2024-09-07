@@ -8,7 +8,8 @@ const TeamSchema = mongoose.Schema({
     name: {
         type: String,
         unique: [true, "Team name is already taken"],
-        required: [true, "Must be provided"]
+        required: [true, "Must be provided"],
+        toLowerCase: true,
     },
 
     leader: {

@@ -6,15 +6,18 @@ const UserSchema = mongoose.Schema(
        
         fname: {
             type: String,
+            toLowerCase: true,
+            
             
         },
         lname: {
             type: String,
-            
+            toLowerCase: true,
         },
         email: {
             type: String,
             unique: [true, "This email is already in use"],
+            toLowerCase: true,
         },
         phoneNo: {
             type: String,
@@ -71,6 +74,7 @@ const UserSchema = mongoose.Schema(
         },
         gitHubUrl:{
             type: String,
+            toLowerCase: true,
         },
     },
     { timestamps: true }
