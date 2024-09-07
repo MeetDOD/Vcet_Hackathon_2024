@@ -191,7 +191,7 @@ const Registration = () => {
                     placeholder="Email (All notifications will be sent to this mail.)"
                     value={usersToAdd[0]?.email || ""}
                     onChange={(e) =>
-                      handleUserChange(0, "email", e.target.value.toLowerCase())
+                      handleUserChange(0, "email", e.target.value)
                     }
                     data-error="Please enter your Email"
                     required
@@ -257,6 +257,7 @@ const Registration = () => {
                     id="id_team_leader_college_name"
                     name="team_leader_college_name"
                     placeholder="College Name"
+                    pattern="^[A-Za-z]+( [A-Za-z]+)*$"
                     value={usersToAdd[0]?.college || ""}
                     onChange={(e) =>
                       handleUserChange(0, "college", e.target.value)
@@ -433,7 +434,7 @@ const Registration = () => {
                       placeholder="Email"
                       value={usersToAdd[_]?.email || ""}
                       onInput={(e) =>
-                        handleUserChange(_, "email", e.target.value.toLowerCase())
+                        handleUserChange(_, "email", e.target.value)
                       }
                       data-error="Please enter your Email"
                     />
@@ -495,6 +496,7 @@ const Registration = () => {
                     {/* Member College */}
                     <input
                       type="text"
+                      pattern="^[A-Za-z]+( [A-Za-z]+)*$"
                       className="form-control"
                       id="id_team_leader_college_name"
                       name="team_leader_college_name"
