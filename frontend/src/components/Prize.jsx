@@ -27,7 +27,7 @@ const Prize = () => {
               <div className='text-[#C0C0C0]'>
                 <GiTrophyCup size={190} />
               </div>
-              <div className='text-2xl font-semibold countDown'>₹ 25,000</div>
+              <div className='text-2xl font-semibold countDown'>₹ 20,000</div>
             </div>
           </div>
         </div>
