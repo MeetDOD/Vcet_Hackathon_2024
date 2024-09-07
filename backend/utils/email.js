@@ -8,7 +8,7 @@ const generateToken = (email) => {
     return jwt.sign({ email }, process.env.JWT_SECRET, { expiresIn: '1d' })
 }
 
-const sendVerification = async (recipientEmail, username) => {
+const sendVerification = async (recipientEmail, teamLeader, teamName) => {
     try {
 
         const transporter = nodemailer.createTransport({
@@ -19,11 +19,11 @@ const sendVerification = async (recipientEmail, username) => {
             }
         })
 
-        const emailcontent = generateVerificationEmail(recipientEmail, username);
+        const emailcontent = generateVerificationEmail(teamLeader, teamName);
         await transporter.sendMail({
             from: process.env.EMAIL,
             to: recipientEmail,
-            subject: 'Registration Successful',
+            subject: `${teamName} you're successfully registered for the event! 🎉`,
             html: emailcontent
         })
 

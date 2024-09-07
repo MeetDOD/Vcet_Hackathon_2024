@@ -17,7 +17,7 @@ const Hero = () => {
     };
 
     return (
-        <div id='#home' className='mb-20 overflow-hidden relative flex flex-col justify-center text-center min-h-screen
+        <div id='home' className='mb-20 overflow-hidden relative flex flex-col justify-center text-center min-h-screen
         [mask-image:linear-gradient(to_top,transparent,black_15%,black_100%,transparent)]'
         >
             <div className='absolute inset-0 
@@ -107,22 +107,56 @@ const Hero = () => {
 
             <div className='relative mt-12 flex flex-col items-center font-montserrat'>
                 <img src={vcet} alt='vcet' className='py-2 w-24 md:w-28 lg:w-32' />
-                <p className='font-semibold text-white text-xl md:text-2xl lg:text-3xl py-2 tracking-tighter'>
+
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                    className='font-semibold text-white text-xl md:text-2xl lg:text-3xl py-2 tracking-tighter px-2'
+                >
                     Vidyavardhini's College of Engineering and Technology
-                </p>
-                <p className='py-2 text-white text-xl lg:text-2xl font-semibold tracking-tighter'>
+                </motion.p>
+
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className='font-semibold text-white text-lg md:text-xl lg:text-2xl py-2 tracking-tighter'
+                >
+                    Department of Information Technology
+                </motion.p>
+
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className='py-2 text-white text-xl lg:text-2xl font-semibold tracking-tighter'
+                >
                     presents
-                </p>
-                <p className='text-white py-2 text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight'>
-                    VCET HACKATHON
-                </p>
-                <div className='tracking-wide text-transparent text-3xl md:text-5xl lg:text-6xl font-bold py-3 bg-clip-text bg-gradient-to-r from-gray-100 via-violet-500 to-customOrange animate-gradient-x'>
+                </motion.p>
+
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                    className='text-white py-2 text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight'
+                >
+                    VCET <span className='countDown'>HACKATHON</span>
+                </motion.p>
+
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                    className='tracking-wide text-transparent text-3xl md:text-5xl lg:text-6xl font-bold py-3 bg-clip-text bg-gradient-to-r from-gray-100 via-violet-500 to-customOrange animate-gradient-x'
+                >
                     Code The Cosm
                     <div className='-mr-2 -ml-2 inline-block w-14 md:w-20 lg:w-24 h-auto align-middle'>
                         <Lottie options={defaultOptions} />
                     </div>
                     s
-                </div>
+                </motion.div>
+
                 <Button />
             </div>
         </div>

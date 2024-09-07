@@ -1,32 +1,24 @@
 import { useState } from 'react';
 import Heading from './Heading';
 import { Link } from 'react-router-dom';
+import qr from "../assets/qr.jpg"
+import { Modal } from 'react-responsive-modal';
+import 'react-responsive-modal/styles.css';
+import { IoClose } from "react-icons/io5";
 
-const Modal = ({ title, children, onClose }) => (
-  <div className="fixed inset-0 bg-gray-800 bg-opacity-70 flex items-center justify-center z-50">
-    <div className="bg-[#212529] p-6 rounded-lg w-full max-w-md">
-      <div className="flex justify-between items-center border-b border-white pb-3 mb-3">
-        <h5 className="text-xl font-exo text-white">{title}</h5>
-        <button className="text-white" onClick={onClose}>
-          <svg className="w-8 h-8 text-black bg-gray-400 rounded-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-      <div className="text-white text-center">{children}</div>
-    </div>
+const closeIcon = (
+  <div className='text-customOrange'>
+    <IoClose size={30} />
   </div>
 );
 
 const Guidelines = () => {
   const [isNeftModalOpen, setNeftModalOpen] = useState(false);
   const [isUpiModalOpen, setUpiModalOpen] = useState(false);
-  const [isRegister, setRegistration] = useState(false);
 
   const handleModalClose = () => {
     setNeftModalOpen(false);
     setUpiModalOpen(false);
-    setRegistration(false);
   };
 
   return (
@@ -37,7 +29,7 @@ const Guidelines = () => {
         <Heading
           title1="Event"
           title2="Guidelines"
-          subtitle="Code the Cosmos, Code for Cosmos and Code by Cosmos"
+          subtitle="Navigate the rules and make the most of your experience"
           sectionId="guideline"
         />
 
@@ -54,7 +46,6 @@ const Guidelines = () => {
               <li>Participants are expected to promptly push their code changes on GitHub.</li>
               <li>Participants are expected to behave professionally and responsibly.</li>
               <li>Decisions made by organizers and judges are final.</li>
-              <li>Please submit a 300-500 word abstract on the provided example problem statement along with the GitHub profile of any member of the team for shortlisting.</li>
               <li>All updates regarding the event will be posted on Social Media handles and mailed to each team.</li>
             </ul>
             <div className="my-6">
@@ -65,12 +56,11 @@ const Guidelines = () => {
               </Link>
             </div>
             <ul className="list-disc pl-5 space-y-2 mt-4 text-sm sm:text-base md:text-lg">
-              {/* Additional notes */}
-              <li>NOTE: The order preference of the problem statements is solely for our reference. We do not assure that the topic allocation will be based on your top preferences only.</li>
+              <li>NOTE: The order preference of the domain is solely for our reference. We do not assure that the topic allocation will be based on your top preferences only.</li>
               <li>Last date for submission of abstract is <span className="text-customOrange">September 22, 2024</span>.</li>
               <li>The selected teams will get a confirmation after <span className="text-customOrange">September 25, 2024</span>.</li>
               <li>Payment for the selected teams i.e. ₹500 per person should be made by <span className="text-customOrange">September 29, 2024</span>. Entry fee payment of the entire team should be done in a single transaction.</li>
-              <li>Out of the 5 abstracts submitted, the final Problem Statement for your team will be disclosed on <span className="text-customOrange">October 4, 2024.</span></li>
+              <li>Out of the 5 domains selected, the final domain for your team will be disclosed on <span className="text-customOrange">October 4, 2024.</span></li>
               <li>All done, your squad is all set to seize the Code The Cosmos for VCET HACKATHON'24.</li>
               <li>Following are the details of payment.</li>
             </ul>
@@ -92,27 +82,42 @@ const Guidelines = () => {
         </div>
 
         {/* NEFT Modal */}
-        {isNeftModalOpen && (
-          <Modal title="NEFT Details" onClose={handleModalClose}>
-            <p>NAME: Mrs. Archana Babaji Rawool</p>
-            <p>Account No: 68012823017</p>
-            <p>IFSC: MAHB0000299</p>
-          </Modal>
-        )}
+        <Modal
+          open={isNeftModalOpen}
+          onClose={handleModalClose}
+          center
+          classNames={{
+            overlay: 'customOverlay',
+            modal: 'customModal',
+          }}
+          closeIcon={closeIcon}
+          styles={{
+            modal: { borderRadius: '12px', padding: '30px', backgroundColor: '#212529' }
+          }}
+        >
+          <h2 className='text-2xl font-bold text-customOrange mb-4'>NEFT Details</h2><hr />
+          <p className='text-lg font-semibold text-white mt-5 mb-2'>NAME: Vedant Sharad Patil</p>
+          <p className='text-lg font-semibold text-white my-2'>Account No: 018100100013886</p>
+          <p className='text-lg font-semibold text-white'>IFSC: BACB0000018</p>
+        </Modal>
 
         {/* UPI Modal */}
-        {isUpiModalOpen && (
-          <Modal title="UPI Details" onClose={handleModalClose}>
-            <img src="/assets/upi-13bc9438.png" alt="UPI QR Code" className="w-full" />
-          </Modal>
-        )}
-
-        {/* Registration Modal */}
-        {isRegister && (
-          <Modal title="Registration Form" onClose={handleModalClose}>
-            {/* Registration form fields can go here */}
-          </Modal>
-        )}
+        <Modal
+          open={isUpiModalOpen}
+          onClose={handleModalClose}
+          center
+          classNames={{
+            overlay: 'customOverlay',
+            modal: 'customModal',
+          }}
+          styles={{
+            modal: { borderRadius: '12px', padding: '30px', backgroundColor: '#212529' }
+          }}
+          closeIcon={closeIcon}
+        >
+          <h2 className='text-2xl font-bold text-customOrange mb-4'>UPI Details</h2><hr />
+          <img src={qr} alt="UPI QR Code" className="w-80 h-full rounded-lg shadow-lg mt-5" />
+        </Modal>
       </div>
     </div>
   );

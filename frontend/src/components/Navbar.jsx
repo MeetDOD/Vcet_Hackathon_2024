@@ -73,7 +73,7 @@ const Navbar = () => {
                         </Link>
                         <div className="hidden lg:flex items-center space-x-4">
                             <HashLink
-                                to='##home'
+                                to='/#home'
                                 className="px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customOrange/90 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
@@ -81,7 +81,7 @@ const Navbar = () => {
                                 Home
                             </HashLink>
                             <HashLink
-                                to="#aboutUs"
+                                to="/#aboutUs"
                                 className="px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customOrange/90 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
@@ -89,15 +89,15 @@ const Navbar = () => {
                                 About
                             </HashLink>
                             <HashLink
-                                to="#problems"
+                                to="/#domains"
                                 className="px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customOrange/90 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
-                                Problem Statements
+                                Domains
                             </HashLink>
                             <HashLink
-                                to="#prizes"
+                                to="/#prizes"
                                 className="px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customOrange/90 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
@@ -105,7 +105,7 @@ const Navbar = () => {
                                 Prizes
                             </HashLink>
                             <HashLink
-                                to="#sponsors"
+                                to="/#sponsors"
                                 className="px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customOrange/90 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
@@ -147,35 +147,35 @@ const Navbar = () => {
                             {isProfileDropdownOpen && (
                                 <div className="absolute right-0 mt-72 w-48 bg-gray-900 border-2 border-gray-900 text-white rounded-md shadow-lg z-10">
                                     <HashLink
-                                        to="#timelines"
+                                        to="/#timelines"
                                         className="block px-4 py-2 rounded-md m-2 hover:bg-gradient-to-b from-customOrange to-customOrange/90 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                         onClick={closeMenu}
                                     >
                                         Timeline
                                     </HashLink>
                                     <HashLink
-                                        to="#guidelines"
+                                        to="/#guidelines"
                                         className="block px-4 py-2 rounded-md m-2 hover:bg-gradient-to-b from-customOrange to-customOrange/90 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                         onClick={closeMenu}
                                     >
                                         Guidelines
                                     </HashLink>
                                     <HashLink
-                                        to="#gallerys"
+                                        to="/#gallerys"
                                         className="block px-4 py-2 rounded-md m-2 hover:bg-gradient-to-b from-customOrange to-customOrange/90 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                         onClick={closeMenu}
                                     >
                                         Gallery
                                     </HashLink>
                                     <HashLink
-                                        to="#faq"
+                                        to="/#faq"
                                         className="block px-4 py-2 rounded-md m-2 hover:bg-gradient-to-b from-customOrange to-customOrange/90 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                         onClick={closeMenu}
                                     >
                                         FAQ
                                     </HashLink>
                                     <HashLink
-                                        to="#contactUs"
+                                        to="/#contactUs"
                                         className="block px-4 py-2 rounded-md m-2 hover:bg-gradient-to-b from-customOrange to-customOrange/90 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                         onClick={closeMenu}
                                     >
@@ -212,7 +212,7 @@ const Navbar = () => {
                     <div className="lg:hidden mx-5 rounded-lg text-gray-100 text-center bg-gray-900">
                         <div className="space-y-1 px-2 pt-2 pb-3">
                             <HashLink
-                                to="##home"
+                                to="/#home"
                                 className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customOrange/90 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
@@ -220,7 +220,7 @@ const Navbar = () => {
                                 Home
                             </HashLink>
                             <HashLink
-                                to="#aboutUs"
+                                to="/#aboutUs"
                                 className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customOrange/90 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
@@ -228,15 +228,15 @@ const Navbar = () => {
                                 About
                             </HashLink>
                             <HashLink
-                                to="#problems"
+                                to="/#domains"
                                 className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customOrange/90 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
-                                Problem Statements
+                                Domains
                             </HashLink>
                             <HashLink
-                                to="#prizes"
+                                to="/#prizes"
                                 className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customOrange/90 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
@@ -244,7 +244,7 @@ const Navbar = () => {
                                 Prizes
                             </HashLink>
                             <HashLink
-                                to="#Sponsors"
+                                to="/#Sponsors"
                                 className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customOrange/90 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
@@ -252,7 +252,7 @@ const Navbar = () => {
                                 Sponsors
                             </HashLink>
                             <HashLink
-                                to="#timeline"
+                                to="/#timeline"
                                 className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customOrange/90 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
@@ -260,7 +260,7 @@ const Navbar = () => {
                                 Timeline
                             </HashLink>
                             <HashLink
-                                to="#guidelines"
+                                to="/#guidelines"
                                 className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customOrange/90 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
@@ -268,7 +268,7 @@ const Navbar = () => {
                                 Guidelines
                             </HashLink>
                             <HashLink
-                                to="#gallery"
+                                to="/#gallery"
                                 className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customOrange/90 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
@@ -276,7 +276,7 @@ const Navbar = () => {
                                 Gallery
                             </HashLink>
                             <HashLink
-                                to="#faq"
+                                to="/#faq"
                                 className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customOrange/90 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
@@ -284,21 +284,22 @@ const Navbar = () => {
                                 FAQ
                             </HashLink>
                             <HashLink
-                                to="#contact"
+                                to="/#contact"
                                 className="block px-3 py-2 mb-5 rounded-md text-base font-medium hover:bg-gradient-to-b from-customOrange to-customOrange/90 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 onClick={closeMenu}
                                 animate="true"
                             >
                                 Contact
                             </HashLink>
-                            <button className='w-full relative py-3 px-4 md:px-8 lg:px-6 rounded-lg font-medium text-base bg-gradient-to-b from-customOrange to-customOrange/90 text-white shadow-[0px_0px_12px_#8c45ff] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>
-                                <div className='absolute inset-0'>
-                                    <div className='rounded-lg border border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]'></div>
-                                    <div className='rounded-lg border absolute inset-0 border-white/40 [mask-image:linear-gradient(to_top,black,transparent)]'></div>
-                                    <div className='absolute inset-0 shadow-[0_0_10px_rgb(140,69,255,.7)_inset] rounded-lg'></div>
-                                </div>
-                                Register
-                            </button>
+                            <Link to="/register">
+                                <button className='w-full relative py-3 px-4 md:px-8 lg:px-6 rounded-lg font-medium text-base bg-gradient-to-b from-customOrange to-customOrange/90 text-white shadow-[0px_0px_12px_#8c45ff] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>
+                                    <div className='absolute inset-0'>
+                                        <div className='rounded-lg border border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]'></div>
+                                        <div className='rounded-lg border absolute inset-0 border-white/40 [mask-image:linear-gradient(to_top,black,transparent)]'></div>
+                                        <div className='absolute inset-0 shadow-[0_0_10px_rgb(140,69,255,.7)_inset] rounded-lg'></div>
+                                    </div>
+                                    Register
+                                </button></Link>
                         </div>
                     </div>
                 )}
