@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Lottie from 'react-lottie';
 import loader from "./assets/lottie/loader.json"
 import StarsCanvas from "./components/StarBackground";
+import { Toaster } from 'sonner'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -45,6 +46,7 @@ function App() {
           </Routes>
         </>
       )}
+      <Toaster expand={false} position="bottom-left" />
     </Router>
   );
 }

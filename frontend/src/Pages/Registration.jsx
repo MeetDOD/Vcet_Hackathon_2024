@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "../styles/Form.css";
-import { toast, ToastContainer } from "react-toastify";
 import { fillTestFormData, handleFormSubmit, isAnyFieldFilled } from "../helper/helper";
 import StarsCanvas from "../components/StarBackground";
 import Heading from "../components/Heading";
+import { toast } from 'sonner'
 
 const Registration = () => {
   const [teamName, setTeamName] = useState("");
@@ -27,6 +27,8 @@ const Registration = () => {
       gitHubUrl: "",
     },
   ]);
+
+  const toastShown = useRef(false);
 
   const handleUserChange = (index, field, value) => {
     if (field !== "college") {
@@ -52,16 +54,20 @@ const Registration = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    if (!toastShown.current) {
+      toast("Problem abstract will be announced shortly");
+      toastShown.current = true;
+    }
   }, []);
 
   return (
     <>
       <div style={{ backgroundColor: "black" }}>
         <StarsCanvas />
-        <ToastContainer />
         <div className="relative ">
           <br />
           <br />
+
           <form
             className="form-main-container marginal"
             onSubmit={(e) =>
