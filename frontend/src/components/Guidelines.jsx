@@ -5,6 +5,7 @@ import qr from "../assets/qr.jpg"
 import { Modal } from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
 import { IoClose } from "react-icons/io5";
+import { toast } from 'sonner';
 
 const closeIcon = (
   <div className='text-customOrange'>
@@ -21,6 +22,9 @@ const Guidelines = () => {
     setUpiModalOpen(false);
   };
 
+  const hackathonOver = () => {
+    toast.success("Registration is Closed 😭")
+  }
   return (
 
     <div id='guidelines' className="relative w-full h-full custom-bg-small">
@@ -49,11 +53,11 @@ const Guidelines = () => {
               <li>All updates regarding the event will be posted on Social Media handles and mailed to each team.</li>
             </ul>
             <div className="my-6">
-              <Link to="/register"
+              <button onClick={hackathonOver}
                 className="text-white py-3 px-6 rounded-lg bg-gradient-to-b from-customOrange to-customOrange/90 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
               >
                 Register Now
-              </Link>
+              </button>
             </div>
             <ul className="list-disc pl-5 space-y-2 mt-4 text-sm sm:text-base md:text-lg">
               <li>NOTE: The order preference of the domain is solely for our reference. We do not assure that the topic allocation will be based on your top preferences only.</li>

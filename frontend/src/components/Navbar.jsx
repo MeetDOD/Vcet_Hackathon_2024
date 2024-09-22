@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import SplitType from "split-type";
 import logo from "../assets/logo.png";
 import { HashLink } from 'react-router-hash-link';
+import { toast } from "sonner";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -63,6 +64,9 @@ const Navbar = () => {
         };
     }, []);
 
+    const hackathonOver = () => {
+        toast.success("Registration is Closed 😭")
+    }
     return (
         <div>
             <nav className={`fixed w-full z-50 py-1 text-white font-montserrat transition-colors duration-300 ${isScrolled ? "bg-gray-900 shadow-lg" : ""}`}>
@@ -112,14 +116,14 @@ const Navbar = () => {
                             >
                                 Sponsors
                             </HashLink>
-                            <Link to="/register" animate="true" className='my-3 relative py-3 px-4 md:px-8 lg:px-6 rounded-lg font-medium text-sm md:text-lg lg:text-sm bg-gradient-to-b from-customOrange to-customOrange/90 text-white shadow-[0px_0px_12px_#8c45ff] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>
+                            <button onClick={hackathonOver} animate="true" className='my-3 relative py-3 px-4 md:px-8 lg:px-6 rounded-lg font-medium text-sm md:text-lg lg:text-sm bg-gradient-to-b from-customOrange to-customOrange/90 text-white shadow-[0px_0px_12px_#8c45ff] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>
                                 <div className='absolute inset-0'>
                                     <div className='rounded-lg border border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]'></div>
                                     <div className='rounded-lg border absolute inset-0 border-white/40 [mask-image:linear-gradient(to_top,black,transparent)]'></div>
                                     <div className='absolute inset-0 shadow-[0_0_10px_rgb(140,69,255,.7)_inset] rounded-lg'></div>
                                 </div>
                                 Register
-                            </Link>
+                            </button>
                         </div>
                         <div className="relative flex items-center" ref={dropdownRef}>
                             <button
@@ -291,15 +295,15 @@ const Navbar = () => {
                             >
                                 Contact
                             </HashLink>
-                            <Link to="/register">
-                                <button className='w-full relative py-3 px-4 md:px-8 lg:px-6 rounded-lg font-medium text-base bg-gradient-to-b from-customOrange to-customOrange/90 text-white shadow-[0px_0px_12px_#8c45ff] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>
-                                    <div className='absolute inset-0'>
-                                        <div className='rounded-lg border border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]'></div>
-                                        <div className='rounded-lg border absolute inset-0 border-white/40 [mask-image:linear-gradient(to_top,black,transparent)]'></div>
-                                        <div className='absolute inset-0 shadow-[0_0_10px_rgb(140,69,255,.7)_inset] rounded-lg'></div>
-                                    </div>
-                                    Register
-                                </button></Link>
+
+                            <button onClick={hackathonOver} className='w-full relative py-3 px-4 md:px-8 lg:px-6 rounded-lg font-medium text-base bg-gradient-to-b from-customOrange to-customOrange/90 text-white shadow-[0px_0px_12px_#8c45ff] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>
+                                <div className='absolute inset-0'>
+                                    <div className='rounded-lg border border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]'></div>
+                                    <div className='rounded-lg border absolute inset-0 border-white/40 [mask-image:linear-gradient(to_top,black,transparent)]'></div>
+                                    <div className='absolute inset-0 shadow-[0_0_10px_rgb(140,69,255,.7)_inset] rounded-lg'></div>
+                                </div>
+                                Register
+                            </button>
                         </div>
                     </div>
                 )}

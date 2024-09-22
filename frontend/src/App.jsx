@@ -42,11 +42,11 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" Component={Home} />
-            <Route path="/register" Component={Registration} />
+            {/* <Route path="/register" Component={Registration} /> */}
           </Routes>
         </>
       )}
-      <Toaster expand={false} position="bottom-left" />
+      <Toaster richColors expand={false} position="top-center" />
     </Router>
   );
 }
