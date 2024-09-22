@@ -43,6 +43,7 @@ function App() {
           <Routes>
             <Route path="/" Component={Home} />
             {/* <Route path="/register" Component={Registration} /> */}
+            <Route path="*" Component={Home} />
           </Routes>
         </>
       )}
