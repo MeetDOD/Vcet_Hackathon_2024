@@ -1,4 +1,4 @@
-# Project : VCET HACKATHON 2024 🗿
+# Project : VCET HACKATHON 2024 🏅
 
 # Theme : Code The Cosmos 🚀
 
@@ -18,6 +18,7 @@ Make sure you have the following installed:
    cd codeTheCosmos
    npm i
    npm run dev
+   ```
 
 ### Screenshot:
 

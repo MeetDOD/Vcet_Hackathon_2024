@@ -47,7 +47,7 @@ function App() {
           </Routes>
         </>
       )}
-      <Toaster richColors expand={false} position="top-center" />
+      <Toaster richColors expand={false} position="bottom-right" />
     </Router>
   );
 }
