@@ -4,7 +4,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import title from "../assets/currentSponsors/contentstack.jpg";
 import powered from "../assets/currentSponsors/jeebr.png";
-import copowered from "../assets/currentSponsors/gsystem.jpg";
+import copowered from "../assets/currentSponsors/gsystem.png";
 import training from "../assets/currentSponsors/edba.png";
 import security from "../assets/currentSponsors/techsol.jpg";
 import banking from "../assets/currentSponsors/unionbank.png";
@@ -112,8 +112,8 @@ const Sponsors = () => {
                     </motion.div>
                 </div>
 
-                {/* <div className='flex my-5 justify-center font-semibold  text-xl md:text-2xl lg:text-3xl text-center tracking-tighter relative countDown'>
-                    Co-Powered By
+                <div className='flex my-5 justify-center font-semibold  text-xl md:text-2xl lg:text-3xl text-center tracking-tighter relative countDown'>
+                    Co Powered By
                 </div>
                 <div className="flex justify-center my-5 pb-10 items-center">
                     <motion.div
@@ -139,40 +139,7 @@ const Sponsors = () => {
                             <img
                                 src={copowered}
                                 alt="Title Sponsor"
-                                className="w-80 p-5 px-10 transition-transform duration-300 ease-in-out transform"
-                            />
-                        </a>
-                    </motion.div>
-                </div> */}
-
-                <div className='flex my-5 justify-center font-semibold  text-xl md:text-2xl lg:text-3xl text-center tracking-tighter relative countDown'>
-                    Training Partner
-                </div>
-                <div className="flex justify-center my-5 pb-10 items-center">
-                    <motion.div
-                        className="shadow-2xl sponsor-item flex flex-col items-center bg-gray-50 rounded-xl h-32 justify-center"
-                        whileHover={{
-                            scale: 1.05,
-                            transition: {
-                                type: "spring",
-                                stiffness: 300,
-                                damping: 10,
-                            },
-                        }}
-                        whileTap={{
-                            scale: 0.95,
-                            transition: {
-                                type: "spring",
-                                stiffness: 300,
-                                damping: 20,
-                            },
-                        }}
-                    >
-                        <a href="https://www.edba-academy.com" target='_blank' className="relative">
-                            <img
-                                src={training}
-                                alt="Title Sponsor"
-                                className="w-80 p-5 px-10 transition-transform duration-300 ease-in-out transform"
+                                className="w-80 h-40 p-5 px-10 transition-transform duration-300 ease-in-out transform"
                             />
                         </a>
                     </motion.div>
@@ -212,7 +179,7 @@ const Sponsors = () => {
                 </div>
 
                 <div className='flex my-5 justify-center font-semibold  text-xl md:text-2xl lg:text-3xl text-center tracking-tighter relative countDown'>
-                    Banking Partner
+                    Training Partner
                 </div>
                 <div className="flex justify-center my-5 pb-10 items-center">
                     <motion.div
@@ -236,7 +203,7 @@ const Sponsors = () => {
                     >
                         <a href="https://www.edba-academy.com" target='_blank' className="relative">
                             <img
-                                src={banking}
+                                src={training}
                                 alt="Title Sponsor"
                                 className="w-80 p-5 px-10 transition-transform duration-300 ease-in-out transform"
                             />
@@ -272,6 +239,39 @@ const Sponsors = () => {
                                 src={apperal}
                                 alt="Title Sponsor"
                                 className="w-80 h-40 p-4 px-10 transition-transform duration-300 ease-in-out transform"
+                            />
+                        </a>
+                    </motion.div>
+                </div>
+
+                <div className='flex my-5 justify-center font-semibold  text-xl md:text-2xl lg:text-3xl text-center tracking-tighter relative countDown'>
+                    Banking Partner
+                </div>
+                <div className="flex justify-center my-5 pb-10 items-center">
+                    <motion.div
+                        className="shadow-2xl sponsor-item flex flex-col items-center bg-gray-50 rounded-xl h-32 justify-center"
+                        whileHover={{
+                            scale: 1.05,
+                            transition: {
+                                type: "spring",
+                                stiffness: 300,
+                                damping: 10,
+                            },
+                        }}
+                        whileTap={{
+                            scale: 0.95,
+                            transition: {
+                                type: "spring",
+                                stiffness: 300,
+                                damping: 20,
+                            },
+                        }}
+                    >
+                        <a href="https://www.edba-academy.com" target='_blank' className="relative">
+                            <img
+                                src={banking}
+                                alt="Title Sponsor"
+                                className="w-80 p-5 px-10 transition-transform duration-300 ease-in-out transform"
                             />
                         </a>
                     </motion.div>
